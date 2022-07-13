@@ -8,8 +8,8 @@
     "packages/*"
   ],
   "scripts": {
-    "frontend:serve": "yarn --cwd frontend serve",
-    "frontend:build": "yarn --cwd frontend build",
+    "frontend:serve": "yarn --cwd packages/frontend serve",
+    "frontend:build": "yarn --cwd packages/frontend build",
     "changeset": "changeset",
     "lint": "yarn workspaces run lint",
     "prepare": "husky install",

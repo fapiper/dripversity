@@ -6,7 +6,6 @@
     "moduleResolution": "Node",
     "module": "CommonJS",
     "target": "ES2018",
-    "noEmit": true,
     "sourceMap": true,
     "lib": [
       "esnext"
