@@ -1,0 +1,40 @@
+{
+  "name": "dripversity",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "frontend:serve": "yarn --cwd frontend serve",
+    "frontend:build": "yarn --cwd frontend build",
+    "changeset": "changeset",
+    "lint": "yarn workspaces run lint",
+    "prepare": "husky install",
+    "commit": "cz",
+    "check-format": "yarn prettier --list-different",
+    "validate": "yarn-run-all --parallel check-format lint build"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.23.1",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "yarn-run-all": "^3.1.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "**/*.+(js|jsx|ts|tsx|css)": [
+      "yarn lint"
+    ]
+  }
+}
