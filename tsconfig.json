@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
     "incremental": true,
-    "outDir": "./dist",
     "baseUrl": ".",
     "moduleResolution": "Node",
     "module": "CommonJS",
-    "target": "ES2018",
+    "target": "ES2020",
     "sourceMap": true,
     "lib": [
       "esnext"
@@ -29,7 +28,7 @@
       "path": "packages/frontend"
     },
     {
-      "path": "packages/functions"
+      "path": "packages/api"
     }
   ],
   "exclude": [

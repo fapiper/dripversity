@@ -1,7 +1,7 @@
 {
   "name": "dripversity",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Dripversity NFT collection monorepo",
   "license": "MIT",
   "private": true,
   "workspaces": [
@@ -10,12 +10,13 @@
   "scripts": {
     "frontend:serve": "yarn --cwd packages/frontend serve",
     "frontend:build": "yarn --cwd packages/frontend build",
+    "api:start": "yarn --cwd packages/api start",
+    "api:deploy": "yarn --cwd packages/api deploy",
     "changeset": "changeset",
     "lint": "yarn workspaces run lint",
+    "format": "yarn workspaces run format",
     "prepare": "husky install",
-    "commit": "cz",
-    "check-format": "yarn prettier --list-different",
-    "validate": "yarn-run-all --parallel check-format lint build"
+    "commit": "cz"
   },
   "devDependencies": {
     "@changesets/cli": "^2.23.1",
