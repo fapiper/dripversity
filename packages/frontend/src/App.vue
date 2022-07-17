@@ -1,9 +1,13 @@
 <template>
-    <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
+    <LayoutHeader />
+    <LayoutBody>
+        <router-view />
+    </LayoutBody>
+    <LayoutFooter />
 </template>
 
-<style></style>
+<script lang="ts" setup>
+import LayoutHeader from "@/components/layout/LayoutHeader.vue";
+import LayoutFooter from "@/components/layout/LayoutFooter.vue";
+import LayoutBody from "@/components/layout/LayoutBody.vue";
+</script>

@@ -8,10 +8,20 @@ const routes: Array<RouteRecordRaw> = [
         component: HomeView,
     },
     {
-        path: "/about",
-        name: "about",
+        path: "/privacy-policy",
+        name: "privacy-policy",
         component: () =>
-            import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+            import(
+                /* webpackChunkName: "privacy-policy" */ "../views/PrivacyView.vue"
+            ),
+    },
+    {
+        path: "/terms-of-service",
+        name: "terms-of-service",
+        component: () =>
+            import(
+                /* webpackChunkName: "terms-of-service" */ "../views/TermsView.vue"
+            ),
     },
 ];
 
