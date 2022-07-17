@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/:match*",
+            "destination": "https://dripversity-api.vercel.app/:match*"
+        },
+        {
+            "source": "/:match*",
+            "destination": "https://dripversity.vercel.app/:match*"
+        }
+    ]
+}
