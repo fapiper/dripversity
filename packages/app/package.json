@@ -1,5 +1,5 @@
 {
-  "name": "@dripversity/frontend",
+  "name": "@dripversity/app",
   "version": "1.0.0",
   "description": "Dripversity NFT collection frontend",
   "private": true,
@@ -18,6 +18,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
+    "@vercel/node": "^2.4.4",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-pwa": "~5.0.0",
@@ -33,6 +34,7 @@
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "tailwindcss": "^3.1.6",
-    "typescript": "~4.5.5"
+    "typescript": "~4.5.5",
+    "vercel": "^27.1.5"
   }
 }

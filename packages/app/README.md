@@ -1,4 +1,4 @@
-# @dripversity/frontend
+# @dripversity/app
 
 ## Project setup
 ```

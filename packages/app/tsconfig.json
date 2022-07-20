@@ -15,11 +15,15 @@
         "baseUrl": ".",
         "types": ["webpack-env"],
         "paths": {
-            "@/*": ["src/*"]
+            "@/*": ["src/*"],
+            "@api/*": ["api/*"]
         },
         "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
     },
     "include": [
+        "api/**/*.ts",
+        "api/**/*.d.ts",
+        "api/**/*.tsx",
         "src/**/*.ts",
         "src/**/*.d.ts",
         "src/**/*.tsx",
