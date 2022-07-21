@@ -1,0 +1,68 @@
+<template>
+    <TransitionRoot appear :show="modelValue" as="template">
+        <Dialog as="div" @close="$emit('update:modelValue', false)">
+            <div class="fixed inset-0 overflow-y-auto z-50">
+                <div class="flex items-center justify-center h-screen p-8">
+                    <TransitionChild
+                        as="template"
+                        enter="duration-100 ease-out"
+                        enter-from="opacity-0"
+                        enter-to="opacity-100"
+                        leave="duration-100 ease-in"
+                        leave-from="opacity-100"
+                        leave-to="opacity-0"
+                    >
+                        <DialogOverlay class="fixed inset-0 bg-black/50" />
+                    </TransitionChild>
+
+                    <TransitionChild
+                        as="template"
+                        enter="duration-100 ease-out"
+                        enter-from="opacity-0 translate-y-12"
+                        enter-to="opacity-100 translate-y-0"
+                        leave="duration-100 ease-in"
+                        leave-from="opacity-100 translate-y-0"
+                        leave-to="opacity-0 translate-y-12"
+                    >
+                        <div
+                            class="relative inline-block w-full max-w-lg max-h-full bg-white text-black transition transform shadow rounded"
+                        >
+                            <div class="absolute top-0 right-0 p-2">
+                                <AppButton
+                                    size="sm"
+                                    color="link"
+                                    only-icon
+                                    rounded="full"
+                                    @click.prevent="
+                                        $emit('update:modelValue', false)
+                                    "
+                                    ><XIcon class="w-4 h-4"
+                                /></AppButton>
+                            </div>
+
+                            <slot />
+                        </div>
+                    </TransitionChild>
+                </div>
+            </div>
+        </Dialog>
+    </TransitionRoot>
+</template>
+
+<script setup lang="ts">
+import {
+    TransitionRoot,
+    TransitionChild,
+    Dialog,
+    DialogOverlay,
+} from "@headlessui/vue";
+import AppButton from "@/components/app/AppButton.vue";
+import { XIcon } from "@heroicons/vue/outline";
+defineEmits(["update:modelValue"]);
+defineProps({
+    modelValue: {
+        type: Boolean,
+        default: false,
+    },
+});
+</script>

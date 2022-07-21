@@ -10,6 +10,7 @@
   "scripts": {
     "app:serve": "yarn --cwd packages/app serve",
     "app:build": "yarn --cwd packages/app build",
+    "app:start": "vercel dev",
     "changeset": "changeset",
     "lint": "yarn workspaces run lint",
     "format": "yarn workspaces run format",
@@ -23,7 +24,8 @@
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3"
+    "lint-staged": "^13.0.3",
+    "vercel": "^27.1.5"
   },
   "config": {
     "commitizen": {

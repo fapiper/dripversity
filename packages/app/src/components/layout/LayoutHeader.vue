@@ -1,33 +1,42 @@
 <template>
-    <header
-        class="sticky top-0 left-0 h-12 bg-white/60 backdrop-blur w-full flex z-40"
-    >
+    <header class="sticky top-0 left-0 h-16 bg-white w-full flex z-40">
         <nav class="container-default flex flex-1 items-center justify-between">
             <router-link class="block" to="/"
                 ><span class="font-bold text-lg">Dripversity</span>
             </router-link>
 
-            <ul class="flex items-center justify-center space-x-12">
+            <ul class="hidden md:flex items-center justify-center space-x-12">
                 <li v-for="(to, title) of items" :key="title">
-                    <router-link class="font-extrabold text-xs" :to="to">{{
+                    <router-link class="font-bold text-xs" :to="to">{{
                         title
                     }}</router-link>
                 </li>
             </ul>
 
-            <ul class="flex items-center justify-center space-x-4">
+            <ul class="hidden md:flex items-center justify-center space-x-4">
                 <li>
-                    <a href="/"><InstagramIcon class="h-4 w-4" /></a>
+                    <a
+                        href="https://www.instagram.com/dripversityenrollment"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><InstagramIcon class="h-4 w-4"
+                    /></a>
                 </li>
                 <li>
-                    <router-link to="/"
+                    <a
+                        href="https://twitter.com/dripversity"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         ><TwitterIcon class="h-4 w-4"
-                    /></router-link>
+                    /></a>
                 </li>
                 <li>
-                    <router-link to="/"
+                    <a
+                        href="https://discord.com/invite/dripversity"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         ><DiscordIcon class="h-4 w-4"
-                    /></router-link>
+                    /></a>
                 </li>
             </ul>
         </nav>
