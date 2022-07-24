@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Dripversity";
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    src: url("../font/Dripversity-Regular.woff2") format("woff2"),
+        url("../font/Dripversity-Regular.woff") format("woff"),
+        url("../font/Dripversity-Regular.otf") format("otf");
+}

@@ -14,12 +14,12 @@ export default defineComponent({
             default: "button",
         },
         color: {
-            type: String as () => "primary",
+            type: String as () => "primary" | "secondary" | "outline",
             default: "primary",
         },
         rounded: {
             type: String as () => "full" | "base" | "none",
-            default: "base",
+            default: "full",
         },
         size: {
             type: String as () => "xs" | "sm" | "md" | "lg",
@@ -53,22 +53,22 @@ export default defineComponent({
     setup(props, { emit, slots }) {
         const hover = ref(false);
         const ButtonColor: Indexable<string> = {
-            primary: "bg-white text-black border hover:border-neutral-300",
-            secondary:
-                "bg-neutral-900 text-white border border-neutral-700 hover:border-neutral-600",
+            primary: "bg-black text-white border border-black",
+            secondary: "bg-neutral-200 text-black border border-black",
+            outline: "bg-transparent text-current border border-neutral-500",
             disabled: "border border-transparent",
         };
         const ButtonSizeIcon: Indexable<string> = {
             xs: "w-8 h-8 text-xs",
-            sm: "w-10 h-10 text-xs",
-            md: "w-12 h-12 text-sm",
-            lg: "w-14 h-14 text-base",
+            sm: "w-10 h-10 text-sm",
+            md: "w-12 h-12 text-base",
+            lg: "w-14 h-14 text-lg",
         };
         const ButtonSizeDefault: Indexable<string> = {
             xs: "h-8 text-xs",
-            sm: "h-10 text-xs",
-            md: "h-12 text-sm",
-            lg: "h-14 text-base",
+            sm: "h-10 text-sm",
+            md: "h-12 text-base",
+            lg: "h-14 text-lg",
         };
         const ButtonSpacing: Indexable<string> = {
             xs: "py-1 px-6 space-x-1",
@@ -83,7 +83,7 @@ export default defineComponent({
         };
 
         const classesButton = computed(() => [
-            `relative inline-flex items-center font-semibold transition duration-200 ease-out`,
+            `relative inline-flex items-center transition duration-200`,
             ButtonRounded[props.rounded],
             ButtonColor[props.disabled ? "disabled" : props.color],
             !props.onlyIcon && ButtonSpacing[props.size],

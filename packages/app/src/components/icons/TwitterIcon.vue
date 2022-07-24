@@ -5,7 +5,7 @@
         x="0px"
         y="0px"
         viewBox="0 0 248 204"
-        style="enable-background: new 0 0 248 204"
+        fill="currentColor"
     >
         <g id="Logo_1_">
             <path
