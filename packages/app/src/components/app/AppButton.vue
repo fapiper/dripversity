@@ -53,9 +53,12 @@ export default defineComponent({
     setup(props, { emit, slots }) {
         const hover = ref(false);
         const ButtonColor: Indexable<string> = {
-            primary: "bg-black text-white border border-black",
-            secondary: "bg-neutral-200 text-black border border-black",
-            outline: "bg-transparent text-current border border-neutral-500",
+            primary:
+                "bg-black text-white border border-black hover:italic hover:bg-black/80",
+            secondary:
+                "bg-neutral-200 text-black border border-black hover:italic",
+            outline:
+                "bg-transparent text-current border border-neutral-500 hover:opacity-80 hover:italic",
             disabled: "border border-transparent",
         };
         const ButtonSizeIcon: Indexable<string> = {
@@ -135,7 +138,6 @@ export default defineComponent({
                         hover.value = false;
                     },
                     onClick: (e: Event) => {
-                        !isAnchorLink && e.preventDefault();
                         if (!(props.disabled || props.loading)) {
                             emit("click", e);
                         }

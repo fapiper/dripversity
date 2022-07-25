@@ -1,71 +1,50 @@
 <template>
-    <footer class="bg-black text-white">
-        <div class="py-16 md:py-32 bg-neutral-900/90">
-            <div class="container-default max-w-4xl mx-auto">
-                <div class="space-y-8">
-                    <h2 class="font-bold text-4xl uppercase mb-8 italic">
-                        Subscribe to the<br />Dripversity <br />newsletter
-                    </h2>
+    <section class="!mt-8">
+        <div class="container-default max-w-4xl">
+            <div v-animate.stagger>
+                <h2 class="title">Subscribe to<br />Dripversity</h2>
 
-                    <NewsletterForm />
-                </div>
+                <NewsletterForm />
             </div>
         </div>
-        <div class="py-16 bg-neutral-900/70">
+    </section>
+
+    <footer class="bg-black text-white">
+        <div class="py-16">
             <div
                 class="container-default flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-0 md:space-x-8 lg:space-x-12"
             >
-                <div class="flex flex-col justify-between col-span-3">
-                    <h3 class="font-serif font-bold text-5xl">D</h3>
-                </div>
-
-                <div class="flex flex-col space-y-2">
-                    <router-link to="/" class="underline">Home</router-link>
-                    <router-link to="/#about" class="underline"
-                        >About</router-link
-                    >
-                    <router-link to="/#explore" class="underline"
-                        >Explore</router-link
-                    >
+                <div class="col-span-3">
+                    <h3 class="font-serif font-bold text-5xl mb-8">D</h3>
                 </div>
 
                 <ul class="flex flex-col space-y-2">
-                    <li>
-                        <a
-                            href="https://www.instagram.com/dripversityenrollment"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="underline"
-                            >Instagram</a
-                        >
+                    <li v-for="(to, name) in routes" :key="name">
+                        <router-link class="link" :to="to">{{
+                            name
+                        }}</router-link>
                     </li>
-                    <li>
+                </ul>
+
+                <ul class="flex flex-col space-y-2">
+                    <li v-for="(social, name) in socials" :key="name">
                         <a
-                            href="https://twitter.com/dripversity"
+                            :href="social.href"
                             target="_blank"
+                            class="link"
                             rel="noopener noreferrer"
-                            class="underline"
-                            >Twitter</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            class="underline"
-                            href="https://discord.com/invite/dripversity"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >Discord</a
+                            >{{ name }}</a
                         >
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class="bg-neutral-900/0 py-8 border-b-4 border-blue">
+        <div class="py-8 border-b-8 border-blue">
             <div
-                class="container-default flex items-center justify-between space-x-4 md:space-x-8 lg:space-x-12"
+                class="container-default flex flex-col md:flex-row items-start md:items-center justify-between space-y-4 md:space-y-0 md:space-x-8 lg:space-x-12"
             >
-                <div class="text-xs text-neutral-400">
+                <div class="text-xs text-neutral-400 leading-relaxed">
                     <p>
                         Copyright &copy; {{ new Date().getFullYear() }}
                         Dripversity
@@ -73,22 +52,12 @@
                     <p>Made by Decentum</p>
                 </div>
 
-                <ul
-                    class="flex items-center justify-end space-x-1 md:space-x-4"
-                >
-                    <li>
+                <ul class="flex items-center justify-end space-x-4">
+                    <li v-for="(to, name) in legals" :key="name">
                         <router-link
-                            class="text-xs text-neutral-400"
-                            to="/privacy-policy"
-                            >Privacy Policy</router-link
-                        >
-                    </li>
-                    <li class="text-neutral-600">|</li>
-                    <li>
-                        <router-link
-                            class="text-xs text-neutral-400"
-                            to="/terms-of-service"
-                            >Terms of Service</router-link
+                            class="link text-xs text-neutral-400"
+                            :to="to"
+                            >{{ name }}</router-link
                         >
                     </li>
                 </ul>
@@ -97,10 +66,7 @@
     </footer>
 </template>
 
-<script lang="ts" setup></script>
-<script>
-import NewsletterForm from "@/components/Newsletter/NewsletterForm";
-export default {
-    components: { NewsletterForm },
-};
+<script lang="ts" setup>
+import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
+import { routes, socials, legals } from "@/constants/";
 </script>

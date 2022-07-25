@@ -7,7 +7,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 serif: ["Dripversity", ...defaultTheme.fontFamily.serif],
-                sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
+                sans: ["Milliard", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 blue: {

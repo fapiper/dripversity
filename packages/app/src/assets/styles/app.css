@@ -6,12 +6,20 @@
     .container-default {
        @apply container mx-auto px-4 md:px-8 lg:px-12;
     }
+
+    .title {
+        @apply font-bold text-5xl md:text-6xl italic uppercase mb-8
+    }
+
+    .link {
+        @apply relative after:block after:absolute after:bottom-px after:left-0 after:w-full after:h-px after:bg-current hover:italic transition-all duration-200
+    }
 }
 
 @layer base {
 
     body{
-        @apply bg-neutral-300 text-neutral-800;
+        @apply bg-neutral-200 text-neutral-800;
     }
     section {
         @apply my-32;

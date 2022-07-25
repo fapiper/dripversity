@@ -1,4 +1,20 @@
 @font-face {
+    font-family: "Milliard";
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    src: url("../font/Milliard-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Milliard";
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+    src: url("../font/Milliard-ExtraBold.woff") format("woff");
+}
+
+@font-face {
     font-family: "Dripversity";
     font-weight: 400;
     font-display: swap;
@@ -7,3 +23,4 @@
         url("../font/Dripversity-Regular.woff") format("woff"),
         url("../font/Dripversity-Regular.otf") format("otf");
 }
+

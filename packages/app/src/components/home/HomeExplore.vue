@@ -2,7 +2,11 @@
     <section id="explore" ref="outer">
         <div class="container-default">
             <div class="w-full overflow-hidden" v-for="i in 3" :key="i">
-                <ul ref="inner" class="flex w-full justify-start items-center">
+                <ul
+                    ref="inner"
+                    class="flex w-full justify-start items-center"
+                    v-animate.stagger
+                >
                     <li
                         class="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex-shrink-0"
                         v-for="token in tokens"

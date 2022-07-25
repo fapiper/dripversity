@@ -1,7 +1,7 @@
 <template>
-    <section id="about">
+    <section id="creator">
         <AppTextContainer>
-            <h2 class="title">About</h2>
+            <h2 class="title">Creator</h2>
             <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
