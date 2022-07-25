@@ -21,7 +21,7 @@
             <router-link
                 class="block order-first md:order-none md:absolute md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 pointer-events-auto"
                 to="/"
-                ><span class="font-serif text-3xl">D</span>
+                ><span class="font-logo text-3xl">D</span>
             </router-link>
 
             <ul class="hidden md:flex items-center justify-center space-x-4">

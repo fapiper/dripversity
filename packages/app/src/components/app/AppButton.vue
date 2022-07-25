@@ -54,11 +54,10 @@ export default defineComponent({
         const hover = ref(false);
         const ButtonColor: Indexable<string> = {
             primary:
-                "bg-black text-white border border-black hover:italic hover:bg-black/80",
-            secondary:
-                "bg-neutral-200 text-black border border-black hover:italic",
+                "bg-black text-white border border-black hover:bg-black/80",
+            secondary: "bg-neutral-200 text-black border border-black",
             outline:
-                "bg-transparent text-current border border-neutral-500 hover:opacity-80 hover:italic",
+                "bg-transparent text-current border border-neutral-500 hover:opacity-80",
             disabled: "border border-transparent",
         };
         const ButtonSizeIcon: Indexable<string> = {

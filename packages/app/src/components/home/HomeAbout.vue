@@ -20,10 +20,15 @@
                 clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
                 dolor sit amet.
             </p>
+
+            <div class="!mt-8">
+                <AppButton to="/#subscribe">Subscribe to Dripversity</AppButton>
+            </div>
         </AppTextContainer>
     </section>
 </template>
 
 <script lang="ts" setup>
 import AppTextContainer from "@/components/app/AppTextContainer.vue";
+import AppButton from "@/components/app/AppButton.vue";
 </script>

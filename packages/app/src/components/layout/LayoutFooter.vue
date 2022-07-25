@@ -1,5 +1,5 @@
 <template>
-    <section class="!mt-8">
+    <section class="!mt-8" id="subscribe">
         <div class="container-default max-w-4xl">
             <div v-animate.stagger>
                 <h2 class="title">Subscribe to<br />Dripversity</h2>
@@ -15,7 +15,7 @@
                 class="container-default flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-0 md:space-x-8 lg:space-x-12"
             >
                 <div class="col-span-3">
-                    <h3 class="font-serif font-bold text-5xl mb-8">D</h3>
+                    <h3 class="font-logo text-5xl mb-8">D</h3>
                 </div>
 
                 <ul class="flex flex-col space-y-2">

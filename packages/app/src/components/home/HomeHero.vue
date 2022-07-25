@@ -15,7 +15,7 @@
                     v-animate.stagger
                 >
                     <div>
-                        <h1 class="font-serif text-7xl md:text-9xl text-center">
+                        <h1 class="font-logo text-7xl md:text-9xl text-center">
                             D
                         </h1>
                     </div>
