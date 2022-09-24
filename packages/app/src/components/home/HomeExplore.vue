@@ -1,57 +1,64 @@
 <template>
-    <section id="explore" ref="outer">
-        <div class="container-default">
-            <div class="w-full overflow-hidden" v-for="i in 3" :key="i">
-                <ul
-                    ref="inner"
-                    class="flex w-full justify-start items-center"
-                    v-animate.stagger
+    <section id="explore">
+        <div class="relative z-10 w-full overflow-hidden" v-animate>
+            <Swiper
+                :modules="modules"
+                grab-cursor
+                free-mode
+                loop
+                centeredSlides
+                :slides-per-view="2"
+                :breakpoints="{
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                    },
+                    1536: {
+                        slidesPerView: 5,
+                    },
+                }"
+                :space-between="16"
+            >
+                <SwiperSlide
+                    v-for="(token, i) in tokens"
+                    ref="slideRef"
+                    :key="token.name"
                 >
-                    <li
-                        class="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex-shrink-0"
-                        v-for="token in tokens"
-                        :key="token.name"
+                    <div
+                        class="transform block py-8"
+                        :class="
+                            i % 2 === 0 ? '-translate-y-8' : 'translate-y-8'
+                        "
                     >
                         <TokenCard :token="token" />
-                    </li>
-                </ul>
-            </div>
+                    </div>
+                </SwiperSlide>
+                <template v-slot:container-start
+                    ><span
+                        class="absolute top-0 left-0 w-8 lg:w-32 h-full bg-gradient-to-r from-black z-20 pointer-events-none"
+                /></template>
+                <template v-slot:container-end
+                    ><span
+                        class="absolute top-0 right-0 w-8 lg:w-32 h-full bg-gradient-to-l from-black z-20 pointer-events-none"
+                /></template>
+            </Swiper>
         </div>
     </section>
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from "vue";
-import { gsap } from "gsap";
 import TokenCard from "@/components/token/TokenCard.vue";
-
-const description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.";
+import { FreeMode } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/free-mode";
 
 const tokens = Array.from({ length: 10 }, (_, id) => ({
     image: require(`@/assets/images/token/${id + 1}.jpg`),
-    name: `Item #${id + 1}`,
-    description,
+    name: `# XXX`,
 }));
 
-const outer = ref(null);
-const inner = ref<Array<any>>([]);
-
-onMounted(() => {
-    inner.value.forEach((el, i) => {
-        const [xStart, xEnd] = i % 2 === 0 ? [-100, 0] : [-0, -100];
-
-        gsap.fromTo(
-            el,
-            { xPercent: xStart },
-            {
-                xPercent: xEnd,
-                scrollTrigger: {
-                    trigger: outer.value,
-                    scrub: 0,
-                    start: "top bottom",
-                },
-            }
-        );
-    });
-});
+const modules = [FreeMode] as any[];
 </script>

@@ -19,7 +19,7 @@ export default defineComponent({
         },
         rounded: {
             type: String as () => "full" | "base" | "none",
-            default: "full",
+            default: "base",
         },
         size: {
             type: String as () => "xs" | "sm" | "md" | "lg",
@@ -54,8 +54,8 @@ export default defineComponent({
         const hover = ref(false);
         const ButtonColor: Indexable<string> = {
             primary:
-                "bg-black text-white border border-black hover:bg-black/80",
-            secondary: "bg-neutral-200 text-black border border-black",
+                "bg-blue text-neutral-50 border border-blue hover:bg-blue/80",
+            secondary: "bg-neutral-50 text-blue border border-neutral-50",
             outline:
                 "bg-transparent text-current border border-neutral-500 hover:opacity-80",
             disabled: "border border-transparent",
@@ -73,10 +73,10 @@ export default defineComponent({
             lg: "h-14 text-lg",
         };
         const ButtonSpacing: Indexable<string> = {
-            xs: "py-1 px-6 space-x-1",
-            sm: "py-2 px-8 space-x-2",
-            md: "py-3 px-10 space-x-2",
-            lg: "py-6 px-14 space-x-2",
+            xs: "py-1 px-2 space-x-1",
+            sm: "py-2 px-3 space-x-2",
+            md: "py-3 px-6 space-x-2",
+            lg: "py-6 px-8 space-x-2",
         };
         const ButtonRounded: Indexable<string> = {
             none: "rounded-none",
@@ -85,7 +85,7 @@ export default defineComponent({
         };
 
         const classesButton = computed(() => [
-            `relative inline-flex items-center transition duration-200`,
+            `relative inline-flex items-center transition duration-200 font-semibold`,
             ButtonRounded[props.rounded],
             ButtonColor[props.disabled ? "disabled" : props.color],
             !props.onlyIcon && ButtonSpacing[props.size],
@@ -143,7 +143,7 @@ export default defineComponent({
                     },
                 },
                 [
-                    h("span", slots.default && slots.default()),
+                    slots.default && slots.default(),
                     props.loading && loadingNode(),
                 ]
             );

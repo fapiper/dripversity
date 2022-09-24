@@ -1,21 +1,38 @@
 <template>
-    <article class="flex flex-col w-full p-2 group rounded">
-        <div class="relative aspect-square rounded overflow-hidden">
-            <img
-                :src="token.image"
-                :alt="token.name"
-                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full"
-            />
-        </div>
-        <div class="p-2">
-            <h4 class="font-bold text-xs uppercase">{{ token.name }}</h4>
-            <p class="text-xs text-black/50">
-                {{ token.description }}
-            </p>
+    <article class="relative flex rounded group">
+        <div class="aspect-square w-full"></div>
+
+        <img
+            :src="token.image"
+            :alt="token.name"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full rounded"
+        />
+
+        <div
+            class="absolute top-0 left-0 w-full h-full flex p-2 bg-neutral-900/90 backdrop-blur-sm rounded opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-200"
+        >
+            <div
+                class="p-2 md:p-4 border-2 border-neutral-400/50 border-dashed flex flex-col justify-center space-y-2 md:space-y-4"
+            >
+                <h4
+                    class="font-bold text-neutral-400/50 text-3xl md:text-6xl lg:text-7xl uppercase"
+                >
+                    {{ token.name }}
+                </h4>
+                <p class="text-xs md:text-base text-neutral-400">
+                    Join the waitlist and be the first to claim this NFT on
+                    launch day
+                </p>
+                <div>
+                    <AppButton size="sm">Join Waitlist</AppButton>
+                </div>
+            </div>
         </div>
     </article>
 </template>
 
 <script lang="ts" setup>
+import AppButton from "@/components/app/AppButton.vue";
+
 defineProps(["token"]);
 </script>

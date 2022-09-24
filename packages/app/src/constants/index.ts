@@ -4,22 +4,26 @@ import TwitterIcon from "@/components/icons/TwitterIcon.vue";
 
 export const routes = {
     Home: "/#home",
-    About: "/#about",
-    Explore: "/#explore",
-    Creator: "/#creator",
+    Rarity: "/#rarity",
+    Story: "/#story",
+    Team: "/#team",
+    FAQ: "/#faq",
 };
 
 export const socials = {
     Instagram: {
-        href: "https://www.instagram.com/dripversityenrollment",
+        baseUrl: "https://www.instagram.com",
+        account: "dripversityenrollment",
         icon: InstagramIcon,
     },
     Twtter: {
-        href: "https://twitter.com/dripversity",
+        baseUrl: "https://twitter.com",
+        account: "dripversity",
         icon: TwitterIcon,
     },
     Discord: {
-        href: "https://discord.com/invite/dripversity",
+        baseUrl: "https://discord.com/invite",
+        account: "dripversity",
         icon: DiscordIcon,
     },
 };

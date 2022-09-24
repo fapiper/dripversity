@@ -1,5 +1,8 @@
 <template>
-    <form @submit.prevent="subscribe" class="space-y-2">
+    <form
+        @submit.prevent="subscribe"
+        class="bg-neutral-800/50 backdrop-blur p-1 rounded space-y-2"
+    >
         <div
             v-if="isFinished"
             class="flex items-start w-full space-x-2"
@@ -25,33 +28,31 @@
                 </div>
             </div>
         </div>
-        <div
-            class="flex flex-col md:flex-row w-full md:items-end space-y-4 md:space-y-0 md:space-x-4"
-        >
+        <div class="flex w-full items-end space-x-2">
             <div class="text-left flex flex-col flex-1">
-                <label for="email" class="text-xs leading-relaxed">Email</label>
                 <input
                     required
                     v-model="email"
                     type="email"
                     id="email"
-                    placeholder="Please enter your Email"
-                    class="w-full block h-12 bg-transparent px-4 border rounded-full border-neutral-400 placeholder-neutral-400 !ring-0 !outline-none focus:border-neutral-900"
+                    placeholder="Your Email"
+                    class="w-full block h-12 bg-transparent px-4 border-none placeholder-neutral-400 placeholder:font-semibold !ring-0 !outline-none"
                 />
             </div>
             <div>
-                <AppButton :disabled="isFetching" type="submit">
+                <AppButton :disabled="isFetching" type="submit" :color="color">
                     <span class="block w-24">{{
                         isFetching
                             ? "Loading"
                             : error
                             ? "Try Again"
-                            : "Subscribe"
+                            : "Join Waitlist"
                     }}</span>
                 </AppButton>
             </div>
         </div>
 
+        <!--
         <div class="flex items-center space-x-2">
             <input
                 id="agreement"
@@ -64,6 +65,7 @@
                 >I agree to receive marketing emails from Dripversity</label
             >
         </div>
+-->
     </form>
 </template>
 
@@ -73,6 +75,7 @@ import { reactive, ref } from "vue";
 import { useFetch } from "@vueuse/core";
 import { ExclamationCircleIcon, CheckCircleIcon } from "@heroicons/vue/solid";
 
+defineProps(["color"]);
 const email = ref("");
 
 const {

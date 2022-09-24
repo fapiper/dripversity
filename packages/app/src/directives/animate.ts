@@ -1,7 +1,7 @@
 import { Directive } from "vue";
 import { gsap } from "gsap";
 
-const from = { autoAlpha: 0, xPercent: 0, y: 10 };
+const from = { autoAlpha: 0, xPercent: 0, y: 10, skewY: 2 };
 const duration = 0.6;
 
 export default {

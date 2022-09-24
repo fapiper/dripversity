@@ -1,46 +1,54 @@
 <template>
-    <section class="!mt-8" id="subscribe">
-        <div class="container-default max-w-4xl">
-            <div v-animate.stagger>
-                <h2 class="title">Subscribe to<br />Dripversity</h2>
+    <footer class="">
+        <div>
+            <div class="grid lg:grid-cols-5 rounded-2xl">
+                <div class="lg:col-span-3 bg-discord p-8 lg:p-16 space-y-8">
+                    <h3 class="font-semibold text-5xl">
+                        Join the <span class="font-logo">D</span> community
+                    </h3>
+                    <div class="w-full max-w-md">
+                        <p>
+                            Non integer vulputate ut tempus mollis in blandit.
+                            Vestibulum, ultrices quis vitae sagittis et
+                            pellentesque.
+                        </p>
+                    </div>
 
-                <NewsletterForm />
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-black text-white">
-        <div class="py-16">
-            <div
-                class="container-default flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-0 md:space-x-8 lg:space-x-12"
-            >
-                <div class="col-span-3">
-                    <h3 class="font-logo text-5xl mb-8">D</h3>
+                    <AppButton color="secondary"
+                        ><DiscordIcon class="block w-4 h-4" />
+                        <span class="block">Join our Discord</span></AppButton
+                    >
                 </div>
 
-                <ul class="flex flex-col space-y-2">
-                    <li v-for="(to, name) in routes" :key="name">
-                        <router-link class="link" :to="to">{{
-                            name
-                        }}</router-link>
-                    </li>
-                </ul>
+                <div
+                    class="lg:col-span-2 flex flex-col justify-between bg-black p-8 lg:p-16 space-y-8"
+                >
+                    <h4 class="font-semibold text-3xl">
+                        Follow us on our social channels
+                    </h4>
 
-                <ul class="flex flex-col space-y-2">
-                    <li v-for="(social, name) in socials" :key="name">
-                        <a
-                            :href="social.href"
-                            target="_blank"
-                            class="link"
-                            rel="noopener noreferrer"
-                            >{{ name }}</a
-                        >
-                    </li>
-                </ul>
+                    <ul class="flex flex-col space-y-2">
+                        <li v-for="(social, name) in socials" :key="name">
+                            <a
+                                :href="social.baseUrl + '/' + social.account"
+                                target="_blank"
+                                class="inline-flex items-center space-x-2"
+                                rel="noopener noreferrer"
+                                ><component
+                                    :is="social.icon"
+                                    class="block w-4 h-4"
+                                /><span
+                                    class="block text-neutral-400 text-sm mb-1"
+                                    >@{{ social.account }}</span
+                                ></a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="py-8 border-b-8 border-blue">
+        <div class="py-4">
             <div
                 class="container-default flex flex-col md:flex-row items-start md:items-center justify-between space-y-4 md:space-y-0 md:space-x-8 lg:space-x-12"
             >
@@ -69,4 +77,6 @@
 <script lang="ts" setup>
 import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
 import { routes, socials, legals } from "@/constants/";
+import AppButton from "@/components/app/AppButton.vue";
+import DiscordIcon from "@/components/icons/DiscordIcon.vue";
 </script>

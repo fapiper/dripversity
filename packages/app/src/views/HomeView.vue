@@ -1,9 +1,14 @@
 <template>
     <div>
         <HomeHero />
-        <HomeAbout />
         <HomeExplore />
-        <HomeCreator />
+        <HomeAbout />
+        <HomeStory />
+        <HomeBlockschmidt />
+        <HomeCollection />
+        <HomeTeam />
+        <HomeCta />
+        <HomeQuestions />
     </div>
 </template>
 
@@ -11,5 +16,10 @@
 import HomeHero from "@/components/home/HomeHero.vue";
 import HomeAbout from "@/components/home/HomeAbout.vue";
 import HomeExplore from "@/components/home/HomeExplore.vue";
-import HomeCreator from "@/components/home/HomeCreator.vue";
+import HomeStory from "@/components/home/HomeStory.vue";
+import HomeBlockschmidt from "@/components/home/HomeBlockschmidt.vue";
+import HomeCollection from "@/components/home/HomeCollection.vue";
+import HomeTeam from "@/components/home/HomeTeam.vue";
+import HomeCta from "@/components/home/HomeCta.vue";
+import HomeQuestions from "@/components/home/HomeQuestions.vue";
 </script>
