@@ -1,5 +1,5 @@
 <template>
-    <AppPinnedSection id="team" bg-fade="600">
+    <AppPinnedSection id="team">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="space-y-2" v-animate.stagger>
                 <h2 class="title">Building a Team</h2>

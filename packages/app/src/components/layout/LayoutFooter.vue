@@ -4,7 +4,8 @@
             <div class="grid lg:grid-cols-5 rounded-2xl">
                 <div class="lg:col-span-3 bg-discord p-8 lg:p-16 space-y-8">
                     <h3 class="font-semibold text-5xl">
-                        Join the <span class="font-logo">D</span> community
+                        Join the
+                        <span class="font-logo">DRIPVERSITY</span> community
                     </h3>
                     <div class="w-full max-w-md">
                         <p>

@@ -1,5 +1,5 @@
 <template>
-    <AppPinnedSection id="collection" bg-fade="700">
+    <AppPinnedSection id="collection">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="space-y-4" v-animate.stagger>
                 <h2 class="title">The spark for the collection</h2>

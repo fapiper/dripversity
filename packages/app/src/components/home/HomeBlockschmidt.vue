@@ -1,5 +1,5 @@
 <template>
-    <AppPinnedSection id="blockschmidt" bg-fade="800">
+    <AppPinnedSection id="blockschmidt">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="space-y-4" v-animate.stagger>
                 <h2 class="title">The first Collection</h2>

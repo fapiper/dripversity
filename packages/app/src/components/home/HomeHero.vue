@@ -1,8 +1,6 @@
 <template>
     <header id="home">
-        <div
-            class="w-full flex items-center justify-center relative h-screen overflow-hidden"
-        >
+        <div class="w-full flex items-center justify-center relative h-screen">
             <div
                 class="relative container-default flex flex-col items-center justify-center z-20 space-y-8"
             >
@@ -26,7 +24,7 @@
         <span
             class="block absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-transparent z-10"
         />
-        <div class="absolute top-0 left-0 w-full h-full flex z-0">
+        <div class="absolute inset-0 flex z-0 overflow-hidden">
             <img
                 class="flex-1 object-cover"
                 v-parallax="{

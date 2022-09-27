@@ -13,7 +13,7 @@ export const routes = {
 export const socials = {
     Instagram: {
         baseUrl: "https://www.instagram.com",
-        account: "dripversityenrollment",
+        account: "dripversitynft",
         icon: InstagramIcon,
     },
     Twtter: {

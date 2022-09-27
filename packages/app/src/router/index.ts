@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import scrollBehavior from "@/router/scrollBehavior";
+import { App } from "vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -26,10 +27,12 @@ const routes: Array<RouteRecordRaw> = [
     },
 ];
 
-const router = createRouter({
+export const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes,
     scrollBehavior,
 });
 
-export default router;
+export function setupRouter(app: App<Element>) {
+    app.use(router);
+}

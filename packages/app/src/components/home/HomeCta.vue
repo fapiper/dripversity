@@ -36,7 +36,7 @@
             class="hidden lg:block absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2"
         >
             <div v-parallax class="block font-logo text-neutral-50/25 text-9xl">
-                D
+                DRIPVERSITY
             </div>
         </div>
 
@@ -44,7 +44,7 @@
             class="hidden lg:block absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2"
         >
             <span v-parallax class="block font-logo text-neutral-50/25 text-9xl"
-                >D</span
+                >DRIPVERSITY</span
             >
         </div>
     </section>

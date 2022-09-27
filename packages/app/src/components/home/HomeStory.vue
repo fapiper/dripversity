@@ -7,11 +7,11 @@
     />
 -->
 
-    <AppPinnedSection id="story" bg-fade="900">
+    <AppPinnedSection id="story">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="space-y-4" v-animate.stagger>
                 <h3 class="tracking-widest text-xs uppercase">
-                    The story behind <span class="font-logo">D</span>
+                    The story behind <span class="font-logo">DRIPVERSITY</span>
                 </h3>
                 <h2 class="title !mt-6 !mb-8">How we got here</h2>
                 <p>

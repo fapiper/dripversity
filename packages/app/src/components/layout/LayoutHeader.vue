@@ -6,7 +6,7 @@
             class="container-default flex flex-1 items-center justify-start justify-end space-x-8 relative"
         >
             <router-link class="block pointer-events-auto !mr-auto" to="/"
-                ><span class="font-logo text-2xl">D</span>
+                ><span class="font-logo text-2xl">DRIPVERSITY</span>
             </router-link>
 
             <ul class="hidden md:flex items-center justify-center space-x-4">

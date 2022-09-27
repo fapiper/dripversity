@@ -1,4 +1,5 @@
 <template>
+    <LayoutLoader />
     <LayoutHeader />
     <LayoutBody>
         <router-view />
@@ -10,4 +11,5 @@
 import LayoutHeader from "@/components/layout/LayoutHeader.vue";
 import LayoutFooter from "@/components/layout/LayoutFooter.vue";
 import LayoutBody from "@/components/layout/LayoutBody.vue";
+import LayoutLoader from "@/components/layout/LayoutLoader.vue";
 </script>
