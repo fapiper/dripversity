@@ -1,26 +1,29 @@
 <template>
     <section id="cta" class="bg-black relative w-full overflow-hidden">
         <div
-            class="relative container-default max-w-6xl space-y-8 lg:space-y-16 text-center mx-auto z-10"
+            class="relative container-default max-w-6xl space-y-16 lg:space-y-32 text-center mx-auto z-10"
         >
-            <ul class="grid grid-cols-5 gap-4 md:gap-16" v-animate.stagger>
+            <ul class="grid grid-cols-5 gap-4 md:gap-8" v-animate.stagger>
                 <li class="block" v-for="item in 5" :key="item">
                     <div
-                        class="flex items-center justify-center text-center aspect-square w-full border-2 border-neutral-50 border-dashed rounded transform scale-125"
+                        class="flex items-center justify-center text-center aspect-square w-full border-2 border-neutral-50 border-dashed rounded transform scale-100"
                         v-if="item === 3"
                     >
                         <span class="block font-bold text-3xl">?</span>
                     </div>
                     <img
                         v-else
-                        class="w-full rounded"
+                        class="w-full rounded scale-90"
                         :src="require(`@/assets/images/token/${item + 1}.jpg`)"
                         :alt="'Token Cta ' + item"
                     />
                 </li>
             </ul>
 
-            <div class="w-full max-w-lg mx-auto space-y-8" v-animate.stagger>
+            <div
+                class="w-full max-w-lg mx-auto space-y-8 lg:space-y-16"
+                v-animate.stagger
+            >
                 <h2 class="title">Stay up to date</h2>
 
                 <p>

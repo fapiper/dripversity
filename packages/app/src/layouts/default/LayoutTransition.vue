@@ -1,6 +1,6 @@
 <template>
     <div
-        v-show="showPageLoading"
+        v-show="show"
         class="fixed bottom-0 left-0 h-screen w-full overflow-hidden z-50"
     >
         <div
@@ -28,21 +28,24 @@
             </div>
         </div>
     </div>
+
+    <Transition
+        @enter="onEnter"
+        @leave="onLeave"
+        :css="false"
+        :appear="true"
+        mode="out-in"
+    >
+        <slot></slot>
+    </Transition>
 </template>
 
 <script lang="ts" setup>
-import { useAppStore } from "@/store/modules/app";
-import { storeToRefs } from "pinia";
-import { onMounted, ref, watch } from "vue";
 import { gsap } from "gsap";
 import { templateRef } from "@vueuse/core";
+import { onMounted, ref } from "vue";
 
-const { getPageLoading } = storeToRefs(useAppStore());
-const showPageLoading = ref(true);
-
-const enterTl = ref();
-const leaveTl = ref();
-
+const show = ref(true);
 const lightBgRef = templateRef("lightBgRef");
 const darkBgRef = templateRef("darkBgRef");
 const darkContentRef = templateRef("darkContentRef");
@@ -54,32 +57,50 @@ const tl = () =>
         defaults: { duration: 0.4, ease: "Power1.easeInOut" },
     });
 
+const enterTl = ref();
+const leaveTl = ref();
+
 onMounted(() => {
-    enterTl.value = tl()
-        .add(() => {
-            showPageLoading.value = true;
-        })
-        .to(progressRef.value, {
+    enterTl.value = tl().fromTo(
+        progressRef.value,
+        { width: "0%" },
+        {
             width: "100%",
             duration: 1.2,
             ease: "slow(0.1, 2, false)",
-        });
+        }
+    );
 
     leaveTl.value = tl()
         .to(darkContentRef.value, { autoAlpha: 0, duration: 0.8 })
         .to(lightBgRef.value, { height: "100vh" })
         .to(lightBgRef.value, { yPercent: -100 })
-        .to(darkBgRef.value, { autoAlpha: 0 })
-        .add(() => {
-            showPageLoading.value = false;
-        });
+        .to(darkBgRef.value, { autoAlpha: 0 });
+
+    showLoader();
 });
 
-watch(getPageLoading, async () => {
-    if (!getPageLoading.value) {
-        await enterTl.value.add(leaveTl.value.play(0), 1.2);
-    } else {
-        await enterTl.value.play(0);
-    }
-});
+async function onEnter(el: Element, done: () => any) {
+    await hideLoader();
+    await done();
+}
+
+async function onLeave(el: Element, done: () => any) {
+    showLoader();
+    await done();
+}
+
+function showLoader() {
+    console.log("showLoader");
+    show.value = true;
+    enterTl.value.play(0);
+}
+
+async function hideLoader() {
+    console.log("hideLoader");
+    await enterTl.value.then(() => leaveTl.value.play(0));
+    show.value = false;
+    leaveTl.value.progress(0).pause();
+    enterTl.value.progress(0).pause();
+}
 </script>

@@ -1,15 +1,18 @@
 <template>
-    <LayoutLoader />
     <LayoutHeader />
     <LayoutBody>
-        <router-view />
+        <router-view v-slot="{ Component }">
+            <LayoutTransition>
+                <component :is="Component" />
+            </LayoutTransition>
+        </router-view>
     </LayoutBody>
     <LayoutFooter />
 </template>
 
 <script lang="ts" setup>
-import LayoutHeader from "@/components/layout/LayoutHeader.vue";
-import LayoutFooter from "@/components/layout/LayoutFooter.vue";
-import LayoutBody from "@/components/layout/LayoutBody.vue";
-import LayoutLoader from "@/components/layout/LayoutLoader.vue";
+import LayoutHeader from "@/layouts/default/LayoutHeader.vue";
+import LayoutFooter from "@/layouts/default/LayoutFooter.vue";
+import LayoutBody from "@/layouts/default/LayoutBody.vue";
+import LayoutTransition from "@/layouts/default/LayoutTransition.vue";
 </script>

@@ -24,7 +24,7 @@
                     launch day
                 </p>
                 <div>
-                    <AppButton size="sm">Join Waitlist</AppButton>
+                    <AppButton size="sm" to="/#home">Join Waitlist</AppButton>
                 </div>
             </div>
         </div>

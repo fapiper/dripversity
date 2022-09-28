@@ -11,8 +11,28 @@
         @apply font-semibold text-4xl md:text-5xl mb-8
     }
 
-    .link {
-        @apply relative after:block after:absolute after:bottom-px after:left-0 after:w-full after:h-px after:bg-current after:transition-all after:duration-200 hover:after:w-0
+    .title-2 {
+        @apply font-semibold text-2xl md:text-3xl mb-8
+    }
+
+    .title-3 {
+        @apply font-semibold text-lg md:text-xl mb-4
+    }
+
+    .title-4 {
+        @apply font-semibold text-sm uppercase mb-2 tracking-wide
+    }
+
+    .title-5{
+        @apply font-semibold text-sm mb-1 tracking-widest
+    }
+
+    .link, .link-1 {
+        @apply font-semibold opacity-100 transition-opacity duration-200 hover:opacity-70
+    }
+
+    .link-2 {
+        @apply relative opacity-60 hover:opacity-100 after:block after:absolute after:bottom-px after:left-0 after:w-full after:h-px after:bg-current after:transition-all after:duration-200 hover:after:w-0
     }
 
     .font-logo {
@@ -31,6 +51,6 @@
     }
 
     p {
-        @apply text-neutral-300
+        @apply text-neutral-300/70
     }
 }

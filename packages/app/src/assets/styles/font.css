@@ -1,33 +1,33 @@
 @font-face {
-    font-family: "Milliard";
+    font-family: "Aktiv Grotesk";
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    src: url("../font/AktivGrotesk-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Aktiv Grotesk";
     font-weight: 400;
     font-display: swap;
     font-style: normal;
-    src: url("../font/Milliard-Light.woff") format("woff");
+    src: url("../font/AktivGrotesk-Regular.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Milliard";
+    font-family: "Aktiv Grotesk";
     font-weight: 600;
     font-display: swap;
     font-style: normal;
-    src: url("../font/Milliard-Medium.woff") format("woff");
+    src: url("../font/AktivGrotesk-Medium.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Milliard";
+    font-family: "Aktiv Grotesk";
     font-weight: 700;
     font-display: swap;
     font-style: normal;
-    src: url("../font/Milliard-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Milliard";
-    font-weight: 800;
-    font-display: swap;
-    font-style: normal;
-    src: url("../font/Milliard-ExtraBold.woff") format("woff");
+    src: url("../font/AktivGrotesk-Bold.woff") format("woff");
 }
 
 @font-face {

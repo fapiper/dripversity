@@ -9,13 +9,11 @@
                 ><span class="font-logo text-2xl">DRIPVERSITY</span>
             </router-link>
 
-            <ul class="hidden md:flex items-center justify-center space-x-4">
+            <ul class="hidden md:flex items-center justify-center space-x-8">
                 <li v-for="(to, name) in routes" :key="name">
-                    <router-link
-                        class="pointer-events-auto font-semibold"
-                        :to="to"
-                        >{{ name }}</router-link
-                    >
+                    <router-link class="pointer-events-auto link-1" :to="to">{{
+                        name
+                    }}</router-link>
                 </li>
             </ul>
 

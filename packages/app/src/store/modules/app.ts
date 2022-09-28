@@ -15,7 +15,7 @@ let timeId: TimeoutHandle;
 export const useAppStore = defineStore({
     id: "app",
     state: (): AppState => ({
-        pageLoading: false,
+        pageLoading: true,
         showMobileMenu: false,
     }),
     getters: {
@@ -28,6 +28,7 @@ export const useAppStore = defineStore({
     },
     actions: {
         setPageLoading(loading: boolean): void {
+            console.log("setPageLoading", loading);
             this.pageLoading = loading;
         },
         setShowMobileMenu(show: boolean): void {

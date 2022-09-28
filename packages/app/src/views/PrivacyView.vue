@@ -1,10 +1,10 @@
 <template>
     <section>
-        <div class="container-default">
-            <h1 class="font-bold text-4xl">Privacy Policy</h1>
-            <div>
-                <h2>1. DATENSCHUTZ AUF EINEN BLICK</h2>
-                <h3>Allgemeine Hinweise</h3>
+        <div class="space-y-16">
+            <h1 class="title-2">Privacy Policy</h1>
+            <div class="space-y-4">
+                <h2 class="title-3">1. Datenschutz auf einen Blick</h2>
+                <h3 class="title-4">Allgemeine Hinweise</h3>
                 <p>
                     Die folgenden Hinweise geben einen einfachen Überblick
                     darüber, was mit Ihren personenbezogenen Daten passiert,
@@ -14,19 +14,17 @@
                     Datenschutz entnehmen Sie unserer unter diesem Text
                     aufgeführten Datenschutzerklärung.
                 </p>
-                <h3>Datenerfassung auf unserer Website</h3>
-                <p>
-                    <strong
-                        >Wer ist verantwortlich für die Datenerfassung auf
-                        dieser Website?</strong
-                    >
-                </p>
+                <h3 class="title-4">Datenerfassung auf unserer Website</h3>
+                <h4 class="title-5">
+                    Wer ist verantwortlich für die Datenerfassung auf dieser
+                    Website?
+                </h4>
                 <p>
                     Die Datenverarbeitung auf dieser Website erfolgt durch den
                     Websitebetreiber. Dessen Kontaktdaten können Sie dem
                     Impressum dieser Website entnehmen.
                 </p>
-                <p><strong>Wie erfassen wir Ihre Daten?</strong></p>
+                <h4 class="title-5">Wie erfassen wir Ihre Daten?</h4>
                 <p>
                     Ihre Daten werden zum einen dadurch erhoben, dass Sie uns
                     diese mitteilen. Hierbei kann es sich z.&nbsp;B. um Daten
@@ -39,17 +37,15 @@
                     oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten
                     erfolgt automatisch, sobald Sie unsere Website betreten.
                 </p>
-                <p><strong>Wofür nutzen wir Ihre Daten?</strong></p>
+                <h4 class="title-5">Wofür nutzen wir Ihre Daten?</h4>
                 <p>
                     Ein Teil der Daten wird erhoben, um eine fehlerfreie
                     Bereitstellung der Website zu gewährleisten. Andere Daten
                     können zur Analyse Ihres Nutzerverhaltens verwendet werden.
                 </p>
-                <p>
-                    <strong
-                        >Welche Rechte haben Sie bezüglich Ihrer Daten?</strong
-                    >
-                </p>
+                <h4 class="title-5">
+                    Welche Rechte haben Sie bezüglich Ihrer Daten?
+                </h4>
                 <p>
                     Sie haben jederzeit das Recht unentgeltlich Auskunft über
                     Herkunft, Empfänger und Zweck Ihrer gespeicherten
@@ -67,7 +63,9 @@
                     Datenschutzerklärung unter „Recht auf Einschränkung der
                     Verarbeitung“.
                 </p>
-                <h3>Analyse-Tools und Tools von Drittanbietern</h3>
+                <h3 class="title-4">
+                    Analyse-Tools und Tools von Drittanbietern
+                </h3>
                 <p>
                     Beim Besuch unserer Website kann Ihr Surf-Verhalten
                     statistisch ausgewertet werden. Das geschieht vor allem mit
@@ -82,8 +80,10 @@
                     Widerspruchsmöglichkeiten finden Sie in der folgenden
                     Datenschutzerklärung.
                 </p>
-                <h2>2. ALLGEMEINE HINWEISE UND PFLICHTINFORMATIONEN</h2>
-                <h3>Datenschutz</h3>
+                <h2 class="title-3">
+                    2. Allgemeine Hinweise und Pflichtinformationen
+                </h2>
+                <h3 class="title-4">Datenschutz</h3>
                 <p>
                     Die Betreiber dieser Seiten nehmen den Schutz Ihrer
                     persönlichen Daten sehr ernst. Wir behandeln Ihre
@@ -105,7 +105,7 @@
                     Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der
                     Daten vor dem Zugriff durch Dritte ist nicht möglich.
                 </p>
-                <h3>Hinweis zur verantwortlichen Stelle</h3>
+                <h3 class="title-4">Hinweis zur verantwortlichen Stelle</h3>
                 <p>
                     Die verantwortliche Stelle für die Datenverarbeitung auf
                     dieser Website ist:
@@ -122,7 +122,9 @@
                     Zwecke und Mittel der Verarbeitung von personenbezogenen
                     Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
                 </p>
-                <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+                <h3 class="title-4">
+                    Widerruf Ihrer Einwilligung zur Datenverarbeitung
+                </h3>
                 <p>
                     Viele Datenverarbeitungsvorgänge sind nur mit Ihrer
                     ausdrücklichen Einwilligung möglich. Sie können eine bereits
@@ -131,7 +133,7 @@
                     der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom
                     Widerruf unberührt.
                 </p>
-                <h3>
+                <h3 class="title-4">
                     Widerspruchsrecht gegen die Datenerhebung in besonderen
                     Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)
                 </h3>
@@ -163,7 +165,9 @@
                     anschließend nicht mehr zum Zwecke der Direktwerbung
                     verwendet (Widerspruch nach Art. 21 Abs. 2 DSGVO).
                 </p>
-                <h3>Beschwerderecht bei der zuständigen Aufsichtsbehörde</h3>
+                <h3 class="title-4">
+                    Beschwerderecht bei der zuständigen Aufsichtsbehörde
+                </h3>
                 <p>
                     Im Falle von Verstößen gegen die DSGVO steht den Betroffenen
                     ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere
@@ -172,7 +176,7 @@
                     Das Beschwerderecht besteht unbeschadet anderweitiger
                     verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
                 </p>
-                <h3>Recht auf Datenübertragbarkeit</h3>
+                <h3 class="title-4">Recht auf Datenübertragbarkeit</h3>
                 <p>
                     Sie haben das Recht, Daten, die wir auf Grundlage Ihrer
                     Einwilligung oder in Erfüllung eines Vertrags automatisiert
@@ -182,7 +186,7 @@
                     anderen Verantwortlichen verlangen, erfolgt dies nur, soweit
                     es technisch machbar ist.
                 </p>
-                <h3>SSL- bzw. TLS-Verschlüsselung</h3>
+                <h3 class="title-4">SSL- bzw. TLS-Verschlüsselung</h3>
                 <p>
                     Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der
                     Übertragung vertraulicher Inhalte, wie zum Beispiel
@@ -197,7 +201,9 @@
                     die Daten, die Sie an uns übermitteln, nicht von Dritten
                     mitgelesen werden.
                 </p>
-                <h3>Auskunft, Sperrung, Löschung und Berichtigung</h3>
+                <h3 class="title-4">
+                    Auskunft, Sperrung, Löschung und Berichtigung
+                </h3>
                 <p>
                     Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen
                     jederzeit das Recht auf unentgeltliche Auskunft über Ihre
@@ -208,7 +214,9 @@
                     Daten können Sie sich jederzeit unter der im Impressum
                     angegebenen Adresse an uns wenden.
                 </p>
-                <h3>Recht auf Einschränkung der Verarbeitung</h3>
+                <h3 class="title-4">
+                    Recht auf Einschränkung der Verarbeitung
+                </h3>
                 <p>
                     Sie haben das Recht, die Einschränkung der Verarbeitung
                     Ihrer personenbezogenen Daten zu verlangen. Hierzu können
@@ -257,8 +265,8 @@
                     wichtigen öffentlichen Interesses der Europäischen Union
                     oder eines Mitgliedstaats verarbeitet werden.
                 </p>
-                <h2>3. DATENERFASSUNG AUF UNSERER WEBSITE</h2>
-                <h3>Cookies</h3>
+                <h2 class="title-3">3. DATENERFASSUNG AUF UNSERER WEBSITE</h2>
+                <h3 class="title-4">Cookies</h3>
                 <p>
                     Die Internetseiten verwenden teilweise so genannte Cookies.
                     Cookies richten auf Ihrem Rechner keinen Schaden an und
@@ -297,7 +305,7 @@
                     Surfverhaltens) gespeichert werden, werden diese in dieser
                     Datenschutzerklärung gesondert behandelt.
                 </p>
-                <h3>Kontaktformular</h3>
+                <h3 class="title-4">Kontaktformular</h3>
                 <p>
                     Wenn Sie uns per Kontaktformular Anfragen zukommen lassen,
                     werden Ihre Angaben aus dem Anfrageformular inklusive der
@@ -324,7 +332,9 @@
                     gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen
                     – bleiben unberührt.
                 </p>
-                <h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
+                <h3 class="title-4">
+                    Anfrage per E-Mail, Telefon oder Telefax
+                </h3>
                 <p>
                     Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren,
                     wird Ihre Anfrage inklusive aller daraus hervorgehenden
@@ -353,8 +363,8 @@
                     gesetzliche Bestimmungen – insbesondere gesetzliche
                     Aufbewahrungsfristen – bleiben unberührt.
                 </p>
-                <h2>4. ANALYSE-TOOLS UND WERBUNG</h2>
-                <h3>Google Analytics</h3>
+                <h2 class="title-3">4. ANALYSE-TOOLS UND WERBUNG</h2>
+                <h3 class="title-4">Google Analytics</h3>
                 <p>
                     Diese Website nutzt Funktionen des Webanalysedienstes Google
                     Analytics. Anbieter ist die Google Ireland Limited
@@ -376,7 +386,7 @@
                     Interesse an der Analyse des Nutzerverhaltens, um sowohl
                     sein Webangebot als auch seine Werbung zu optimieren.
                 </p>
-                <p><strong>IP Anonymisierung</strong></p>
+                <h4 class="title-5">IP Anonymisierung</h4>
                 <p>
                     Wir haben auf dieser Website die Funktion IP-Anonymisierung
                     aktiviert. Dadurch wird Ihre IP-Adresse von Google innerhalb
@@ -394,7 +404,7 @@
                     Analytics von Ihrem Browser übermittelte IP-Adresse wird
                     nicht mit anderen Daten von Google zusammengeführt.
                 </p>
-                <p><strong>Browser Plugin</strong></p>
+                <h4 class="title-5">Browser Plugin</h4>
                 <p>
                     Sie können die Speicherung der Cookies durch eine
                     entsprechende Einstellung Ihrer Browser-Software verhindern;
@@ -413,7 +423,7 @@
                         >https://tools.google.com/dlpage/gaoptout?hl=de</a
                     >.
                 </p>
-                <p><strong>Widerspruch gegen Datenerfassung</strong></p>
+                <h4 class="title-5">Widerspruch gegen Datenerfassung</h4>
                 <p>
                     Sie können die Erfassung Ihrer Daten durch Google Analytics
                     verhindern, indem Sie auf folgenden Link klicken. Es wird
@@ -433,16 +443,16 @@
                         >https://support.google.com/analytics/answer/6004245?hl=de</a
                     >.
                 </p>
-                <p><strong>Auftragsverarbeitung</strong></p>
+                <h4 class="title-5">Auftragsverarbeitung</h4>
                 <p>
                     Wir haben mit Google einen Vertrag zur Auftragsverarbeitung
                     abgeschlossen und setzen die strengen Vorgaben der deutschen
                     Datenschutzbehörden bei der Nutzung von Google Analytics
                     vollständig um.
                 </p>
-                <p>
-                    <strong>Demografische Merkmale bei Google Analytics</strong>
-                </p>
+                <h4 class="title-5">
+                    Demografische Merkmale bei Google Analytics
+                </h4>
                 <p>
                     Diese Website nutzt die Funktion „demografische Merkmale“
                     von Google Analytics. Dadurch können Berichte erstellt
@@ -456,7 +466,7 @@
                     durch Google Analytics wie im Punkt „Widerspruch gegen
                     Datenerfassung“ dargestellt generell untersagen.
                 </p>
-                <p><strong>Speicherdauer</strong></p>
+                <h4 class="title-5">Speicherdauer</h4>
                 <p>
                     Bei Google gespeicherte Daten auf Nutzer- und Ereignisebene,
                     die mit Cookies, Nutzerkennungen (z.&nbsp;B. User ID) oder
@@ -470,8 +480,8 @@
                         >https://support.google.com/analytics/answer/7667196?hl=de</a
                     >
                 </p>
-                <h2>5. PLUGINS UND TOOLS</h2>
-                <h3>YouTube mit erweitertem Datenschutz</h3>
+                <h2 class="title-3">5. PLUGINS UND TOOLS</h2>
+                <h3 class="title-4">YouTube mit erweitertem Datenschutz</h3>
                 <p>
                     Unsere Website nutzt Plugins der Website YouTube. Betreiber
                     der Seiten ist die Google Ireland Limited („Google“), Gordon
@@ -527,7 +537,7 @@
                         >https://policies.google.com/privacy?hl=de</a
                     >.
                 </p>
-                <h3>Google Web Fonts</h3>
+                <h3 class="title-4">Google Web Fonts</h3>
                 <p>
                     Diese Seite nutzt zur einheitlichen Darstellung von
                     Schriftarten so genannte Web Fonts, die von Google

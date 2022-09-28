@@ -1,20 +1,20 @@
 <template>
     <section>
-        <div class="container-default">
-            <h1 class="font-bold text-4xl">Terms of Service</h1>
-            <div>
-                <h2>ANGABEN GEMÄSS § 5 TM</h2>
+        <div class="space-y-16">
+            <h1 class="title-2">Terms of Service</h1>
+            <div class="space-y-4">
+                <h2 class="title-3">Angaben gemäß § 5 TM</h2>
                 <p>
                     Julian Kaltschmidt<br />Ludwigstraße 13<br />04315 Leipzig
                 </p>
-                <h2>KONTAKT</h2>
+                <h2 class="title-3">Kontakt</h2>
                 <p>
                     Telefon: +49 152 07138886<br />E-Mail:&nbsp;<a
                         href="mailto:%20info@dripversity.com"
                         >info@dripversity.com</a
                     >
                 </p>
-                <h2>UMSATZSTEUER-ID</h2>
+                <h2 class="title-3">Umsatzsteuer-ID</h2>
                 <p>
                     Umsatzsteuer-Identifikationsnummer gemäß § 27 a
                     Umsatzsteuergesetz:
@@ -23,8 +23,7 @@
                     Bitte erfragen an unsere E-Mail-Adresse die Sie oben im
                     Impressum finden
                 </p>
-                <p></p>
-                <h2>STREITSCHLICHTUNG</h2>
+                <h2 class="title-3">Streitschlichtung</h2>
                 <p>
                     Die Europäische Kommission stellt eine Plattform zur
                     Online-Streitbeilegung (OS) bereit:&nbsp;<a
@@ -39,7 +38,7 @@
                     Streitbeilegungsverfahren vor einer
                     Verbraucherschlichtungsstelle teilzunehmen.
                 </p>
-                <h3>Haftung für Inhalte</h3>
+                <h3 class="title-4">Haftung für Inhalte</h3>
                 <p>
                     Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene
                     Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
@@ -58,7 +57,7 @@
                     Rechtsverletzungen werden wir diese Inhalte umgehend
                     entfernen.
                 </p>
-                <h3>Haftung für Links</h3>
+                <h3 class="title-4">Haftung für Links</h3>
                 <p>
                     Unser Angebot enthält Links zu externen Websites Dritter,
                     auf deren Inhalte wir keinen Einfluss haben. Deshalb können
@@ -76,7 +75,7 @@
                     Rechtsverletzungen werden wir derartige Links umgehend
                     entfernen.
                 </p>
-                <h3>Urheberrecht</h3>
+                <h3 class="title-4">Urheberrecht</h3>
                 <p>
                     Die durch die Seitenbetreiber erstellten Inhalte und Werke
                     auf diesen Seiten unterliegen dem deutschen Urheberrecht.

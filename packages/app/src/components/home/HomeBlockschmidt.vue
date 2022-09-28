@@ -21,7 +21,7 @@
                     href="https://foundation.app/collection/maskof?sortOrder=DEFAULT"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center w-full bg-black/50 backdrop-blur-sm rounded p-2 space-x-4 !mt-8"
+                    class="flex items-center w-full bg-black/50 backdrop-blur-sm rounded p-2 space-x-4 !mt-8 transition hover:bg-black/60 duration-200"
                 >
                     <img
                         class="w-12 h-12 rounded object-cover"

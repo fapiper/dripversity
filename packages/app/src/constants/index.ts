@@ -29,6 +29,6 @@ export const socials = {
 };
 
 export const legals = {
-    "Terms of Service": "/terms-of-service",
-    "Privacy Policy": "/privacy-policy",
+    "Terms of Service": "/legal/terms-of-service",
+    "Privacy Policy": "/legal/privacy-policy",
 };

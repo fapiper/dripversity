@@ -6,19 +6,19 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                serif: ["Dripversity", ...defaultTheme.fontFamily.serif],
-                sans: ["Milliard", ...defaultTheme.fontFamily.sans],
+                logo: ["Dripversity", ...defaultTheme.fontFamily.serif],
+                sans: ["Aktiv Grotesk", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 discord: "#5865F2",
                 blue: {
-                    DEFAULT: "#0B41A3",
+                    DEFAULT: "#1D21A9",
                     50: "#70A0F5",
                     100: "#5D93F4",
                     200: "#3779F1",
                     300: "#1160EF",
                     400: "#0E50C9",
-                    500: "#0B41A3",
+                    500: "#1D21A9",
                     600: "#072C6E",
                     700: "#04173A",
                     800: "#010119",

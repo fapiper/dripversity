@@ -2,7 +2,9 @@
     <footer class="">
         <div>
             <div class="grid lg:grid-cols-5 rounded-2xl">
-                <div class="lg:col-span-3 bg-discord p-8 lg:p-16 space-y-8">
+                <div
+                    class="lg:col-span-3 bg-discord px-8 py-16 lg:px-16 space-y-8"
+                >
                     <h3 class="font-semibold text-5xl">
                         Join the
                         <span class="font-logo">DRIPVERSITY</span> community
@@ -22,7 +24,7 @@
                 </div>
 
                 <div
-                    class="lg:col-span-2 flex flex-col justify-between bg-black p-8 lg:p-16 space-y-8"
+                    class="lg:col-span-2 flex flex-col justify-between bg-black px-8 py-16 lg:px-16 space-y-8"
                 >
                     <h4 class="font-semibold text-3xl">
                         Follow us on our social channels
@@ -58,7 +60,17 @@
                         Copyright &copy; {{ new Date().getFullYear() }}
                         Dripversity
                     </p>
-                    <p>Made by Decentum</p>
+                    <!--
+                    <p>
+                        Made by
+                        <a
+                            href="https://www.decentum.co/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Decentum</a
+                        >
+                    </p>
+-->
                 </div>
 
                 <ul class="flex items-center justify-end space-x-4">
@@ -76,8 +88,7 @@
 </template>
 
 <script lang="ts" setup>
-import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
-import { routes, socials, legals } from "@/constants/";
+import { socials, legals } from "@/constants/";
 import AppButton from "@/components/app/AppButton.vue";
 import DiscordIcon from "@/components/icons/DiscordIcon.vue";
 </script>
