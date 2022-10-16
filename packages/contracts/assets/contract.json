@@ -1,0 +1,8 @@
+{
+  "name": "Dripversity",
+  "description": "Dripversity is a new NFT collection.",
+  "image": "https://dripversity.com/logo.png",
+  "external_link": "https://dripversity.com",
+  "seller_fee_basis_points": 250,
+  "fee_recipient": "0x0"
+}
