@@ -1,9 +1,7 @@
 <template>
-    <section :id="id" class="!z-0 !p-0" v-pin>
-        <div class="relative flex z-10 h-screen bg-blue">
-            <div class="container-default flex flex-col justify-center">
-                <slot />
-            </div>
+    <section :id="id" class="bg-blue">
+        <div class="container-default">
+            <slot />
         </div>
     </section>
 </template>
