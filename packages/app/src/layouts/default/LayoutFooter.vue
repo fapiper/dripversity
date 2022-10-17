@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-neutral-900 border-t border-neutral-800">
+    <footer class="relative bg-neutral-900 border-t border-neutral-800 z-10">
         <div class="container-default grid lg:grid-cols-5 py-24 gap-24">
             <div class="lg:col-span-3">
                 <div class="w-full max-w-md space-y-8">

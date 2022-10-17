@@ -1,19 +1,12 @@
 <template>
-    <section id="cta" class="overflow-hidden">
-        <div class="relative container-default overflow-visible z-10 pt-12">
+    <section id="cta">
+        <div class="overflow-hidden pt-28 lg:pt-20">
             <div
-                class="relative rounded-2xl bg-gradient-to-bl from-blue via-blue to-blue-700 border border-blue-700 px-4 py-8 lg:p-16 space-y-8"
-                v-parallax="{
-                    from: { yPercent: 25 },
-                }"
+                class="sm:rounded-2xl bg-gradient-to-bl from-blue via-blue to-blue-700 border border-blue-700 container-default py-8 lg:py-16 space-y-12"
             >
                 <ul
-                    class="w-full flex items-center justify-center space-x-8 -mt-36"
+                    class="w-full flex items-center justify-center space-x-4 lg:space-x-8 -mt-28 lg:-mt-36"
                     v-animate.stagger
-                    v-parallax="{
-                        from: { yPercent: -8 },
-                        to: { yPercent: 8 },
-                    }"
                 >
                     <li
                         class="block flex-grow-0 flex-shrink-0 w-32"
@@ -52,7 +45,6 @@
                 </div>
             </div>
         </div>
-        <span class="absolute block bg-black -bottom-px left-0 w-full h-2/5" />
     </section>
 </template>
 

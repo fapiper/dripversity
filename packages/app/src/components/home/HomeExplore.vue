@@ -1,6 +1,6 @@
 <template>
-    <section id="explore">
-        <div class="relative z-10 w-full overflow-hidden" v-animate>
+    <section id="explore" class="relative bg-black">
+        <div class="relative z-10 w-full" v-animate>
             <Swiper
                 :modules="modules"
                 grab-cursor
@@ -22,18 +22,11 @@
                 :space-between="16"
             >
                 <SwiperSlide
-                    v-for="(token, i) in tokens"
+                    v-for="token in tokens"
                     ref="slideRef"
                     :key="token.name"
                 >
-                    <div
-                        class="transform block py-8"
-                        :class="
-                            i % 2 === 0 ? '-translate-y-8' : 'translate-y-8'
-                        "
-                    >
-                        <TokenCard :token="token" />
-                    </div>
+                    <TokenCard :token="token" />
                 </SwiperSlide>
                 <template v-slot:container-start
                     ><span

@@ -1,11 +1,11 @@
 <template>
-    <article class="relative flex rounded group">
-        <div class="aspect-square w-full"></div>
-
+    <article
+        class="relative flex group p-4 rounded bg-neutral-900 border border-neutral-800"
+    >
         <img
             :src="token.image"
             :alt="token.name"
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full rounded"
+            class="w-full aspect-square rounded"
         />
 
         <div

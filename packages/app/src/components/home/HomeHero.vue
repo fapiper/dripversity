@@ -1,5 +1,5 @@
 <template>
-    <header id="home">
+    <header id="home" class="relative z-10">
         <div class="w-full flex items-center justify-center relative h-screen">
             <div
                 class="relative container-default flex flex-col items-center justify-center z-20 space-y-16"
