@@ -1,10 +1,8 @@
 <template>
-    <section id="cta" class="relative w-full overflow-hidden">
-        <div
-            class="relative pt-36 -mt-36 container-default overflow-visible z-10"
-        >
+    <section id="cta" class="overflow-hidden">
+        <div class="relative container-default overflow-visible z-10 pt-12">
             <div
-                class="relative rounded-2xl bg-gradient-to-bl from-blue via-blue to-blue-700 border border-blue-700 p-4 lg:p-16 space-y-8"
+                class="relative rounded-2xl bg-gradient-to-bl from-blue via-blue to-blue-700 border border-blue-700 px-4 py-8 lg:p-16 space-y-8"
                 v-parallax="{
                     from: { yPercent: 25 },
                 }"
@@ -18,15 +16,15 @@
                     }"
                 >
                     <li
-                        class="block flex-grow-0 flex-shrink-0 w-40"
+                        class="block flex-grow-0 flex-shrink-0 w-32"
                         v-for="item in 5"
                         :key="item"
                     >
                         <div
-                            class="flex items-center justify-center text-center aspect-square w-full bg-black border-2 border-neutral-50 border-dashed rounded transform scale-100"
+                            class="flex items-center justify-center text-center aspect-square w-full bg-black/70 backdrop-blur-sm border-2 border-neutral-50 border-dashed rounded transform scale-100"
                             v-if="item === 3"
                         >
-                            <span class="block font-bold text-3xl">?</span>
+                            <span class="block font-bold text-2xl">?</span>
                         </div>
                         <img
                             v-else
@@ -50,7 +48,7 @@
                         sed diam nonumy eirmod tempor invidunt.
                     </p>
 
-                    <NewsletterForm />
+                    <NewsletterForm color="secondary" />
                 </div>
             </div>
         </div>

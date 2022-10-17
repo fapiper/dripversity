@@ -14,9 +14,11 @@
                     class="space-y-4 lg:col-start-2 lg:col-span-2"
                     v-animate.stagger
                 >
-                    <h3 class="tracking-widest text-xs uppercase">
+                    <h3 class="tracking-widest text-sm uppercase">
                         The story behind
-                        <span class="font-logo">DRIPVERSITY</span>
+                        <DripversityIcon
+                            class="inline-block align-middle w-16 mb-1 text-neutral-50"
+                        />
                     </h3>
                     <h2 class="title !mt-6 !mb-8">How we got here</h2>
                     <p>
@@ -41,4 +43,5 @@
 
 <script lang="ts" setup>
 import AppPinnedSection from "@/components/app/AppPinnedSection.vue";
+import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 </script>

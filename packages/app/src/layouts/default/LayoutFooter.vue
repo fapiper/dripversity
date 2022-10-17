@@ -33,7 +33,7 @@
                         <a
                             :href="social.baseUrl + '/' + social.account"
                             target="_blank"
-                            class="inline-flex items-center space-x-2"
+                            class="inline-flex items-center space-x-2 link-2"
                             rel="noopener noreferrer"
                             ><component
                                 :is="social.icon"
