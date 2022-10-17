@@ -142,10 +142,12 @@ export default defineComponent({
                         }
                     },
                 },
-                [
-                    slots.default && slots.default(),
-                    props.loading && loadingNode(),
-                ]
+                {
+                    default: () => [
+                        slots.default && slots.default(),
+                        props.loading && loadingNode(),
+                    ],
+                }
             );
     },
 });

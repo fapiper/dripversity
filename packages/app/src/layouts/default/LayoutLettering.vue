@@ -1,6 +1,6 @@
 <template>
     <div
-        class="fixed top-1/2 left-0 w-full transform -translate-y-1/2 h-40 overflow-hidden"
+        class="fixed top-1/2 left-0 w-full transform -translate-y-1/2 h-40 2xl:h-80 overflow-hidden"
     >
         <div
             ref="letterRef"
@@ -24,9 +24,7 @@ const letterRef = ref();
 
 onMounted(() => {
     gsap.to(letterRef.value, {
-        xPercent: -25,
-        start: "top top",
-        end: "max",
+        xPercent: -30,
         ease: "none",
         scrollTrigger: {
             scrub: 0.8,
