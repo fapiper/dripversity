@@ -2,16 +2,14 @@
     <header id="home">
         <div class="w-full flex items-center justify-center relative h-screen">
             <div
-                class="relative container-default flex flex-col items-center justify-center z-20 space-y-8"
+                class="relative container-default flex flex-col items-center justify-center z-20 space-y-16"
             >
-                <img
-                    class="w-full max-w-sm"
-                    src="@/assets/images/logo.png"
-                    alt="Dripversity"
+                <DripversityIcon
+                    class="w-full max-w-2xl text-blue stroke-creme mt-40 drop-shadow-2xl"
                 />
                 <div class="w-full max-w-md">
                     <NewsletterForm />
-                    <div class="text-neutral-400 text-center p-4">
+                    <div class="text-neutral-400 text-center p-4 text-sm">
                         <p>
                             We will send you updates on the development on
                             dripversity to your email once a month.
@@ -43,4 +41,5 @@
 
 <script lang="ts" setup>
 import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
+import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 </script>

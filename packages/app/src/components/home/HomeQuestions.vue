@@ -1,5 +1,5 @@
 <template>
-    <section id="faq" class="bg-neutral-900">
+    <section id="faq">
         <div class="container-default grid lg:grid-cols-2 gap-8 lg:gap-16">
             <div>
                 <div

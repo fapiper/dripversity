@@ -1,5 +1,5 @@
 <template>
-    <section id="cta" class="bg-black relative w-full overflow-hidden">
+    <section id="cta" class="relative w-full overflow-hidden">
         <div
             class="relative pt-36 -mt-36 container-default overflow-visible z-10"
         >
@@ -54,9 +54,7 @@
                 </div>
             </div>
         </div>
-        <span
-            class="absolute block bg-neutral-900 -bottom-px left-0 w-full h-2/5"
-        />
+        <span class="absolute block bg-black -bottom-px left-0 w-full h-2/5" />
     </section>
 </template>
 

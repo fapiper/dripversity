@@ -16,7 +16,9 @@
                 ref="darkContentRef"
                 class="text-center space-y-16 flex flex-col justify-center items-center transform translate-y-8"
             >
-                <span class="font-logo text-5xl">DRIPVERSITY</span>
+                <DripversityIcon
+                    class="w-full max-w-sm text-blue stroke-creme"
+                />
                 <div
                     class="relative w-40 h-px bg-neutral-50/20 overflow-hidden rounded"
                 >
@@ -44,6 +46,7 @@
 import { gsap } from "gsap";
 import { templateRef } from "@vueuse/core";
 import { onMounted, ref } from "vue";
+import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 
 const show = ref(true);
 const lightBgRef = templateRef("lightBgRef");

@@ -3,10 +3,14 @@
         class="fixed top-0 left-0 h-32 pointer-events-none bg-gradient-to-b from-black/50 via-transparent text-white w-full flex z-40"
     >
         <nav
-            class="container-default flex flex-1 items-center justify-start justify-end space-x-8 relative"
+            class="px-8 lg:px-12 w-full flex flex-1 items-center justify-start justify-end space-x-8 relative"
         >
             <router-link class="block pointer-events-auto !mr-auto" to="/"
-                ><span class="font-logo text-2xl">DRIPVERSITY</span>
+                ><img
+                    src="@/assets/images/dripversity-dv.png"
+                    alt="Dripversity DV Logo"
+                    class="block w-12"
+                />
             </router-link>
 
             <ul class="hidden md:flex items-center justify-center space-x-8">

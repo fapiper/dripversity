@@ -45,6 +45,11 @@
                 /></template>
             </Swiper>
         </div>
+        <img
+            src="@/assets/images/grid.svg"
+            alt="Grid"
+            class="absolute block bottom-0 left-0 w-full h-52 object-cover object-bottom"
+        />
     </section>
 </template>
 
