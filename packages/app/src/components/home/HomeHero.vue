@@ -42,4 +42,12 @@
 <script lang="ts" setup>
 import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
 import DripversityIcon from "@/components/icons/DripversityIcon.vue";
+import { useSalePhase } from "@/composables/useSalePhase";
+import { onMounted } from "vue";
+
+const { currentSalePhase } = useSalePhase();
+
+onMounted(() => {
+    console.log("currentSalePhase", currentSalePhase);
+});
 </script>

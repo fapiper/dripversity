@@ -1,6 +1,6 @@
 <template>
     <article
-        class="relative flex group p-4 rounded bg-neutral-900 border border-neutral-800"
+        class="relative flex group p-1 lg:p-4 rounded bg-neutral-900 border border-neutral-800"
     >
         <img
             :src="token.image"

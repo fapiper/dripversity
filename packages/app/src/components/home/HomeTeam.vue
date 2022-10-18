@@ -25,35 +25,58 @@
                     </p>
                 </div>
 
-                <ul
+                <div
                     class="lg:col-start-2 lg:col-span-3 flex space-x-4 overflow-hidden w-full"
-                    v-animate.stagger
                 >
-                    <li
-                        class="flex flex-col p-4 space-y-4 w-64 flex-shrink-0 shadow-2xl border border-neutral-800 bg-neutral-900 rounded"
-                        v-for="item in 5"
-                        :key="item"
+                    <Swiper
+                        :modules="modules"
+                        grab-cursor
+                        free-mode
+                        :slides-per-view="'auto'"
+                        :breakpoints="{
+                            768: {},
+                            1024: {},
+                            1536: {},
+                        }"
+                        :space-between="16"
                     >
-                        <img
-                            class="w-full aspect-square w-full rounded"
-                            :src="
-                                require(`@/assets/images/token/${item + 1}.jpg`)
-                            "
-                            :alt="'Member ' + item"
-                        />
-                        <div class="">
-                            <h5 class="font-semibold leading-none">Name</h5>
-                            <span class="text-neutral-400/50 text-xs uppercase"
-                                >Role</span
+                        <SwiperSlide
+                            v-for="item in 5"
+                            :key="item"
+                            class="!w-64"
+                        >
+                            <article
+                                class="flex flex-col p-4 space-y-4 border border-neutral-800 bg-neutral-900 rounded"
                             >
-                        </div>
-                    </li>
-                </ul>
+                                <img
+                                    class="w-full aspect-square w-full rounded"
+                                    :src="
+                                        require(`@/assets/images/token/${
+                                            item + 1
+                                        }.jpg`)
+                                    "
+                                    :alt="'Member ' + item"
+                                />
+                                <div class="">
+                                    <h5 class="font-semibold leading-none">
+                                        Name
+                                    </h5>
+                                    <span
+                                        class="text-neutral-400/50 text-xs uppercase"
+                                        >Role</span
+                                    >
+                                </div>
+                            </article>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
             </div>
         </div>
     </section>
 </template>
 
 <script lang="ts" setup>
-import AppPinnedSection from "@/components/app/AppPinnedSection.vue";
+import { FreeMode } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/vue";
+const modules = [FreeMode] as any[];
 </script>

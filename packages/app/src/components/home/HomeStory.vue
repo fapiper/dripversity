@@ -42,6 +42,5 @@
 </template>
 
 <script lang="ts" setup>
-import AppPinnedSection from "@/components/app/AppPinnedSection.vue";
 import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 </script>

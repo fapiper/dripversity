@@ -5,8 +5,8 @@
                 :modules="modules"
                 grab-cursor
                 free-mode
+                :centeredSlides="true"
                 loop
-                centeredSlides
                 :slides-per-view="2"
                 :breakpoints="{
                     768: {
@@ -50,8 +50,6 @@
 import TokenCard from "@/components/token/TokenCard.vue";
 import { FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/free-mode";
 
 const tokens = Array.from({ length: 10 }, (_, id) => ({
     image: require(`@/assets/images/token/${id + 1}.jpg`),

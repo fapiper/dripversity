@@ -61,6 +61,5 @@
 </template>
 
 <script lang="ts" setup>
-import AppPinnedSection from "@/components/app/AppPinnedSection.vue";
 import { ChevronRightIcon } from "@heroicons/vue/outline";
 </script>

@@ -27,6 +27,4 @@
     </section>
 </template>
 
-<script lang="ts" setup>
-import AppPinnedSection from "@/components/app/AppPinnedSection.vue";
-</script>
+<script lang="ts" setup></script>

@@ -28,14 +28,10 @@ export const useAppStore = defineStore({
     },
     actions: {
         setPageLoading(loading: boolean): void {
-            console.log("setPageLoading", loading);
             this.pageLoading = loading;
         },
         setShowMobileMenu(show: boolean): void {
             this.showMobileMenu = show;
-        },
-        async resetAllState() {
-            console.log("resetAllState");
         },
         toggleMobileMenu() {
             this.setShowMobileMenu(!this.showMobileMenu);
