@@ -13,7 +13,7 @@
                     sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </p>
                 <div class="w-full max-w-md">
-                    <NewsletterForm />
+                    <AppCta />
                 </div>
             </div>
             <div class="">
@@ -49,7 +49,7 @@
 </template>
 
 <script lang="ts" setup>
-import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
+import AppCta from "@/components/app/AppCta.vue";
 
 const attributes = {
     Headwear: {

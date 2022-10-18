@@ -7,9 +7,12 @@
                 <DripversityIcon
                     class="w-full max-w-2xl text-blue stroke-creme mt-40 drop-shadow-2xl"
                 />
-                <div class="w-full max-w-md">
-                    <NewsletterForm />
-                    <div class="text-neutral-400 text-center p-4 text-sm">
+                <div class="w-full max-w-md flex flex-col items-center">
+                    <AppCta />
+                    <div
+                        class="text-neutral-400 text-center p-4 text-sm"
+                        v-if="isPreSale"
+                    >
                         <p>
                             We will send you updates on the development on
                             dripversity to your email once a month.
@@ -25,13 +28,6 @@
         <div class="absolute inset-0 flex z-0 overflow-hidden">
             <img
                 class="flex-1 object-cover"
-                v-parallax="{
-                    from: { yPercent: 0 },
-                    to: {
-                        yPercent: 20,
-                        scrollTrigger: { start: 'top top', scrub: true },
-                    },
-                }"
                 src="@/assets/images/hero.jpeg"
                 alt="Dripversity Environment"
             />
@@ -43,11 +39,8 @@
 import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
 import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 import { useSalePhase } from "@/composables/useSalePhase";
-import { onMounted } from "vue";
+import AppButton from "@/components/app/AppButton.vue";
+import AppCta from "@/components/app/AppCta.vue";
 
-const { currentSalePhase } = useSalePhase();
-
-onMounted(() => {
-    console.log("currentSalePhase", currentSalePhase);
-});
+const { isPreSale } = useSalePhase();
 </script>

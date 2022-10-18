@@ -14,18 +14,33 @@
             <div
                 class="p-2 md:p-4 border-2 border-neutral-400/50 border-dashed flex flex-col justify-center space-y-2 md:space-y-4"
             >
-                <h4
-                    class="font-bold text-neutral-400/50 text-3xl md:text-6xl lg:text-7xl uppercase"
-                >
-                    {{ token.name }}
-                </h4>
-                <p class="text-xs md:text-base text-neutral-400">
-                    Join the waitlist and be the first to claim this NFT on
-                    launch day
-                </p>
-                <div>
-                    <AppButton size="sm" to="/#home">Join Waitlist</AppButton>
-                </div>
+                <template v-if="isPreSale">
+                    <h4
+                        class="font-bold text-neutral-400/50 text-3xl md:text-6xl lg:text-7xl uppercase"
+                    >
+                        {{ token.name }}
+                    </h4>
+                    <p class="text-xs md:text-base text-neutral-400">
+                        Join the waitlist and be the first to claim this NFT on
+                        launch day
+                    </p>
+                    <div>
+                        <AppButton size="sm" to="/#home"
+                            >Join Waitlist</AppButton
+                        >
+                    </div>
+                </template>
+                <template v-else>
+                    <h4 class="font-bold text-xl">Yours?</h4>
+                    <p class="text-xs md:text-base text-neutral-400">
+                        Mint your own NFT now. Lorem Ipsum dolor sit amet.
+                    </p>
+                    <div>
+                        <AppButton size="sm" to="/#home"
+                            >Start Minting</AppButton
+                        >
+                    </div>
+                </template>
             </div>
         </div>
     </article>
@@ -33,6 +48,8 @@
 
 <script lang="ts" setup>
 import AppButton from "@/components/app/AppButton.vue";
+import { useSalePhase } from "@/composables/useSalePhase";
 
+const { isPreSale } = useSalePhase();
 defineProps(["token"]);
 </script>

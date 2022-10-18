@@ -12,7 +12,7 @@
                         sed diam nonumy eirmod tempor invidunt ut labore et
                         dolore magna aliquyam erat, sed diam voluptua.
                     </p>
-                    <NewsletterForm />
+                    <AppCta />
                 </div>
             </div>
 
@@ -44,6 +44,6 @@
 </template>
 
 <script lang="ts" setup>
-import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
 import DisclosureItem from "@/components/disclosure/DisclosureItem.vue";
+import AppCta from "@/components/app/AppCta.vue";
 </script>

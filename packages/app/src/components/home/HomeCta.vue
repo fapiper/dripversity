@@ -34,14 +34,21 @@
                     class="w-full max-w-lg mx-auto space-y-8 text-center"
                     v-animate.stagger
                 >
-                    <h2 class="title">Stay up to date</h2>
+                    <h2 class="title">
+                        {{
+                            isPreSale ? "Stay up to date" : "Claim your NFT now"
+                        }}
+                    </h2>
 
                     <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt.
+                        {{
+                            isPreSale
+                                ? "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."
+                                : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt."
+                        }}
                     </p>
 
-                    <NewsletterForm color="secondary" />
+                    <AppCta color="secondary" />
                 </div>
             </div>
         </div>
@@ -51,4 +58,8 @@
 <script lang="ts" setup>
 import { ChevronRightIcon } from "@heroicons/vue/outline";
 import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
+import { useSalePhase } from "@/composables/useSalePhase";
+import AppCta from "@/components/app/AppCta.vue";
+
+const { isPreSale } = useSalePhase();
 </script>
