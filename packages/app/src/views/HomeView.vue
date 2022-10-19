@@ -1,5 +1,6 @@
 <template>
     <div>
+        <HomeMint />
         <HomeHero />
         <HomeExplore />
         <HomeAbout />
@@ -22,4 +23,5 @@ import HomeCollection from "@/components/home/HomeCollection.vue";
 import HomeTeam from "@/components/home/HomeTeam.vue";
 import HomeCta from "@/components/home/HomeCta.vue";
 import HomeQuestions from "@/components/home/HomeQuestions.vue";
+import HomeMint from "@/components/home/HomeMint.vue";
 </script>

@@ -1,52 +1,36 @@
 import { defineStore } from "pinia";
 import { store } from "@/store";
 
-type TimeoutHandle = ReturnType<typeof setTimeout>;
-
 interface AppState {
     // show mobile menu
     showMobileMenu: boolean;
-    // Page loading status
-    pageLoading: boolean;
+    // show mint modal
+    showMintModal: boolean;
 }
-
-let timeId: TimeoutHandle;
 
 export const useAppStore = defineStore({
     id: "app",
     state: (): AppState => ({
-        pageLoading: true,
         showMobileMenu: false,
+        showMintModal: false,
     }),
     getters: {
-        getPageLoading(): boolean {
-            return this.pageLoading;
-        },
         getShowMobileMenu(): boolean {
             return this.showMobileMenu;
         },
+        getShowMintModal(): boolean {
+            return this.showMintModal;
+        },
     },
     actions: {
-        setPageLoading(loading: boolean): void {
-            this.pageLoading = loading;
-        },
         setShowMobileMenu(show: boolean): void {
             this.showMobileMenu = show;
         },
+        setShowMintModal(show: boolean): void {
+            this.showMintModal = show;
+        },
         toggleMobileMenu() {
             this.setShowMobileMenu(!this.showMobileMenu);
-        },
-        async setPageLoadingAction(loading: boolean): Promise<void> {
-            if (loading) {
-                clearTimeout(timeId);
-                // Prevent flicker
-                timeId = setTimeout(() => {
-                    this.setPageLoading(loading);
-                }, 50);
-            } else {
-                this.setPageLoading(loading);
-                clearTimeout(timeId);
-            }
         },
     },
 });

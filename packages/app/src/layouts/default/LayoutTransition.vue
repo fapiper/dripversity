@@ -94,14 +94,14 @@ async function onLeave(el: Element, done: () => any) {
 }
 
 function showLoader() {
-    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
     show.value = true;
     enterTl.value.play(0);
 }
 
 async function hideLoader() {
     await enterTl.value.then(() => leaveTl.value.play(0));
-    document.documentElement.style.overflow = "auto";
+    document.body.style.overflow = "auto";
     show.value = false;
     leaveTl.value.progress(0).pause();
     enterTl.value.progress(0).pause();
