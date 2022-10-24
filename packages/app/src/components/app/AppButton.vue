@@ -14,7 +14,11 @@ export default defineComponent({
             default: "button",
         },
         color: {
-            type: String as () => "primary" | "secondary" | "outline",
+            type: String as () =>
+                | "primary"
+                | "secondary"
+                | "outline"
+                | "transparent",
             default: "primary",
         },
         rounded: {
@@ -58,13 +62,15 @@ export default defineComponent({
             secondary: "bg-neutral-50 text-blue border border-neutral-50",
             outline:
                 "bg-transparent text-current border border-neutral-500 hover:opacity-80",
-            disabled: "border border-transparent",
+            transparent:
+                "bg-transparent text-neutral-400 border-transparent hover:opacity-80",
+            disabled: "bg-neutral-800 text-neutral-400/50 border-neutral-800",
         };
         const ButtonSizeIcon: Indexable<string> = {
-            xs: "w-8 h-8 text-xs",
-            sm: "w-10 h-10 text-sm",
-            md: "w-12 h-12 text-base",
-            lg: "w-14 h-14 text-lg",
+            xs: "w-6 h-6 text-xs",
+            sm: "w-8 h-8 text-sm",
+            md: "w-10 h-10 text-base",
+            lg: "w-12 h-12 text-lg",
         };
         const ButtonSizeDefault: Indexable<string> = {
             xs: "h-8 text-xs",
@@ -73,7 +79,7 @@ export default defineComponent({
             lg: "h-14 text-lg",
         };
         const ButtonSpacing: Indexable<string> = {
-            xs: "py-1 px-2 space-x-1",
+            xs: "py-1 px-2 space-x-2",
             sm: "py-2 px-3 space-x-2",
             md: "py-3 px-6 space-x-2",
             lg: "py-6 px-8 space-x-2",
@@ -85,14 +91,14 @@ export default defineComponent({
         };
 
         const classesButton = computed(() => [
-            `relative inline-flex items-center transition duration-200 font-semibold`,
+            `relative inline-flex items-center text-center transition duration-200 font-semibold`,
             ButtonRounded[props.rounded],
             ButtonColor[props.disabled ? "disabled" : props.color],
             !props.onlyIcon && ButtonSpacing[props.size],
             props.onlyIcon
                 ? ButtonSizeIcon[props.size]
                 : ButtonSizeDefault[props.size],
-            props.onlyIcon ? "justify-center" : "justify-between",
+            props.onlyIcon ? "justify-center" : "justify-center",
             props.fullWidth && "w-full",
             !(props.disabled || props.loading)
                 ? "cursor-pointer active:scale-[97%]"

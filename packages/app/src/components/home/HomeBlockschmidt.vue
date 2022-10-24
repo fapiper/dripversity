@@ -29,31 +29,19 @@
                         eos et accusam et justo duo dolores et ea rebum.
                     </p>
 
-                    <a
+                    <AppPanel
+                        class="!mt-8"
+                        title="Explore MASKOF Collection"
+                        subtitle="On Foundation"
+                        :src="require('@/assets/images/maskof.gif')"
                         href="https://foundation.app/collection/maskof?sortOrder=DEFAULT"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex items-center w-full bg-black/50 backdrop-blur-sm rounded p-2 space-x-4 !mt-8 transition hover:bg-black/60 duration-200"
                     >
-                        <img
-                            class="w-12 h-12 rounded object-cover"
-                            src="@/assets/images/maskof.gif"
-                            alt="Explore Mask Of Collection on Foundation"
-                        />
-                        <div class="flex flex-col">
-                            <h4 class="font-semibold leading-none">
-                                Explore MASKOF Collection
-                            </h4>
-                            <span class="text-neutral-400 text-sm"
-                                >On Foundation</span
-                            >
-                        </div>
-                        <button class="!ml-auto px-4">
+                        <button class="px-4">
                             <ChevronRightIcon
                                 class="block w-4 text-neutral-200"
                             />
                         </button>
-                    </a>
+                    </AppPanel>
                 </div>
             </div>
         </div>
@@ -62,4 +50,5 @@
 
 <script lang="ts" setup>
 import { ChevronRightIcon } from "@heroicons/vue/outline";
+import AppPanel from "@/components/app/AppPanel.vue";
 </script>

@@ -1,42 +1,132 @@
 <template>
-    <ul class="flex flex-col" v-animate.stagger>
-        <li class="flex flex-col space-y-1" v-for="(item, i) in 5" :key="item">
-            <Disclosure as="div" v-slot="{ open }" class="w-full">
-                <div class="w-full border-b border-neutral-800">
-                    <DisclosureButton
-                        class="flex items-center justify-start space-x-4 w-full py-4 cursor-pointer"
-                    >
-                        <span
-                            class="bg-neutral-700 inline-flex items-center justify-center w-6 h-6 text-sm text-neutral-400 rounded-full"
-                            ><span class="block">{{ i + 1 }}</span></span
-                        >
-                        <h5 class="block font-semibold">Lorem Ipsum dolor</h5>
-                    </DisclosureButton>
+    <div class="flex flex-col">
+        <StepItem
+            :title="'Purchase details'"
+            :index="1"
+            :is-current="isCurrent('purchase-details')"
+            :is-success="isAfter('purchase-details')"
+        >
+            <div class="space-y-4">
+                <p>
+                    Upon purchase we will send the NFT into your Ethereum
+                    Wallet. Lorem ipsum dolor sit amet ipsum dolor sit amet.
+                </p>
 
-                    <Transition @enter="onEnter" @leave="onLeave" :css="false">
-                        <div v-show="open" class="h-0 overflow-hidden">
-                            <div class="py-4 pt-0">
-                                <p>
-                                    Upon purchase we will send the NFT into your
-                                    Ethereum Wallet. Lorem ipsum dolor sit amet
-                                    ipsum dolor sit amet.
-                                </p>
-                            </div>
-                        </div>
-                    </Transition>
-                </div>
-            </Disclosure>
-        </li>
-    </ul>
+                <AppPanel
+                    :transparent="true"
+                    title="Dripversity NFT"
+                    subtitle="1:1 NFT"
+                    :src="require('@/assets/images/placeholder.png')"
+                >
+                    <div class="flex flex-1 items-center justify-end space-x-2">
+                        <InputNumber
+                            id="mint-price"
+                            label="Price"
+                            v-model="quantity"
+                            :min="1"
+                            :max="5"
+                        />
+                        <AppPrice :price="quantity * price" />
+                    </div>
+                </AppPanel>
+
+                <AppButton full-width size="sm" @click.prevent="goToNext"
+                    >Complete Purchase</AppButton
+                >
+            </div>
+        </StepItem>
+        <StepItem
+            :title="'Sign transaction in wallet'"
+            :index="2"
+            :is-current="isCurrent('sign-transaction')"
+            :is-success="isAfter('sign-transaction')"
+            :is-error="false"
+        >
+            <div class="space-y-4">
+                <p>
+                    Check your wallet to confirm the transaction. You’ll be
+                    asked to approve this purchase from your wallet.
+                </p>
+
+                <AppButton full-width size="xs" disabled
+                    ><LoadingIcon /><span class="block"
+                        >Waiting for Approval...</span
+                    ></AppButton
+                >
+            </div>
+        </StepItem>
+        <StepItem
+            :title="'Processing transaction on network'"
+            :index="3"
+            :is-current="isCurrent('process-transaction')"
+            :is-success="isAfter('process-transaction')"
+            :is-error="false"
+        >
+            <div class="space-y-4">
+                <p>
+                    Your purchase is processing. It should be confirmed on the
+                    blockchain shortly. We’re waiting for the network to process
+                    your transaction.
+                    <a
+                        href="https://polygonscan.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link"
+                        >View transaction</a
+                    >
+                </p>
+
+                <AppButton full-width size="xs" disabled
+                    ><LoadingIcon /><span class="block"
+                        >Waiting for Confirmation...</span
+                    ></AppButton
+                >
+            </div>
+        </StepItem>
+        <StepItem
+            :title="'Celebrate your NFT'"
+            :is-current="isCurrent('confirm-purchase')"
+            :is-success="isAfter('confirm-purchase')"
+            :index="4"
+        >
+            <div class="space-y-4">
+                <h3 class="title-3">Thank you!</h3>
+                <p>
+                    Thank your for supporting this project! This is your NFT.
+                    Your transaction was successfully completed.
+                </p>
+                <TokenData />
+                <AppButton href="https://opensea.io/" full-width size="sm"
+                    >View on Opensea</AppButton
+                >
+            </div>
+        </StepItem>
+    </div>
 </template>
 
 <script setup lang="ts">
-import { Disclosure, DisclosureButton } from "@headlessui/vue";
-import { gsap } from "gsap";
-const toggle = (el: HTMLElement, height: string) =>
-    gsap.to(el, { height, duration: 0.1, ease: "power3.out" });
-const onEnter = async (el: HTMLElement, done: any) =>
-    toggle(el, "auto").then(done);
-const onLeave = async (el: HTMLElement, done: any) =>
-    toggle(el, "0").then(done);
+import StepItem from "@/components/stepper/StepItem.vue";
+import AppButton from "@/components/app/AppButton.vue";
+import AppPanel from "@/components/app/AppPanel.vue";
+import AppPrice from "@/components/app/AppPrice.vue";
+import InputNumber from "@/components/input/InputNumber.vue";
+import { ref, unref, watch } from "vue";
+import { noop, promiseTimeout, useStepper } from "@vueuse/core";
+import TokenData from "@/components/token/TokenData.vue";
+import LoadingIcon from "@/components/icons/LoadingIcon.vue";
+
+const price = 1; // in MATIC
+const quantity = ref(1);
+
+const { current, goToNext, isCurrent, isAfter } = useStepper({
+    "purchase-details": noop,
+    "sign-transaction": () => promiseTimeout(2000),
+    "process-transaction": () => promiseTimeout(4000),
+    "confirm-purchase": noop,
+});
+
+watch(current, async () => {
+    const fn = unref(current) as () => Promise<any>;
+    fn !== noop && (await fn().then(goToNext));
+});
 </script>
