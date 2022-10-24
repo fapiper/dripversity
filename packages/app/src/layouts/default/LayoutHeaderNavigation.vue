@@ -20,18 +20,38 @@
             leave-from-class="translate-y-0 opacity-100"
             leave-to-class="translate-y-1 opacity-0"
         >
-            <PopoverPanel class="absolute top-full right-0 w-64 z-10 mt-2">
-                <ul
-                    class="flex flex-col space-y-2 p-4 bg-neutral-50 border text-neutral-50 rounded-2xl"
+            <PopoverPanel class="absolute top-full right-0 w-72 z-10 mt-2">
+                <div
+                    class="p-4 bg-neutral-50 border text-neutral-900 rounded-2xl"
                 >
-                    <li v-for="(to, name) in routes" :key="name">
-                        <router-link
-                            class="text-2xl link text-neutral-900 opacity-100 hover:text-neutral-900/70"
-                            :to="to"
-                            >{{ name }}</router-link
+                    <ul class="flex flex-col space-y-2">
+                        <li v-for="(to, name) in routes" :key="name">
+                            <router-link
+                                class="text-2xl link text-neutral-900 opacity-100 hover:text-neutral-900/70"
+                                :to="to"
+                                >{{ name }}</router-link
+                            >
+                        </li>
+                    </ul>
+
+                    <hr class="my-4" />
+
+                    <ul class="flex items-center justify-end space-x-4">
+                        <li
+                            v-for="(social, name) in socials"
+                            :key="name"
+                            class="inline-flex items-center justify-center"
                         >
-                    </li>
-                </ul>
+                            <a
+                                :href="social.baseUrl + '/' + social.account"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                class="link-2 inline-flex items-center justify-center"
+                                ><component :is="social.icon" class="h-4 w-4"
+                            /></a>
+                        </li>
+                    </ul>
+                </div>
             </PopoverPanel>
         </transition>
     </Popover>

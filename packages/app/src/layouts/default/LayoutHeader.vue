@@ -13,28 +13,11 @@
                 />
             </router-link>
 
-            <ul class="flex items-center justify-center space-x-2">
-                <li
-                    v-for="(social, name) in socials"
-                    :key="name"
-                    class="inline-flex items-center justify-center"
-                >
-                    <a
-                        :href="social.baseUrl + '/' + social.account"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        class="link-2 inline-flex items-center justify-center h-6 w-6 pointer-events-auto"
-                        ><component :is="social.icon" class="h-4 w-4"
-                    /></a>
-                </li>
-            </ul>
             <LayoutHeaderNavigation />
         </nav>
     </header>
 </template>
 
 <script lang="ts" setup>
-import { routes, socials } from "@/constants/";
-import AppButton from "@/components/app/AppButton.vue";
 import LayoutHeaderNavigation from "@/layouts/default/LayoutHeaderNavigation.vue";
 </script>
