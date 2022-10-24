@@ -20,7 +20,7 @@
             leave-from-class="translate-y-0 opacity-100"
             leave-to-class="translate-y-1 opacity-0"
         >
-            <PopoverPanel class="absolute top-full right-0 w-72 z-10 mt-2">
+            <PopoverPanel class="absolute top-full right-0 w-60 z-10 mt-2">
                 <div
                     class="p-4 bg-neutral-50 border text-neutral-900 rounded-2xl"
                 >
@@ -36,7 +36,7 @@
 
                     <hr class="my-4" />
 
-                    <ul class="flex items-center justify-end space-x-4">
+                    <ul class="flex items-center justify-start space-x-4">
                         <li
                             v-for="(social, name) in socials"
                             :key="name"
