@@ -6,11 +6,18 @@
                     class="w-full lg:absolute lg:top-0 lg:right-0 lg:w-4/5 lg:h-full flex"
                     v-animate
                 >
-                    <img
-                        alt="Blockschmidt"
-                        src="@/assets/images/blockschmidt.png"
-                        class="flex-1 object-contain"
-                    />
+                    <video
+                        autoplay
+                        muted
+                        loop
+                        id="maskof"
+                        class="w-full flex-1 object-contain"
+                    >
+                        <source
+                            src="@/assets/videos/MASKOF.mp4"
+                            type="video/mp4"
+                        />
+                    </video>
                 </div>
 
                 <div
