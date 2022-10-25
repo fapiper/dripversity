@@ -31,12 +31,27 @@
 }
 
 @font-face {
-    font-family: "Dripversity";
+    font-family: "Satoshi";
     font-weight: 400;
     font-display: swap;
     font-style: normal;
-    src: url("../font/Dripversity-Regular.woff2") format("woff2"),
-        url("../font/Dripversity-Regular.woff") format("woff"),
-        url("../font/Dripversity-Regular.otf") format("otf");
+    src: url("../font/Satoshi-Regular.woff2") format("woff2");
 }
+
+@font-face {
+    font-family: "Satoshi";
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    src: url("../font/Satoshi-Light.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Satoshi";
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    src: url("../font/Satoshi-Bold.woff2") format("woff2");
+}
+
 

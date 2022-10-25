@@ -4,11 +4,11 @@
             class="relative cursor-pointer block border bg-neutral-50 w-20 h-10 rounded-full !outline-none"
         >
             <span
-                class="absolute top-1/2 left-4 right-4 block h-[2px] bg-black transform translate-y-[5px] transition-transform duration-200 ease-in-out"
+                class="absolute top-1/2 left-4 right-4 block h-[2px] bg-black transform translate-y-[0.25rem] transition-transform duration-200 ease-in-out"
                 :class="open && 'rotate-[20deg] !translate-y-1/2'"
             />
             <span
-                class="absolute top-1/2 left-4 right-4 block h-[2px] bg-black transform -translate-y-[5px] transition-transform duration-200 ease-in-out"
+                class="absolute top-1/2 left-4 right-4 block h-[2px] bg-black transform -translate-y-[0.25rem] transition-transform duration-200 ease-in-out"
                 :class="open && '-rotate-[20deg] !translate-y-1/2'"
             />
         </PopoverButton>

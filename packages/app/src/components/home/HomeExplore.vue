@@ -1,5 +1,5 @@
 <template>
-    <section id="explore" class="relative bg-black">
+    <section id="explore">
         <div class="relative z-10 w-full" v-animate>
             <Swiper
                 :modules="modules"
@@ -7,24 +7,15 @@
                 free-mode
                 :centeredSlides="true"
                 loop
-                :slides-per-view="2"
-                :breakpoints="{
-                    768: {
-                        slidesPerView: 3,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                    },
-                    1536: {
-                        slidesPerView: 5,
-                    },
-                }"
-                :space-between="16"
+                :slides-per-view="'auto'"
+                :loopedSlides="tokenLength"
+                :space-between="0"
             >
                 <SwiperSlide
                     v-for="token in tokens"
                     ref="slideRef"
                     :key="token.name"
+                    class="!w-80 px-2"
                 >
                     <TokenCard :token="token" />
                 </SwiperSlide>
@@ -38,11 +29,6 @@
                 /></template>
             </Swiper>
         </div>
-        <img
-            src="@/assets/images/grid.svg"
-            alt="Grid"
-            class="absolute block bottom-0 left-0 w-full h-52 object-cover object-bottom"
-        />
     </section>
 </template>
 
@@ -51,7 +37,8 @@ import TokenCard from "@/components/token/TokenCard.vue";
 import { FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
-const tokens = Array.from({ length: 10 }, (_, id) => ({
+const tokenLength = 10;
+const tokens = Array.from({ length: tokenLength }, (_, id) => ({
     image: require(`@/assets/images/token/${id + 1}.jpg`),
     name: `# XXX`,
 }));

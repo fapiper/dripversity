@@ -1,6 +1,6 @@
 <template>
     <div
-        class="hidden lg:flex lg:col-span-1 sticky top-0 left-0 h-screen lg:flex-col flex-1 overflow-auto bg-neutral-900 border-r border-neutral-800"
+        class="hidden lg:flex lg:col-span-1 sticky top-0 left-0 h-screen lg:flex-col flex-1 overflow-auto bg-black border-r border-neutral-900"
     >
         <span class="block h-32" />
         <div class="space-y-4 py-8 px-8 lg:px-12 max-w-lg">

@@ -16,9 +16,10 @@
                 ref="darkContentRef"
                 class="text-center space-y-16 flex flex-col justify-center items-center transform translate-y-8"
             >
-                <DripversityIcon
-                    class="w-full max-w-sm text-blue stroke-creme"
-                />
+                <div class="w-60">
+                    <DripversityIcon class="w-full text-blue stroke-creme" />
+                </div>
+
                 <div
                     class="relative w-40 h-px bg-neutral-50/20 overflow-hidden rounded"
                 >
@@ -38,7 +39,7 @@
         :appear="true"
         mode="out-in"
     >
-        <slot></slot>
+        <slot />
     </Transition>
 </template>
 

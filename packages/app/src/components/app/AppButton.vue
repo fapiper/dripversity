@@ -61,9 +61,9 @@ export default defineComponent({
                 "bg-blue text-neutral-50 border border-blue hover:bg-blue/80",
             secondary: "bg-neutral-50 text-blue border border-neutral-50",
             outline:
-                "bg-transparent text-current border border-neutral-500 hover:opacity-80",
+                "bg-neutral-900/50 background-blur-sm text-current border border-neutral-500 hover:opacity-80",
             transparent:
-                "bg-transparent text-neutral-400 border-transparent hover:opacity-80",
+                "bg-transparent text-neutral-50 border-transparent hover:opacity-80",
             disabled: "bg-neutral-800 text-neutral-400/50 border-neutral-800",
         };
         const ButtonSizeIcon: Indexable<string> = {

@@ -6,8 +6,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                logo: ["Dripversity", ...defaultTheme.fontFamily.serif],
-                sans: ["Aktiv Grotesk", ...defaultTheme.fontFamily.sans],
+                sans: ["Satoshi", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 discord: "#5865F2",

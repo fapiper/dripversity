@@ -1,7 +1,5 @@
 <template>
-    <article
-        class="relative flex group p-1 lg:p-4 rounded bg-neutral-900 border border-neutral-800"
-    >
+    <article class="relative flex group rounded border border-neutral-800">
         <img
             :src="token.image"
             :alt="token.name"

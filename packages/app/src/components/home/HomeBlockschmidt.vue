@@ -11,7 +11,7 @@
                         muted
                         loop
                         id="maskof"
-                        class="w-full flex-1 object-contain"
+                        class="w-full flex-1 object-contain bg-transparent"
                     >
                         <source
                             src="@/assets/videos/MASKOF.mp4"

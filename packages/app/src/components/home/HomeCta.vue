@@ -40,7 +40,7 @@
                         }}
                     </h2>
 
-                    <p>
+                    <p class="text-neutral-50 text-lg">
                         {{
                             isPreSale
                                 ? "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."

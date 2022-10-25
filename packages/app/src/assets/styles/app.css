@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer components {
+
+    .container {
+        @apply 2xl:max-w-[80rem]
+    }
+
     .container-default {
        @apply container mx-auto px-8 lg:px-12;
     }
@@ -42,7 +47,11 @@
 
 @layer base {
 
-    body{
+    html {
+        @apply 2xl:text-[1vw]
+    }
+
+    body {
         @apply bg-black text-neutral-50 selection:text-neutral-50 selection:bg-blue;
     }
 

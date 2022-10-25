@@ -46,7 +46,7 @@
                             class="!w-64"
                         >
                             <article
-                                class="flex flex-col p-4 space-y-4 border border-neutral-800 bg-neutral-900 rounded"
+                                class="flex flex-col border border-neutral-800 bg-neutral-900 rounded"
                             >
                                 <img
                                     class="w-full aspect-square w-full rounded"
@@ -57,7 +57,7 @@
                                     "
                                     :alt="'Member ' + item"
                                 />
-                                <div class="">
+                                <div class="p-4">
                                     <h5 class="font-semibold leading-none">
                                         Name
                                     </h5>

@@ -11,6 +11,7 @@ export interface UseSalePhase {
     isPreSale: boolean;
     isWhitelistSale: boolean;
     isPublicSale: boolean;
+    stringify: (salePhase: SalePhase) => string;
 }
 
 export function useSalePhase(): UseSalePhase {
@@ -19,10 +20,19 @@ export function useSalePhase(): UseSalePhase {
     const isWhitelistSale = currentSalePhase === SalePhase.WHITELISTSALE;
     const isPublicSale = currentSalePhase === SalePhase.PUBLICSALE;
 
+    const stringify = function (salePhase: SalePhase) {
+        return {
+            0: "Pre Sale",
+            1: "Whitelist Sale",
+            2: "Public Sale",
+        }[salePhase];
+    };
+
     return {
         currentSalePhase,
         isPreSale,
         isWhitelistSale,
         isPublicSale,
+        stringify,
     };
 }

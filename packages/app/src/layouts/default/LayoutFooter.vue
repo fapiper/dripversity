@@ -1,12 +1,12 @@
 <template>
-    <footer class="relative bg-neutral-900 border-t border-neutral-800 z-10">
+    <footer class="relative bg-black border-t border-neutral-900 z-10">
         <div class="container-default grid lg:grid-cols-5 py-24 gap-24">
             <div class="lg:col-span-3">
                 <div class="w-full max-w-md space-y-8">
                     <h3 class="font-semibold text-5xl">
                         Join the
                         <DripversityIcon
-                            class="inline-block align-top w-60 text-blue stroke-creme"
+                            class="inline-block align-top w-60 text-transparent stroke-neutral-50"
                         />
                         community
                     </h3>
@@ -16,7 +16,7 @@
                         pellentesque.
                     </p>
 
-                    <AppButton color="secondary"
+                    <AppButton color="outline"
                         ><DiscordIcon class="block w-4 h-4" />
                         <span class="block">Join our Discord</span></AppButton
                     >
@@ -47,7 +47,9 @@
             </div>
         </div>
 
-        <div class="py-4 border-t border-neutral-800">
+        <div
+            class="py-4 border-t border-b-8 border-b-blue border-t-neutral-900"
+        >
             <div
                 class="container-default flex flex-col md:flex-row items-start md:items-center justify-between space-y-4 md:space-y-0 md:space-x-8 lg:space-x-12"
             >
