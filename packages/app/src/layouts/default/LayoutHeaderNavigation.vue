@@ -1,15 +1,15 @@
 <template>
     <Popover class="relative pointer-events-auto" v-slot="{ open }">
         <PopoverButton
-            class="relative cursor-pointer block border bg-neutral-50 w-20 h-10 rounded-full !outline-none"
+            class="relative cursor-pointer block bg-transparent w-12 h-12 rounded-xl !outline-none"
         >
             <span
-                class="absolute top-1/2 left-4 right-4 block h-[2px] bg-black transform translate-y-[0.25rem] transition-transform duration-200 ease-in-out"
-                :class="open && 'rotate-[20deg] !translate-y-1/2'"
+                class="absolute top-1/2 left-1 right-1 block h-[0.1rem] bg-neutral-50 transform translate-y-[0.25rem] transition-transform duration-200 ease-in-out"
+                :class="open && 'rotate-45 !translate-y-1/2'"
             />
             <span
-                class="absolute top-1/2 left-4 right-4 block h-[2px] bg-black transform -translate-y-[0.25rem] transition-transform duration-200 ease-in-out"
-                :class="open && '-rotate-[20deg] !translate-y-1/2'"
+                class="absolute top-1/2 left-1 right-1 block h-[0.1rem] bg-neutral-50 transform -translate-y-[0.25rem] transition-transform duration-200 ease-in-out"
+                :class="open && '-rotate-45 !translate-y-1/2'"
             />
         </PopoverButton>
         <transition
@@ -33,24 +33,6 @@
                             >
                         </li>
                     </ul>
-
-                    <hr class="my-4" />
-
-                    <ul class="flex items-center justify-start space-x-4">
-                        <li
-                            v-for="(social, name) in socials"
-                            :key="name"
-                            class="inline-flex items-center justify-center"
-                        >
-                            <a
-                                :href="social.baseUrl + '/' + social.account"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                class="link-2 inline-flex items-center justify-center"
-                                ><component :is="social.icon" class="h-4 w-4"
-                            /></a>
-                        </li>
-                    </ul>
                 </div>
             </PopoverPanel>
         </transition>
@@ -58,7 +40,6 @@
 </template>
 
 <script lang="ts" setup>
-import { routes, socials } from "@/constants/";
-import AppButton from "@/components/app/AppButton.vue";
+import { routes } from "@/constants/";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
 </script>

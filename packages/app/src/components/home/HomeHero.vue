@@ -4,39 +4,20 @@
             class="relative min-h-screen w-full flex items-center justify-center py-32"
         >
             <div
-                class="relative container-default max-w-xl flex flex-col z-20 space-y-8"
+                class="relative container-default max-w-xl flex flex-col items-center text-center z-20 space-y-8"
                 v-animate.stagger
             >
-                <h1 class="text-7xl font-bold">High School meets Metaverse</h1>
+                <DripversityIcon class="w-full text-blue stroke-creme" />
 
-                <p class="text-lg">
+                <p class="text-neutral-50 text-sm md:text-base">
                     Molestie ullamcorper egestas at amet, id proin gravida
                     tortor. Semper pellentesque sed nisl enim volutpat sem est
                     vel. Id nunc cras at neque.
                 </p>
-                <!--
-                <DripversityIcon
-                    class="w-full max-w-2xl text-blue stroke-creme mt-40 drop-shadow-2xl"
-                />
 
--->
                 <div>
                     <AppCta />
                 </div>
-                <!--
-                <div class="w-full max-w-md flex flex-col items-center">
-                    <AppCta />
-                    <div
-                        class="text-neutral-400 text-center p-4 text-sm"
-                        v-if="isPreSale"
-                    >
-                        <p>
-                            We will send you updates on the development on
-                            dripversity to your email once a month.
-                        </p>
-                    </div>
-                </div>
--->
             </div>
         </div>
 

@@ -3,7 +3,7 @@
         class="fixed top-0 left-0 h-32 pointer-events-none bg-gradient-to-b from-black/50 via-transparent text-white w-full flex z-40"
     >
         <nav
-            class="px-8 lg:px-12 w-full flex flex-1 items-center justify-start justify-end space-x-4 relative"
+            class="px-8 lg:px-12 w-full flex flex-1 items-center justify-start justify-end space-x-8 relative"
         >
             <router-link class="block pointer-events-auto !mr-auto" to="/"
                 ><img
@@ -13,11 +13,28 @@
                 />
             </router-link>
 
+            <ul class="flex items-center justify-start space-x-4">
+                <li
+                    v-for="(social, name) in socials"
+                    :key="name"
+                    class="inline-flex items-center justify-center"
+                >
+                    <a
+                        :href="social.baseUrl + '/' + social.account"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        class="link-2 inline-flex items-center justify-center pointer-events-auto"
+                        ><component :is="social.icon" class="h-4 w-4"
+                    /></a>
+                </li>
+            </ul>
+
             <LayoutHeaderNavigation />
         </nav>
     </header>
 </template>
 
 <script lang="ts" setup>
+import { socials } from "@/constants/";
 import LayoutHeaderNavigation from "@/layouts/default/LayoutHeaderNavigation.vue";
 </script>
