@@ -2,7 +2,7 @@
     <main>
         <LayoutLettering />
 
-        <div class="relative min-h-screen w-full overflow-hidden flex flex-col">
+        <div class="relative min-h-screen flex flex-col">
             <slot />
         </div>
     </main>

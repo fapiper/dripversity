@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="space-y-16">
+        <div class="space-y-16 break-all">
             <h1 class="title-2">Terms of Service</h1>
             <div class="space-y-4">
                 <h2 class="title-3">Angaben gemäß § 5 TM</h2>
