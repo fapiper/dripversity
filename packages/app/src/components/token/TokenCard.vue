@@ -23,9 +23,7 @@
                         launch day
                     </p>
                     <div>
-                        <AppButton size="sm" to="/#home"
-                            >Join Waitlist</AppButton
-                        >
+                        <AppCta size="sm" />
                     </div>
                 </template>
                 <template v-else>
@@ -47,6 +45,7 @@
 <script lang="ts" setup>
 import AppButton from "@/components/app/AppButton.vue";
 import { useSalePhase } from "@/composables/useSalePhase";
+import AppCta from "@/components/app/AppCta.vue";
 
 const { isPreSale } = useSalePhase();
 defineProps(["token"]);

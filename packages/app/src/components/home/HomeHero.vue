@@ -20,8 +20,8 @@
                 />
 
 -->
-                <div class="flex space-x-4 items-center">
-                    <AppButton>Join Waitlist</AppButton>
+                <div>
+                    <AppCta />
                 </div>
                 <!--
                 <div class="w-full max-w-md flex flex-col items-center">

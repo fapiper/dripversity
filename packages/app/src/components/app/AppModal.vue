@@ -2,7 +2,7 @@
     <TransitionRoot appear :show="modelValue" as="template">
         <Dialog as="div" @close="$emit('update:modelValue', false)">
             <div class="fixed inset-0 overflow-y-auto z-50">
-                <div class="flex items-center justify-center h-screen p-8">
+                <div class="flex items-center justify-center h-screen p-4">
                     <TransitionChild
                         as="template"
                         enter="duration-100 ease-out"
@@ -25,12 +25,12 @@
                         leave-to="opacity-0 translate-y-12"
                     >
                         <div
-                            class="relative inline-block w-full max-w-lg max-h-full bg-white text-black transition transform shadow rounded"
+                            class="relative w-auto max-h-full bg-neutral-900 transition transform border border-neutral-800 rounded-xl"
                         >
                             <div class="absolute top-0 right-0 p-2">
                                 <AppButton
-                                    size="sm"
-                                    color="link"
+                                    size="xs"
+                                    color="transparent"
                                     only-icon
                                     rounded="full"
                                     @click.prevent="
