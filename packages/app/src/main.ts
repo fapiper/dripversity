@@ -2,8 +2,9 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "@/assets/styles/font.css";
 import "@/assets/styles/app.css";
+import "@/assets/styles/web3-onboard.css";
+
 import "./registerServiceWorker";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 
