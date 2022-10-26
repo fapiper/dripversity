@@ -15,6 +15,7 @@ import parallaxDirective from "@/directives/parallax";
 import { router, setupRouter } from "./router";
 import { setupRouterGuard } from "@/router/guard";
 import { setupStore } from "@/store";
+import { setupWeb3Onboard } from "@/wallets";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,5 +30,8 @@ setupStore(app);
 // Configure routing and head setup
 setupRouter(app);
 setupRouterGuard(router);
+
+// Configure web3 onboard modal
+setupWeb3Onboard();
 
 app.mount("#app");
