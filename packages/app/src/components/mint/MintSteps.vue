@@ -57,7 +57,7 @@
                         />
                         <AppPrice
                             :price="quantity * price"
-                            class="w-16 items-end"
+                            class="w-20 items-end"
                         />
                     </div>
                 </AppPanel>
@@ -151,7 +151,7 @@ import LoadingIcon from "@/components/icons/LoadingIcon.vue";
 import { storeToRefs } from "pinia";
 import { useUserStore } from "@/store/modules/user";
 
-const price = 1; // in MATIC
+const price = 400; // in MATIC
 const quantity = ref(1);
 
 const userStore = useUserStore();
@@ -160,11 +160,8 @@ const { isConnected, displayName, connectingWallet } = storeToRefs(userStore);
 
 const onClickConnect = async function () {
     await connectWallet();
-
     if (isConnected.value) {
         goToNext();
-    } else {
-        console.log("error", isConnected.value);
     }
 };
 

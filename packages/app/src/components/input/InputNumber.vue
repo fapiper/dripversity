@@ -14,6 +14,7 @@
             class="inline-flex items-center text-neutral-50 w-8 h-6 text-center text-base font-normal bg-transparent m-0 !border-none !outline-none"
             :id="id"
             :value="modelValue"
+            readonly
         />
         <button
             class="flex items-center justify-center w-6 h-6 bg-neutral-700 disabled:bg-transparent rounded"

@@ -35,6 +35,7 @@ export const legals = {
     "Privacy Policy": "/legal/privacy-policy",
 };
 
+export const uniswapV3PolygonSubgraph = `https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-polygon`;
 export const salePhase = Number(
     process.env["VUE_APP_SALE_PHASE"] || 0
 ) as SalePhase; // 0 = PRESALE | 1 = WHITELISTSALE | 2 = PUBLICSALE
