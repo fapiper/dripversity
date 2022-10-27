@@ -1,6 +1,6 @@
 import { Directive } from "vue";
 import { gsap } from "gsap";
-import { deepMerge } from "@/utils";
+import { object } from "@/utils/";
 
 export default {
     mounted(el, binding) {
@@ -16,8 +16,11 @@ export default {
             },
         };
 
-        const fromVars = deepMerge(defaultFrom, binding.value?.from || {});
-        const toVars = deepMerge(defaultTo, binding.value?.to || {});
+        const fromVars = object.deepMerge(
+            defaultFrom,
+            binding.value?.from || {}
+        );
+        const toVars = object.deepMerge(defaultTo, binding.value?.to || {});
         gsap.fromTo(el, fromVars, toVars);
     },
 } as Directive;

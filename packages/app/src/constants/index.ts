@@ -2,6 +2,7 @@ import DiscordIcon from "@/components/icons/DiscordIcon.vue";
 import InstagramIcon from "@/components/icons/InstagramIcon.vue";
 import TwitterIcon from "@/components/icons/TwitterIcon.vue";
 import { SalePhase } from "@/composables/useSalePhase";
+import { getChain } from "evm-chains";
 
 export const routes = {
     Home: "/#home",
@@ -37,3 +38,6 @@ export const legals = {
 export const salePhase = Number(
     process.env["VUE_APP_SALE_PHASE"] || 0
 ) as SalePhase; // 0 = PRESALE | 1 = WHITELISTSALE | 2 = PUBLICSALE
+
+export const chain = getChain(Number(process.env["VUE_APP_CHAIN_ID"] || 80001));
+export const infuraKey = process.env["VUE_APP_INFURA_KEY"] || "";

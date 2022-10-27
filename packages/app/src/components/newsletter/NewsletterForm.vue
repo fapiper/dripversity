@@ -73,7 +73,10 @@
 import AppButton from "@/components/app/AppButton.vue";
 import { reactive, ref } from "vue";
 import { useFetch } from "@vueuse/core";
-import { ExclamationCircleIcon, CheckCircleIcon } from "@heroicons/vue/solid";
+import {
+    ExclamationCircleIcon,
+    CheckCircleIcon,
+} from "@heroicons/vue/24/solid";
 
 defineProps(["color"]);
 const email = ref("");

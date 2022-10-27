@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/vue/outline";
+import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/vue/24/outline";
 import AppButton from "@/components/app/AppButton.vue";
 import { ref } from "vue";
 

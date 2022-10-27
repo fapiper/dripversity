@@ -1,10 +1,11 @@
 <template>
     <div class="flex flex-col">
         <StepItem
-            :title="'Purchase details'"
+            :title="'Connect wallet'"
+            :subtitle="isConnected && displayName"
             :index="1"
-            :is-current="isCurrent('purchase-details')"
-            :is-success="isAfter('purchase-details')"
+            :is-current="isCurrent('connect-wallet')"
+            :is-success="isAfter('connect-wallet')"
         >
             <div class="space-y-4">
                 <p>
@@ -12,6 +13,33 @@
                     Wallet. Lorem ipsum dolor sit amet ipsum dolor sit amet.
                 </p>
 
+                <AppButton
+                    full-width
+                    size="sm"
+                    @click.prevent="onClickConnect"
+                    :disabled="connectingWallet"
+                >
+                    <LoadingIcon v-if="connectingWallet" />
+                    <span class="block">
+                        {{
+                            connectingWallet
+                                ? "Connecting..."
+                                : isConnected
+                                ? "Disconnect"
+                                : "Connect Wallet"
+                        }}
+                    </span></AppButton
+                >
+            </div>
+        </StepItem>
+
+        <StepItem
+            :title="'Purchase details'"
+            :index="2"
+            :is-current="isCurrent('purchase-details')"
+            :is-success="isAfter('purchase-details')"
+        >
+            <div class="space-y-4">
                 <AppPanel
                     :transparent="true"
                     title="Dripversity NFT"
@@ -26,7 +54,10 @@
                             :min="1"
                             :max="5"
                         />
-                        <AppPrice :price="quantity * price" />
+                        <AppPrice
+                            :price="quantity * price"
+                            class="w-16 items-end"
+                        />
                     </div>
                 </AppPanel>
 
@@ -37,7 +68,7 @@
         </StepItem>
         <StepItem
             :title="'Sign transaction in wallet'"
-            :index="2"
+            :index="3"
             :is-current="isCurrent('sign-transaction')"
             :is-success="isAfter('sign-transaction')"
             :is-error="false"
@@ -57,7 +88,7 @@
         </StepItem>
         <StepItem
             :title="'Processing transaction on network'"
-            :index="3"
+            :index="4"
             :is-current="isCurrent('process-transaction')"
             :is-success="isAfter('process-transaction')"
             :is-error="false"
@@ -87,7 +118,7 @@
             :title="'Celebrate your NFT'"
             :is-current="isCurrent('confirm-purchase')"
             :is-success="isAfter('confirm-purchase')"
-            :index="4"
+            :index="5"
         >
             <div class="space-y-4">
                 <h3 class="title-3">Thank you!</h3>
@@ -110,18 +141,36 @@ import AppButton from "@/components/app/AppButton.vue";
 import AppPanel from "@/components/app/AppPanel.vue";
 import AppPrice from "@/components/app/AppPrice.vue";
 import InputNumber from "@/components/input/InputNumber.vue";
-import { ref, unref, watch } from "vue";
+import { onMounted, ref, unref, watch } from "vue";
 import { noop, promiseTimeout, useStepper } from "@vueuse/core";
 import TokenData from "@/components/token/TokenData.vue";
 import LoadingIcon from "@/components/icons/LoadingIcon.vue";
+import { storeToRefs } from "pinia";
+import { useUserStore } from "@/store/modules/user";
 
 const price = 1; // in MATIC
 const quantity = ref(1);
 
-const { current, goToNext, isCurrent, isAfter } = useStepper({
+const userStore = useUserStore();
+const { connectWallet } = userStore;
+const { isConnected, displayName, connectingWallet } = storeToRefs(userStore);
+
+const onClickConnect = async function () {
+    await connectWallet();
+    goToNext();
+};
+
+onMounted(() => {
+    console.log("isConnected.value", isConnected.value);
+    if (isConnected.value) {
+        goTo("purchase-details");
+    }
+});
+const { current, goTo, goToNext, isCurrent, isAfter } = useStepper({
+    "connect-wallet": () => promiseTimeout(2000),
     "purchase-details": noop,
     "sign-transaction": () => promiseTimeout(2000),
-    "process-transaction": () => promiseTimeout(4000),
+    "process-transaction": () => promiseTimeout(2000),
     "confirm-purchase": noop,
 });
 

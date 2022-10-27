@@ -36,7 +36,7 @@
                                     @click.prevent="
                                         $emit('update:modelValue', false)
                                     "
-                                    ><XIcon class="w-4 h-4"
+                                    ><XMarkIcon class="w-4 h-4"
                                 /></AppButton>
                             </div>
 
@@ -57,7 +57,7 @@ import {
     DialogOverlay,
 } from "@headlessui/vue";
 import AppButton from "@/components/app/AppButton.vue";
-import { XIcon } from "@heroicons/vue/outline";
+import { XMarkIcon } from "@heroicons/vue/24/outline";
 defineEmits(["update:modelValue"]);
 defineProps({
     modelValue: {

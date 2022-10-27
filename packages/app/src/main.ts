@@ -2,8 +2,9 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "@/assets/styles/font.css";
 import "@/assets/styles/app.css";
+import "@/assets/styles/web3-onboard.css";
+
 import "./registerServiceWorker";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 
@@ -15,6 +16,7 @@ import parallaxDirective from "@/directives/parallax";
 import { router, setupRouter } from "./router";
 import { setupRouterGuard } from "@/router/guard";
 import { setupStore } from "@/store";
+import { setupWeb3Onboard } from "@/wallets";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,5 +31,8 @@ setupStore(app);
 // Configure routing and head setup
 setupRouter(app);
 setupRouterGuard(router);
+
+// Configure web3 onboard modal
+setupWeb3Onboard();
 
 app.mount("#app");

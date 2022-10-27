@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { Disclosure, DisclosureButton } from "@headlessui/vue";
-import { MinusIcon, PlusIcon } from "@heroicons/vue/solid";
+import { MinusIcon, PlusIcon } from "@heroicons/vue/24/solid";
 import { gsap } from "gsap";
 import { computed, h } from "vue";
 const toggle = (el: HTMLElement, height: string) =>
