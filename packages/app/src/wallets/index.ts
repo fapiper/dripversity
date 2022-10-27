@@ -18,20 +18,22 @@ export const setupWeb3Onboard = function () {
                 rpcUrl,
             },
         ],
+        accountCenter: {
+            desktop: { enabled: false },
+            mobile: { enabled: false },
+        },
+        /*
+        notify: {
+            desktop: { enabled: false, transactionHandler: ??? },
+            mobile: { enabled: false },
+        },
+*/
         appMetadata: {
-            // The name of your dApp
             name: "Dripversity",
-            // SVG icon string, with height or width (whichever is larger) set to 100% or a valid image URL
             icon: require("@/assets/images/dripversity-dv.png"),
-            // Optional wide format logo (ie icon and text) to be displayed in the sidebar of connect modal. Defaults to icon if not provided
-            // logo: blocknativeLogo,
-            // The description of your app
             description: "High School meets Metaverse",
-            // The url to a getting started guide for app
-            // gettingStartedGuide: 'http://mydapp.io/getting-started',
-            // url that points to more information about app
+            gettingStartedGuide: "http://dripversity.com",
             explore: "http://dripversity.com",
-            // if your app only supports injected wallets and when no injected wallets detected, recommend the user to install some
         },
     });
 };

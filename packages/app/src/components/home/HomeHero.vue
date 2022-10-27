@@ -72,7 +72,7 @@ import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 import { useSalePhase } from "@/composables/useSalePhase";
 import AppButton from "@/components/app/AppButton.vue";
 import AppCta from "@/components/app/AppCta.vue";
-import { PlayIcon } from "@heroicons/vue/outline";
+import { PlayIcon } from "@heroicons/vue/24/outline";
 
 const { currentSalePhase, stringify } = useSalePhase();
 </script>

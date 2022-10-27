@@ -4,7 +4,8 @@
             <span class="block font-semibold">
                 {{ round(price) }}
             </span>
-            <PolygonIcon class="w-4 h-4 block" />
+            &nbsp;
+            <PolygonIcon class="w-2 h-4 block" />
         </div>
         <span v-if="!hideFiat" class="block text-neutral-400 text-sm"
             >{{ round(price) }} $</span

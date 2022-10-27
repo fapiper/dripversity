@@ -43,7 +43,7 @@
                                 rounded="full"
                                 size="xs"
                                 color="transparent"
-                                ><XIcon class="flex-shrink-0 block w-4 h-4"
+                                ><XMarkIcon class="flex-shrink-0 block w-4 h-4"
                             /></AppButton>
                         </div>
 
@@ -76,7 +76,7 @@ import {
     TransitionChild,
     TransitionRoot,
 } from "@headlessui/vue";
-import { XIcon } from "@heroicons/vue/outline";
+import { XMarkIcon } from "@heroicons/vue/24/outline";
 import { useAppStore } from "@/store/modules/app";
 import { storeToRefs } from "pinia";
 import MintSteps from "@/components/mint/MintSteps.vue";

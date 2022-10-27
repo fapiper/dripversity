@@ -6,7 +6,7 @@
             @click.prevent="emit('update:modelValue', modelValue - 1)"
             :disabled="!!min ? modelValue <= Number(min) : false"
         >
-            <span class="block"> <MinusSmIcon class="w-4 h-4" /></span>
+            <span class="block"> <MinusIcon class="w-4 h-4" /></span>
         </button>
         <input
             v-bind="$attrs"
@@ -21,14 +21,14 @@
             :disabled="!!max ? modelValue >= Number(max) : false"
         >
             <span class="block">
-                <PlusSmIcon class="w-4 h-4" />
+                <PlusIcon class="w-4 h-4" />
             </span>
         </button>
     </div>
 </template>
 
 <script setup lang="ts">
-import { PlusSmIcon, MinusSmIcon } from "@heroicons/vue/outline";
+import { PlusIcon, MinusIcon } from "@heroicons/vue/24/outline";
 defineProps(["modelValue", "id", "label", "max", "min"]);
 const emit = defineEmits(["update:modelValue"]);
 </script>

@@ -56,6 +56,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ChevronRightIcon } from "@heroicons/vue/outline";
+import { ChevronRightIcon } from "@heroicons/vue/24/outline";
 import AppPanel from "@/components/app/AppPanel.vue";
 </script>

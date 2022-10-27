@@ -1,7 +1,8 @@
 <template>
     <div class="flex flex-col">
         <StepItem
-            :title="'Connect Wallet'"
+            :title="'Connect wallet'"
+            :subtitle="isConnected && displayName"
             :index="1"
             :is-current="isCurrent('connect-wallet')"
             :is-success="isAfter('connect-wallet')"
@@ -12,7 +13,23 @@
                     Wallet. Lorem ipsum dolor sit amet ipsum dolor sit amet.
                 </p>
 
-                <MintConnectWalletButton @connect="goToNext" />
+                <AppButton
+                    full-width
+                    size="sm"
+                    @click.prevent="onClickConnect"
+                    :disabled="connectingWallet"
+                >
+                    <LoadingIcon v-if="connectingWallet" />
+                    <span class="block">
+                        {{
+                            connectingWallet
+                                ? "Connecting..."
+                                : isConnected
+                                ? "Disconnect"
+                                : "Connect Wallet"
+                        }}
+                    </span></AppButton
+                >
             </div>
         </StepItem>
 
@@ -37,7 +54,10 @@
                             :min="1"
                             :max="5"
                         />
-                        <AppPrice :price="quantity * price" />
+                        <AppPrice
+                            :price="quantity * price"
+                            class="w-16 items-end"
+                        />
                     </div>
                 </AppPanel>
 
@@ -121,16 +141,32 @@ import AppButton from "@/components/app/AppButton.vue";
 import AppPanel from "@/components/app/AppPanel.vue";
 import AppPrice from "@/components/app/AppPrice.vue";
 import InputNumber from "@/components/input/InputNumber.vue";
-import { ref, unref, watch } from "vue";
+import { onMounted, ref, unref, watch } from "vue";
 import { noop, promiseTimeout, useStepper } from "@vueuse/core";
 import TokenData from "@/components/token/TokenData.vue";
 import LoadingIcon from "@/components/icons/LoadingIcon.vue";
-import MintConnectWalletButton from "@/components/mint/MintConnectWalletButton.vue";
+import { storeToRefs } from "pinia";
+import { useUserStore } from "@/store/modules/user";
 
 const price = 1; // in MATIC
 const quantity = ref(1);
 
-const { current, goToNext, isCurrent, isAfter } = useStepper({
+const userStore = useUserStore();
+const { connectWallet } = userStore;
+const { isConnected, displayName, connectingWallet } = storeToRefs(userStore);
+
+const onClickConnect = async function () {
+    await connectWallet();
+    goToNext();
+};
+
+onMounted(() => {
+    console.log("isConnected.value", isConnected.value);
+    if (isConnected.value) {
+        goTo("purchase-details");
+    }
+});
+const { current, goTo, goToNext, isCurrent, isAfter } = useStepper({
     "connect-wallet": () => promiseTimeout(2000),
     "purchase-details": noop,
     "sign-transaction": () => promiseTimeout(2000),
