@@ -1,15 +1,18 @@
 import { init } from "@web3-onboard/vue";
-import injectedModule from "@web3-onboard/injected-wallets";
+import injected from "./injected";
+import coinbaseWalletSdk from "./coinbase-wallet";
+import walletConnect from "./wallet-connect";
+
 import { chain, infuraKey } from "@/constants";
 
-export const setupWeb3Onboard = function () {
-    const injected = injectedModule();
+const wallets = [injected, coinbaseWalletSdk, walletConnect];
 
+export const setupWeb3Onboard = function () {
     // Only one RPC endpoint required per chain
     const rpcUrl = `https://polygon-mumbai.infura.io/v3/${infuraKey}`;
 
     return init({
-        wallets: [injected],
+        wallets,
         chains: [
             {
                 id: `0x${chain.chainId}`,
@@ -22,12 +25,6 @@ export const setupWeb3Onboard = function () {
             desktop: { enabled: false },
             mobile: { enabled: false },
         },
-        /*
-        notify: {
-            desktop: { enabled: false, transactionHandler: ??? },
-            mobile: { enabled: false },
-        },
-*/
         appMetadata: {
             name: "Dripversity",
             icon: require("@/assets/images/dripversity-dv.png"),
