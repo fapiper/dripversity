@@ -4,6 +4,7 @@ import coinbaseWalletSdk from "./coinbase-wallet";
 import walletConnect from "./wallet-connect";
 
 import { chain, infuraKey } from "@/constants";
+import { hexlify, hexStripZeros } from "ethers/lib/utils";
 
 const wallets = [injected, coinbaseWalletSdk, walletConnect];
 
@@ -15,7 +16,7 @@ export const setupWeb3Onboard = function () {
         wallets,
         chains: [
             {
-                id: `0x${chain.chainId}`,
+                id: hexStripZeros(hexlify(chain.chainId)),
                 token: chain.nativeCurrency.symbol,
                 label: chain.network,
                 rpcUrl,

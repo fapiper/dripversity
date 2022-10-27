@@ -22,7 +22,7 @@
                     <LoadingIcon v-if="connectingWallet" />
                     <span class="block">
                         {{
-                            connectingWallet
+                            connectingWallet || settingChain
                                 ? "Connecting..."
                                 : isConnected
                                 ? "Disconnect"
@@ -155,11 +155,12 @@ const price = 400; // in MATIC
 const quantity = ref(1);
 
 const userStore = useUserStore();
-const { connectWallet } = userStore;
-const { isConnected, displayName, connectingWallet } = storeToRefs(userStore);
+const { connect } = userStore;
+const { isConnected, displayName, connectingWallet, settingChain } =
+    storeToRefs(userStore);
 
 const onClickConnect = async function () {
-    await connectWallet();
+    await connect();
     if (isConnected.value) {
         goToNext();
     }
