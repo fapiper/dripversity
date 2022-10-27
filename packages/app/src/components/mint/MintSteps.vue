@@ -22,7 +22,7 @@
                     <LoadingIcon v-if="connectingWallet" />
                     <span class="block">
                         {{
-                            connectingWallet
+                            connectingWallet || settingChain
                                 ? "Connecting..."
                                 : isConnected
                                 ? "Disconnect"
@@ -35,6 +35,7 @@
 
         <StepItem
             :title="'Purchase details'"
+            :subtitle="isAfter('purchase-details') && 'x' + quantity"
             :index="2"
             :is-current="isCurrent('purchase-details')"
             :is-success="isAfter('purchase-details')"
@@ -56,7 +57,7 @@
                         />
                         <AppPrice
                             :price="quantity * price"
-                            class="w-16 items-end"
+                            class="w-20 items-end"
                         />
                     </div>
                 </AppPanel>
@@ -68,6 +69,7 @@
         </StepItem>
         <StepItem
             :title="'Sign transaction in wallet'"
+            :subtitle="isAfter('sign-transaction') && 'Signed'"
             :index="3"
             :is-current="isCurrent('sign-transaction')"
             :is-success="isAfter('sign-transaction')"
@@ -88,6 +90,7 @@
         </StepItem>
         <StepItem
             :title="'Processing transaction on network'"
+            :subtitle="isAfter('process-transaction') && 'Confirmed'"
             :index="4"
             :is-current="isCurrent('process-transaction')"
             :is-success="isAfter('process-transaction')"
@@ -142,32 +145,35 @@ import AppPanel from "@/components/app/AppPanel.vue";
 import AppPrice from "@/components/app/AppPrice.vue";
 import InputNumber from "@/components/input/InputNumber.vue";
 import { onMounted, ref, unref, watch } from "vue";
-import { noop, promiseTimeout, useStepper } from "@vueuse/core";
+import { noop, promiseTimeout, useAsyncState, useStepper } from "@vueuse/core";
 import TokenData from "@/components/token/TokenData.vue";
 import LoadingIcon from "@/components/icons/LoadingIcon.vue";
 import { storeToRefs } from "pinia";
 import { useUserStore } from "@/store/modules/user";
 
-const price = 1; // in MATIC
+const price = 400; // in MATIC
 const quantity = ref(1);
 
 const userStore = useUserStore();
-const { connectWallet } = userStore;
-const { isConnected, displayName, connectingWallet } = storeToRefs(userStore);
+const { connect } = userStore;
+const { isConnected, displayName, connectingWallet, settingChain } =
+    storeToRefs(userStore);
 
 const onClickConnect = async function () {
-    await connectWallet();
-    goToNext();
+    await connect();
+    if (isConnected.value) {
+        goToNext();
+    }
 };
 
 onMounted(() => {
-    console.log("isConnected.value", isConnected.value);
     if (isConnected.value) {
         goTo("purchase-details");
     }
 });
+
 const { current, goTo, goToNext, isCurrent, isAfter } = useStepper({
-    "connect-wallet": () => promiseTimeout(2000),
+    "connect-wallet": noop,
     "purchase-details": noop,
     "sign-transaction": () => promiseTimeout(2000),
     "process-transaction": () => promiseTimeout(2000),

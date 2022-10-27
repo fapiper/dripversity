@@ -12,14 +12,12 @@
                     <XMarkIcon v-else-if="isError" class="block w-3 h-3" />
                     <span v-else class="block">{{ index }}</span>
                 </div>
-                <h5
-                    class="block font-semibold flex-grow flex-shrink-0 leading-none"
-                >
+                <h5 class="block font-semibold flex-grow flex-shrink-0">
                     {{ title }}
                 </h5>
                 <span
                     v-if="subtitle"
-                    class="block truncate text-neutral-400 text-right leading-none"
+                    class="block truncate text-neutral-400 text-right"
                     >{{ subtitle }}</span
                 >
             </div>

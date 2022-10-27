@@ -7,12 +7,16 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "format": "vue-cli-service lint --fix"
+    "format": "vue-cli-service lint --fix",
+    "build-client": "graphclient build",
+    "graphiql": "graphclient serve-dev"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.1",
     "@headlessui/vue": "^1.7.3",
     "@heroicons/vue": "^2.0.12",
     "@raugfer/jazzicon": "^1.0.6",
+    "@vue/apollo-composable": "^4.0.0-beta.1",
     "@vueuse/core": "^8.9.4",
     "@vueuse/integrations": "^8.9.4",
     "@web3-onboard/coinbase": "^2.1.3",
@@ -23,6 +27,8 @@
     "core-js": "^3.8.3",
     "ethers": "^5.7.2",
     "evm-chains": "^0.2.0",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6",
     "gsap": "^3.10.4",
     "mailchimp-api-v3": "^1.15.0",
     "node-polyfill-webpack-plugin": "^2.0.1",
@@ -34,6 +40,7 @@
     "workbox-precaching": "^6.5.3"
   },
   "devDependencies": {
+    "@graphprotocol/client-cli": "^2.2.15",
     "@tailwindcss/forms": "^0.5.2",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",

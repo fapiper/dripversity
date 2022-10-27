@@ -8,13 +8,16 @@
             <PolygonIcon class="w-2 h-4 block" />
         </div>
         <span v-if="!hideFiat" class="block text-neutral-400 text-sm"
-            >{{ round(price) }} $</span
+            >{{ maticToUsd(price) }} $</span
         >
     </div>
 </template>
 
 <script setup lang="ts">
 import PolygonIcon from "@/components/icons/PolygonIcon.vue";
+import { useCurrency } from "@/composables/useCurrency";
+
+const { maticToUsd } = useCurrency();
 
 const props = defineProps(["price", "hideFiat", "digits"]);
 

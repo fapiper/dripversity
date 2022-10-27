@@ -6,9 +6,11 @@ import { computed, ref, shallowRef, watch } from "vue";
 import { useOnboard } from "@web3-onboard/vue";
 import { getShortAddress } from "@/utils/ethereum";
 import Jazzicon from "@raugfer/jazzicon";
+import { hexlify, hexStripZeros } from "ethers/lib/utils";
+import { chain } from "@/constants";
 
 export const useUserStore = defineStore("drip-user", () => {
-    const web3Onboard = useOnboard();
+    const { connectWallet, ...web3Onboard } = useOnboard();
 
     // state
     const balance = ref<string>("0");
@@ -70,8 +72,18 @@ export const useUserStore = defineStore("drip-user", () => {
             : "0";
     };
 
+    const connect = async function (options?: any) {
+        await connectWallet(options);
+        if (isConnected.value) {
+            await web3Onboard.setChain({
+                chainId: hexStripZeros(hexlify(chain.chainId)),
+                wallet: web3Onboard.alreadyConnectedWallets.value[0],
+            });
+        }
+    };
+
     if (web3Onboard.alreadyConnectedWallets.value[0]) {
-        void web3Onboard.connectWallet({
+        void connect({
             autoSelect: {
                 label: web3Onboard.alreadyConnectedWallets.value[0],
                 disableModals: true,
@@ -79,9 +91,9 @@ export const useUserStore = defineStore("drip-user", () => {
         });
     }
 
-    watch(web3Onboard.connectedWallet, () => {
+    watch(web3Onboard.connectedWallet, async () => {
         if (isConnected.value) {
-            void refreshState();
+            await refreshState();
         } else {
             resetState();
         }
@@ -98,6 +110,7 @@ export const useUserStore = defineStore("drip-user", () => {
         signer,
         network,
         balance,
+        connect,
     };
 });
 

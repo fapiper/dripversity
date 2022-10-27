@@ -69,7 +69,7 @@
                                 @click.prevent="
                                     isConnected
                                         ? disconnectConnectedWallet()
-                                        : connectWallet()
+                                        : connect()
                                 "
                             >
                                 <template v-if="connectingWallet">
@@ -110,7 +110,7 @@ import {
 import LoadingIcon from "@/components/icons/LoadingIcon.vue";
 
 const userStore = useUserStore();
-const { disconnectConnectedWallet, connectWallet } = userStore;
+const { disconnectConnectedWallet, connect } = userStore;
 const { isConnected, image, displayName, connectingWallet } =
     storeToRefs(userStore);
 </script>
