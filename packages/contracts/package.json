@@ -26,8 +26,7 @@
     "whitelist-open": "hardhat run scripts/2_whitelist_open.ts",
     "publicsale-open": "hardhat run scripts/3_public_sale_open.ts",
     "pause": "hardhat run scripts/4_pause.ts",
-    "unpause": "hardhat run scripts/5_unpause.ts",
-    "postinstall": "typechain"
+    "unpause": "hardhat run scripts/5_unpause.ts"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",
