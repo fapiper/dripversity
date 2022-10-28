@@ -29,8 +29,8 @@ contract Dripversity is Ownable, Pausable, ReentrancyGuard, ERC721A, EIP712 {
 
   // Token base URI
   string private baseURI;
-  // TODO Add contract metadata
-  string private contractMetadata = "ipfs://<<CID>>/";
+  // COntract metadata (used by Opensea)
+  string private contractMetadata = "ipfs://bafkreigjpwberxrezvkmvbjqy3tbt7jx3ix7q6qrxqnpqjvm4lsqx24usy/";
 
   // Payment splitter address
   address payable private paymentSplitter;
@@ -41,11 +41,11 @@ contract Dripversity is Ownable, Pausable, ReentrancyGuard, ERC721A, EIP712 {
   // Max amount of available NFT's
   uint256 public constant MAX_SUPPLY = 1000;
   // Reserved NFT's for Owner (airdrop, etc.)
-  uint256 public maxReserved = 250;
+  uint256 public maxReserved = 100;
   // Max mint amount per transaction
-  uint256 public maxMint = 100;
+  uint256 public maxMint = 2;
   // Initial price for whitelist sale
-  uint256 public cost = 0.00025 ether;
+  uint256 public cost = 0.0001 ether;
 
   // Mapping to limit amount of NFT's per address during whitelist sale
   mapping(address => uint) public amountNFTsPerWalletWhitelistSale;
@@ -201,6 +201,24 @@ contract Dripversity is Ownable, Pausable, ReentrancyGuard, ERC721A, EIP712 {
      */
   function unpause() external onlyOwner {
     _unpause();
+  }
+
+  /**
+   * @dev Override isApprovedForAll to auto-approve ERC721A contract
+   */
+  function isApprovedForAll(
+    address _owner,
+    address _operator
+  ) public override view returns (bool isOperator) {
+    // if OpenSea's ERC721 Proxy Address is detected, auto-return true
+    // for Polygon's mainnet, use 0x58807baD0B376efc12F5AD86aAc70E78ed67deaE
+    // for Polygon's Mumbai testnet, use 0xff7Ca10aF37178BdD056628eF42fD7F799fAc77c
+    if (_operator == address(0xff7Ca10aF37178BdD056628eF42fD7F799fAc77c)) {
+      return true;
+    }
+
+    // otherwise, use the default ERC721.isApprovedForAll()
+    return ERC721A.isApprovedForAll(_owner, _operator);
   }
 
   /**

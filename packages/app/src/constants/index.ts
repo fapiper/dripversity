@@ -42,3 +42,5 @@ export const salePhase = Number(
 
 export const chain = getChain(Number(process.env["VUE_APP_CHAIN_ID"] || 80001));
 export const infuraKey = process.env["VUE_APP_INFURA_KEY"] || "";
+export const DRIPContractAddress =
+    process.env["VUE_APP_DRIP_CONTRACT_ADDRESS"] || "";

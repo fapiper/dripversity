@@ -2,7 +2,7 @@ import { ethers } from "hardhat";
 import CollectionConfig from "../config/CollectionConfig";
 
 async function main() {
-  const SplitPayments = await ethers.getContractFactory("SplitPayments");
+  const SplitPayments = await ethers.getContractFactory("DripversityPaymentSplitter");
 
   const splitPayments = await SplitPayments.deploy(
     CollectionConfig.payeesAdresses,

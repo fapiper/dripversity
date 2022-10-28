@@ -1,4 +1,4 @@
-import { inject, computed, ref } from "vue";
+import { inject, ref } from "vue";
 import type { Ref } from "vue";
 import { useQuery } from "@vue/apollo-composable";
 import { TOKEN_HOUR_DATAS } from "@/graphql/queries";

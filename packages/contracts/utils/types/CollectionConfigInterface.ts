@@ -15,7 +15,6 @@ export default interface CollectionConfigInterface {
   maxReserved: number;
   whitelistSale: SaleConfig;
   publicSale: SaleConfig;
-  printPrice: number;
   payeesAdresses: string[];
   payeesShares: number[];
   contractMetadata: string;

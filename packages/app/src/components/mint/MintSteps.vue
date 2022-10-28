@@ -67,6 +67,29 @@
                 >
             </div>
         </StepItem>
+
+        <StepItem
+            :title="'Sign transaction in wallet'"
+            :subtitle="isAfter('sign-transaction') && 'Signed'"
+            :index="3"
+            :is-current="isCurrent('sign-transaction')"
+            :is-success="isAfter('sign-transaction')"
+            :is-error="false"
+        >
+            <div class="space-y-4">
+                <p>
+                    Check your wallet to confirm the transaction. You’ll be
+                    asked to approve this purchase from your wallet.
+                </p>
+
+                <AppButton full-width size="xs" disabled
+                    ><LoadingIcon /><span class="block"
+                        >Waiting for Approval...</span
+                    ></AppButton
+                >
+            </div>
+        </StepItem>
+
         <StepItem
             :title="'Sign transaction in wallet'"
             :subtitle="isAfter('sign-transaction') && 'Signed'"
@@ -150,6 +173,7 @@ import TokenData from "@/components/token/TokenData.vue";
 import LoadingIcon from "@/components/icons/LoadingIcon.vue";
 import { storeToRefs } from "pinia";
 import { useUserStore } from "@/store/modules/user";
+import { Dripversity } from "@dripversity/contracts/typechain";
 
 const price = 400; // in MATIC
 const quantity = ref(1);

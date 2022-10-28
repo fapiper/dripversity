@@ -42,16 +42,6 @@ task("configure-contract", "Reconfigures the smart contract", async () => {
   );
   replaceInFile(
     contractFile,
-    "uint256 public printPrice = [0-9]*.[0-9]*",
-    `uint256 public printPrice = ${CollectionConfig.printPrice}`
-  );
-  replaceInFile(
-    contractFile,
-    "uint256 public printPrice = [0-9]*.[0-9]*",
-    `uint256 public printPrice = ${CollectionConfig.printPrice}`
-  );
-  replaceInFile(
-    contractFile,
     `contractMetadata = "ipfs*://[a-zA-Z0-9]*/"`,
     `contractMetadata = "${CollectionConfig.contractMetadata}"`
   );
