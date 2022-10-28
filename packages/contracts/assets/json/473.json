@@ -1,0 +1,31 @@
+{
+  "name": "Dripversity #473",
+  "description": "High School meets Metaverse - Molestie ullamcorper egestas at amet, id proin gravida tortor. Semper pellentesque sed nisl enim volutpat sem est vel. Id nunc cras at neque.",
+  "image": "ipfs://bafybeig4667xt7jp32s7qecj5c76fktz4dwhc2ud7s42jdq27fk5266hwi/473.png",
+  "dna": "7be5a3c6e99ed7b847aac0ebaf87ed1b597b8383",
+  "edition": 473,
+  "date": 1666965609442,
+  "attributes": [
+    {
+      "trait_type": "Character",
+      "value": "5"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "4"
+    },
+    {
+      "trait_type": "Headwear",
+      "value": "5"
+    },
+    {
+      "trait_type": "Jewelry",
+      "value": "4"
+    },
+    {
+      "trait_type": "Lorem",
+      "value": "1"
+    }
+  ],
+  "test": true
+}
