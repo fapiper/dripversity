@@ -10,7 +10,8 @@
   "scripts": {
     "app:serve": "yarn --cwd packages/app serve",
     "app:build": "yarn --cwd packages/app build",
-    "app:start": "vercel dev",
+    "contract:compile": "yarn --cwd packages/contracts compile",
+    "ci:build": "yarn contract:compile && yarn app:build",
     "changeset": "changeset",
     "lint": "yarn workspaces run lint",
     "format": "yarn workspaces run format",

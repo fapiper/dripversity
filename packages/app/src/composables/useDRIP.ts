@@ -5,7 +5,6 @@ import { ethers } from "ethers";
 import type { Dripversity } from "@dripversity/contracts/typechain";
 import dripversityJson from "@dripversity/contracts/artifacts/contracts/Dripversity.sol/Dripversity.json";
 import { DRIPContractAddress } from "@/constants";
-import { BytesLike } from "@ethersproject/bytes/src.ts";
 import { useSalePhase } from "@/composables/useSalePhase";
 
 interface txOptions {
@@ -15,14 +14,14 @@ interface txOptions {
 interface MintParams {
     quantity: number;
     price: string;
-    signature?: BytesLike;
+    signature?: string;
 }
 
 type MintOptions = txOptions;
 
 export const DRIP_CONTEXT = Symbol();
 
-export function createDRIP(contractRes: Ref<any>): any {
+export function createDRIP(): any {
     const { provider, signer, account } = storeToRefs(useUserStoreWithOut());
     const { isWhitelistSale } = useSalePhase();
 
@@ -34,6 +33,7 @@ export function createDRIP(contractRes: Ref<any>): any {
     const name = ref("");
     const paused = ref(false);
     const symbol = ref("");
+    const price = ref(0.0005);
 
     const contract = shallowRef<Dripversity>();
 
@@ -42,6 +42,7 @@ export function createDRIP(contractRes: Ref<any>): any {
         () => maxSupply.value === totalSupply.value
     );
 
+    /*
     watch(contractRes, () => {
         if (contractRes.value.data?.contract) {
             const { contract: res } = contractRes.value.data;
@@ -55,6 +56,7 @@ export function createDRIP(contractRes: Ref<any>): any {
             symbol.value = res.symbol;
         }
     });
+*/
 
     watch(provider, () => {
         contract.value = new ethers.Contract(
@@ -84,6 +86,8 @@ export function createDRIP(contractRes: Ref<any>): any {
 
             return tx;
         } catch (e: any) {
+            console.error("genericMint error", e);
+
             const error: any = {};
             Object.keys(e).forEach((key) => {
                 error[key] = e[key];
@@ -109,13 +113,15 @@ export function createDRIP(contractRes: Ref<any>): any {
             quantity,
             signature,
             {
-                value: ethers.utils.parseEther(price).mul(quantity),
+                value: ethers.utils.parseEther(String(price)).mul(quantity),
             }
         );
     };
 
     // Internal components function for Public Sale
     const publicMint = async function ({ quantity, price }: MintParams) {
+        console.log("account.value", account.value, "signer.value");
+
         if (!account.value || !signer.value) {
             throw new Error("No account, signer or signature available");
         }
@@ -123,13 +129,14 @@ export function createDRIP(contractRes: Ref<any>): any {
         const signedContract = contract.value?.connect(signer.value);
 
         return signedContract?.publicSaleMint(account.value.address, quantity, {
-            value: ethers.utils.parseEther(price).mul(quantity),
+            value: ethers.utils.parseEther(String(price)).mul(quantity),
         });
     };
 
     return {
         id,
         maxSupply,
+        price,
         totalSupply,
         maxReserved,
         supportsMetadata,

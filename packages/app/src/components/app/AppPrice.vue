@@ -8,7 +8,7 @@
             <PolygonIcon class="w-2 h-4 block" />
         </div>
         <span v-if="!hideFiat" class="block text-neutral-400 text-sm"
-            >{{ maticToUsd(price) }} $</span
+            >{{ maticToUsd(price, digits) }} $</span
         >
     </div>
 </template>

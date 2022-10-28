@@ -37,10 +37,10 @@ setupApolloClients(app);
 setupRouter(app);
 setupRouterGuard(router);
 
-// Configure global composables
-setupGlobalComposables(app);
-
 // Configure web3 onboard modal
 setupWeb3Onboard();
+
+// Configure global composables after web3Onboard
+setupGlobalComposables(app);
 
 app.mount("#app");

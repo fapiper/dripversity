@@ -57,12 +57,13 @@
                         />
                         <AppPrice
                             :price="quantity * price"
+                            :digits="4"
                             class="w-20 items-end"
                         />
                     </div>
                 </AppPanel>
 
-                <AppButton full-width size="sm" @click.prevent="goToNext"
+                <AppButton full-width size="sm" @click.prevent="onClickBuy"
                     >Complete Purchase</AppButton
                 >
             </div>
@@ -91,27 +92,6 @@
         </StepItem>
 
         <StepItem
-            :title="'Sign transaction in wallet'"
-            :subtitle="isAfter('sign-transaction') && 'Signed'"
-            :index="3"
-            :is-current="isCurrent('sign-transaction')"
-            :is-success="isAfter('sign-transaction')"
-            :is-error="false"
-        >
-            <div class="space-y-4">
-                <p>
-                    Check your wallet to confirm the transaction. You’ll be
-                    asked to approve this purchase from your wallet.
-                </p>
-
-                <AppButton full-width size="xs" disabled
-                    ><LoadingIcon /><span class="block"
-                        >Waiting for Approval...</span
-                    ></AppButton
-                >
-            </div>
-        </StepItem>
-        <StepItem
             :title="'Processing transaction on network'"
             :subtitle="isAfter('process-transaction') && 'Confirmed'"
             :index="4"
@@ -125,7 +105,7 @@
                     blockchain shortly. We’re waiting for the network to process
                     your transaction.
                     <a
-                        href="https://polygonscan.com/"
+                        :href="'https://mumbai.polygonscan.com/tx/' + tx?.hash"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="link"
@@ -153,7 +133,10 @@
                     Your transaction was successfully completed.
                 </p>
                 <TokenData />
-                <AppButton href="https://opensea.io/" full-width size="sm"
+                <AppButton
+                    :href="'https://testnets.opensea.io/collection/dripversity'"
+                    full-width
+                    size="sm"
                     >View on Opensea</AppButton
                 >
             </div>
@@ -167,17 +150,19 @@ import AppButton from "@/components/app/AppButton.vue";
 import AppPanel from "@/components/app/AppPanel.vue";
 import AppPrice from "@/components/app/AppPrice.vue";
 import InputNumber from "@/components/input/InputNumber.vue";
-import { onMounted, ref, unref, watch } from "vue";
-import { noop, promiseTimeout, useAsyncState, useStepper } from "@vueuse/core";
+import { onMounted, reactive, ref, shallowRef, unref, watch } from "vue";
+import { noop, useStepper } from "@vueuse/core";
 import TokenData from "@/components/token/TokenData.vue";
 import LoadingIcon from "@/components/icons/LoadingIcon.vue";
 import { storeToRefs } from "pinia";
 import { useUserStore } from "@/store/modules/user";
 import { Dripversity } from "@dripversity/contracts/typechain";
+import { useDRIP } from "@/composables/useDRIP";
 
-const price = 400; // in MATIC
 const quantity = ref(1);
+const tx = shallowRef();
 
+const { price, genericMint } = useDRIP();
 const userStore = useUserStore();
 const { connect } = userStore;
 const { isConnected, displayName, connectingWallet, settingChain } =
@@ -190,22 +175,26 @@ const onClickConnect = async function () {
     }
 };
 
+const onClickBuy = async function () {
+    const mintParams = reactive({ quantity, price });
+    console.log("sign transaction with genericMint", mintParams);
+    goToNext();
+    tx.value = await genericMint(mintParams);
+    goToNext();
+    await tx.value.wait().then(() => goToNext());
+};
+
 onMounted(() => {
     if (isConnected.value) {
         goTo("purchase-details");
     }
 });
 
-const { current, goTo, goToNext, isCurrent, isAfter } = useStepper({
-    "connect-wallet": noop,
-    "purchase-details": noop,
-    "sign-transaction": () => promiseTimeout(2000),
-    "process-transaction": () => promiseTimeout(2000),
-    "confirm-purchase": noop,
-});
-
-watch(current, async () => {
-    const fn = unref(current) as () => Promise<any>;
-    fn !== noop && (await fn().then(goToNext));
-});
+const { current, goTo, goToNext, isCurrent, isAfter } = useStepper([
+    "connect-wallet",
+    "purchase-details",
+    "sign-transaction",
+    "process-transaction",
+    "confirm-purchase",
+]);
 </script>
