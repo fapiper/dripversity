@@ -1,0 +1,20 @@
+{
+  "name": "@dripversity/subgraph",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ whitelabel-market/dripversity-test",
+    "create-local": "graph create --node http://localhost:8020/ whitelabel-market/dripversity-test",
+    "remove-local": "graph remove --node http://localhost:8020/ whitelabel-market/dripversity-test",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 whitelabel-market/dripversity-test",
+    "test": "graph test",
+    "lint": "echo \"No linting specified\""
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.35.0",
+    "@graphprotocol/graph-ts": "0.28.1"
+  },
+  "devDependencies": { "matchstick-as": "0.5.0" }
+}
