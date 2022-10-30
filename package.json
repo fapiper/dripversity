@@ -5,14 +5,14 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "app",
+    "frontend",
     "api",
     "contracts",
     "subgraph"
   ],
   "scripts": {
-    "app:serve": "yarn --cwd app serve",
-    "app:build": "yarn --cwd app build",
+    "frontend:serve": "yarn --cwd frontend serve",
+    "frontend:build": "yarn --cwd frontend build",
     "contract:compile": "yarn --cwd contracts compile",
     "ci:build": "yarn contract:compile && yarn app:build",
     "changeset": "changeset",

@@ -1,5 +1,5 @@
 {
-  "name": "@dripversity/app",
+  "name": "@dripversity/frontend",
   "version": "1.0.0",
   "description": "Dripversity NFT collection frontend",
   "private": true,
