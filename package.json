@@ -14,7 +14,7 @@
     "frontend:serve": "yarn --cwd frontend serve",
     "frontend:build": "yarn --cwd frontend build",
     "contract:compile": "yarn --cwd contracts compile",
-    "ci:build": "yarn contract:compile && yarn app:build",
+    "ci:build": "yarn contract:compile && yarn frontend:build",
     "changeset": "changeset",
     "lint": "yarn workspaces run lint",
     "format": "yarn workspaces run format",
