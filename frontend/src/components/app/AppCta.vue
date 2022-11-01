@@ -19,7 +19,6 @@
 <script setup lang="ts">
 import { useSalePhase } from "@/composables/useSalePhase";
 import AppButton from "@/components/app/AppButton.vue";
-import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
 import { useAppStore } from "@/store/modules/app";
 import { ref } from "vue";
 import NewsletterModal from "@/components/newsletter/NewsletterModal.vue";

@@ -25,7 +25,6 @@
 import { Disclosure, DisclosureButton } from "@headlessui/vue";
 import { MinusIcon, PlusIcon } from "@heroicons/vue/24/solid";
 import { gsap } from "gsap";
-import { computed, h } from "vue";
 const toggle = (el: HTMLElement, height: string) =>
     gsap.to(el, { height, duration: 0.1, ease: "power3.out" });
 const onEnter = async (el: HTMLElement, done: any) =>

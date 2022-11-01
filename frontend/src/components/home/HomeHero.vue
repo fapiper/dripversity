@@ -67,7 +67,6 @@
 </template>
 
 <script lang="ts" setup>
-import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
 import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 import { useSalePhase } from "@/composables/useSalePhase";
 import AppButton from "@/components/app/AppButton.vue";

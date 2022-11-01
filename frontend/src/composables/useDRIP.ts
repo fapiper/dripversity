@@ -1,4 +1,4 @@
-import { computed, inject, Ref, ref, shallowRef, watch } from "vue";
+import { computed, inject, ref, shallowRef, watch } from "vue";
 import { storeToRefs } from "pinia";
 import { useUserStoreWithOut } from "@/store/modules/user";
 import { ethers } from "ethers";

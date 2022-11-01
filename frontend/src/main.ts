@@ -31,7 +31,7 @@ app.directive("parallax", parallaxDirective);
 setupStore(app);
 
 // Configure apollo graphql clients
-setupApolloClients(app);
+setupApolloClients();
 
 // Configure routing and head setup
 setupRouter(app);

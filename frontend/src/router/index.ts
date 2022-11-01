@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import LayoutDefault from "@/layouts/default/LayoutDefault.vue";
 import LayoutLegal from "@/layouts/legal/LayoutLegal.vue";
 import HomeView from "@/views/HomeView.vue";
 import scrollBehavior from "@/router/scrollBehavior";

@@ -41,7 +41,6 @@
 </template>
 
 <script lang="ts" setup>
-import AppButton from "@/components/app/AppButton.vue";
 import { useSalePhase } from "@/composables/useSalePhase";
 import AppCta from "@/components/app/AppCta.vue";
 

@@ -56,8 +56,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ChevronRightIcon } from "@heroicons/vue/24/outline";
-import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
 import { useSalePhase } from "@/composables/useSalePhase";
 import AppCta from "@/components/app/AppCta.vue";
 

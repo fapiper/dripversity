@@ -1,13 +1,12 @@
-import { App } from "vue";
 import {
     ApolloClient,
     createHttpLink,
     InMemoryCache,
 } from "@apollo/client/core";
-import { ApolloClients, provideApolloClient } from "@vue/apollo-composable";
+import { provideApolloClient } from "@vue/apollo-composable";
 import { uniswapV3PolygonSubgraph } from "@/constants";
 
-export function setupApolloClients(app: App<Element>) {
+export function setupApolloClients() {
     // HTTP connection to the API
     const httpLink = createHttpLink({
         // You should use an absolute URL here
@@ -24,9 +23,4 @@ export function setupApolloClients(app: App<Element>) {
     });
 
     provideApolloClient(apolloClientUniswapV3Polygon);
-    /*
-    app.provide(ApolloClients, {
-        default: apolloClientUniswapV3Polygon,
-    });
-*/
 }
