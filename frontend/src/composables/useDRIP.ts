@@ -82,6 +82,7 @@ export function createDRIP(): any {
         params: MintParams,
         options?: MintOptions
     ) {
+        console.log("");
         try {
             const tx = isWhitelistSale
                 ? await whitelistMint(params)

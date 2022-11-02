@@ -22,7 +22,7 @@ const CollectionConfig: CollectionConfigInterface = {
     maxMintAmountPerTx: 5,
   },
   contractMetadata: "ipfs://bafkreigjpwberxrezvkmvbjqy3tbt7jx3ix7q6qrxqnpqjvm4lsqx24usy/",
-  tokenBaseUri: "ipfs://bafybeighxuhjis4lqz224mzcub5dqdpdfehz35mn5sbstdaqskr5ofnp3q/",
+  tokenBaseUri: "ipfs://bafybeidrr3dab7gah3mogsouaj2qtb4iwtwsjio54cxylkkkwmt6rpri2u/",
   adminAddress: "0x23479a6877970E5889dfaD779e225aDC08eB8E03",
   // necessary for splitter contract and nft contract
   payeesShares: [60, 40],
@@ -34,7 +34,7 @@ const CollectionConfig: CollectionConfigInterface = {
   // necessary after contract deployment
   signerAddress: "0x23479a6877970E5889dfaD779e225aDC08eB8E03",
   // rest
-  contractAddress: "0x4A53a86B6972D54924f90B649D5430a686dAe3A7",
+  contractAddress: "0xb2307C3fa7Fc1Dd0816E46F137DC9CbFC6DDaf34",
 };
 
 export default CollectionConfig;
