@@ -1,21 +1,23 @@
 <template>
-    <div>
-        <table class="table-auto w-full">
-            <tbody>
-                <tr v-for="(value, key) in data" :key="key">
-                    <td class="text-neutral-400">{{ key }}</td>
-                    <td>{{ value }}</td>
-                </tr>
+    <div class="space-y-4">
+        <div class="grid grid-cols-2">
+            <template v-for="(value, key) in data" :key="key">
+                <div class="text-neutral-400">{{ key }}</div>
+                <div>{{ value }}</div>
+            </template>
 
-                <template v-if="collapse">
-                    <tr class="border-t border-neutral-800"></tr>
-                    <tr v-for="(value, key) in attributes" :key="key">
-                        <td class="text-neutral-400">{{ key }}</td>
-                        <td>{{ value }}</td>
-                    </tr>
+            <template v-if="collapse">
+                <div class="col-span-2 border-t border-neutral-800 my-2"></div>
+                <template v-for="(attribute, i) of attributes" :key="i">
+                    <div class="text-neutral-400">
+                        {{ attribute.trait_type }}
+                    </div>
+                    <div>
+                        {{ attribute.value }}
+                    </div>
                 </template>
-            </tbody>
-        </table>
+            </template>
+        </div>
 
         <AppButton
             @click.prevent="collapse = !collapse"
@@ -36,23 +38,17 @@
 <script lang="ts" setup>
 import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/vue/24/outline";
 import AppButton from "@/components/app/AppButton.vue";
-import { ref } from "vue";
+import { computed, ref, toRef } from "vue";
+import { useDateFormat, useTimeAgo } from "@vueuse/core";
+import { getShortAddress } from "@/utils/ethereum";
 
-defineProps(["token"]);
-
+const props = defineProps(["token"]);
 const collapse = ref(false);
 
-const data = {
-    Owner: "florentin.eth",
-    Rarity: "florentin.eth",
-    "Minted On": "florentin.eth",
-};
+const data = computed(() => ({
+    Owner: getShortAddress(props.token?.owner?.id || ""),
+    "Minted On": useTimeAgo(props.token?.createdAtTimestamp * 1000).value,
+}));
 
-const attributes = {
-    Clothing: "Lorem",
-    Color: "Ipsum",
-    Any: "Dolor",
-    More: "Lorem",
-    Example: "Lorem",
-};
+const attributes = computed(() => props.token?.metadata?.attributes || []);
 </script>

@@ -36,6 +36,10 @@ export const legals = {
 };
 
 export const uniswapV3PolygonSubgraph = `https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-polygon`;
+export const dripversitySubgraph =
+    process.env["VUE_APP_DRIP_SUBGRAPH"] ||
+    "https://api.thegraph.com/subgraphs/name/whitelabel-market/dripversity-test";
+
 export const salePhase = Number(
     process.env["VUE_APP_SALE_PHASE"] || 0
 ) as SalePhase; // 0 = PRESALE | 1 = WHITELISTSALE | 2 = PUBLICSALE

@@ -1,8 +1,38 @@
-import { tokenHourDataFragment } from "@/graphql/fragments";
 import gql from "graphql-tag";
 
+export const CONTRACT = gql`
+    query contract($id: String) {
+        contract(id: $id) {
+            id
+            name
+            paused
+            symbol
+            maxSupply
+            maxReserved
+            totalSupply
+        }
+    }
+`;
+
+export const TOKENS_FROM_BLOCK = gql`
+    query tokensFromBlock($address: String = "", $block: Int = 0) {
+        tokens(where: { owner: $address, createdAtBlockNumber: $block }) {
+            id
+            owner {
+                id
+            }
+            contract {
+                id
+            }
+            metadataURI
+            createdAtTimestamp
+            createdAtBlockNumber
+            transactionHash
+        }
+    }
+`;
+
 export const TOKEN_HOUR_DATAS = gql`
-    ${tokenHourDataFragment}
     query tokenHourDatas(
         $first: Int! = 1
         $skip: Int! = 0

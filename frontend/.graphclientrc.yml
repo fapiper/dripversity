@@ -3,6 +3,10 @@ sources:
       handler:
           graphql:
               endpoint: https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-polygon
+    - name: dripversityTest
+      handler:
+          graphql:
+              endpoint: https://api.thegraph.com/subgraphs/name/whitelabel-market/dripversity-test
 
 documents:
     - ./src/graphql/queries.ts

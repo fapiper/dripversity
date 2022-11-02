@@ -3,24 +3,29 @@ import {
     createHttpLink,
     InMemoryCache,
 } from "@apollo/client/core";
-import { provideApolloClient } from "@vue/apollo-composable";
-import { uniswapV3PolygonSubgraph } from "@/constants";
+import { provideApolloClients } from "@vue/apollo-composable";
+import { uniswapV3PolygonSubgraph, dripversitySubgraph } from "@/constants";
+
+export const clientIdUniswapV3 = "UNISWAP_V3";
 
 export function setupApolloClients() {
-    // HTTP connection to the API
-    const httpLink = createHttpLink({
-        // You should use an absolute URL here
-        uri: uniswapV3PolygonSubgraph,
-    });
-
-    // Cache implementation
-    const cache = new InMemoryCache();
-
     // Create the apollo client
     const apolloClientUniswapV3Polygon = new ApolloClient({
-        link: httpLink,
-        cache,
+        link: createHttpLink({
+            uri: uniswapV3PolygonSubgraph,
+        }),
+        cache: new InMemoryCache(),
     });
 
-    provideApolloClient(apolloClientUniswapV3Polygon);
+    const apolloClientDripversity = new ApolloClient({
+        link: createHttpLink({
+            uri: dripversitySubgraph,
+        }),
+        cache: new InMemoryCache(),
+    });
+
+    provideApolloClients({
+        default: apolloClientDripversity,
+        [clientIdUniswapV3]: apolloClientUniswapV3Polygon,
+    });
 }

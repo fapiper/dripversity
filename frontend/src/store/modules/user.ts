@@ -1,6 +1,5 @@
 import { defineStore } from "pinia";
 import { store } from "@/store";
-
 import { ethers } from "ethers";
 import { computed, ref, shallowRef, watch } from "vue";
 import { useOnboard } from "@web3-onboard/vue";

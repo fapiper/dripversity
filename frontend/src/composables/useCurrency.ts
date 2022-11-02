@@ -3,6 +3,7 @@ import type { Ref } from "vue";
 import { useQuery } from "@vue/apollo-composable";
 import { TOKEN_HOUR_DATAS } from "@/graphql/queries";
 import { ApolloError } from "@apollo/client";
+import { clientIdUniswapV3 } from "@/graphql";
 
 export const CURRENCY_CONTEXT = Symbol();
 
@@ -17,7 +18,9 @@ export function createCurrency(): UseCurrency {
     const defaultFractionDigits = 2;
     const maticPrice = ref("0.00");
 
-    const { result, error, onResult } = useQuery(TOKEN_HOUR_DATAS);
+    const { result, error, onResult } = useQuery(TOKEN_HOUR_DATAS, null, {
+        clientId: clientIdUniswapV3,
+    });
 
     onResult(() => {
         maticPrice.value = result.value?.tokenHourDatas[0].close;

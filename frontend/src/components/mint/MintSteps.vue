@@ -15,13 +15,14 @@ import MintStepConfirmPurchase from "@/components/mint/MintStepConfirmPurchase.v
 import StepperContainer from "@/components/stepper/StepperContainer.vue";
 import { h } from "vue";
 
-const { price, genericMint } = useDRIP();
+const { price, genericMint, waitForTokens } = useDRIP();
 const userStore = useUserStore();
 const { connect } = userStore;
 const { isConnected, displayName } = storeToRefs(userStore);
 
 const stepperRef = ref<typeof StepperContainer>();
 
+const tokens = shallowRef<any[]>();
 const quantity = ref(1);
 const tx = shallowRef();
 
@@ -47,7 +48,9 @@ const purchase = useAsyncState(
         stepperRef.value?.goToNext();
         tx.value = await genericMint(reactive({ quantity, price }));
         stepperRef.value?.goToNext();
-        await tx.value.wait();
+        const receipt = await tx.value.wait();
+        stepperRef.value?.goToNext();
+        tokens.value = await waitForTokens(receipt);
         stepperRef.value?.goToNext();
         return tx.value;
     },
@@ -133,10 +136,25 @@ const steps = [
             ),
     },
     {
+        id: "load-token",
+        title: "Loading your token data",
+        subtitle: "Finished",
+        error: isCurrentError("load-token", purchase.error),
+        vnode: () =>
+            h(
+                MintStepGenericProcessing,
+                {
+                    label: "Waiting for token...",
+                },
+                () =>
+                    "Your transaction is confirmed on the blockchain. Our system is now loading your token data."
+            ),
+    },
+    {
         id: "confirm-purchase",
         title: "Celebrate your NFT",
         error: isCurrentError("confirm-purchase", purchase.error),
-        vnode: () => h(MintStepConfirmPurchase),
+        vnode: () => h(MintStepConfirmPurchase, { tokens }),
     },
 ];
 </script>

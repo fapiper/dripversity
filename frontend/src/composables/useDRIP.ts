@@ -1,4 +1,4 @@
-import { computed, inject, ref, shallowRef, watch } from "vue";
+import { computed, inject, ref, shallowRef, unref, watch } from "vue";
 import { storeToRefs } from "pinia";
 import { useUserStoreWithOut } from "@/store/modules/user";
 import { ethers } from "ethers";
@@ -6,6 +6,14 @@ import type { Dripversity } from "@dripversity/contracts/typechain";
 import dripversityJson from "@dripversity/contracts/artifacts/contracts/Dripversity.sol/Dripversity.json";
 import { DRIPContractAddress } from "@/constants";
 import { useSalePhase } from "@/composables/useSalePhase";
+import { useQuery, useSubscription } from "@vue/apollo-composable";
+import {
+    CONTRACT,
+    TOKEN_HOUR_DATAS,
+    TOKENS_FROM_BLOCK,
+} from "@/graphql/queries";
+import { clientIdUniswapV3 } from "@/graphql";
+import { until } from "@vueuse/core";
 
 interface txOptions {
     txWait: boolean;
@@ -42,21 +50,21 @@ export function createDRIP(): any {
         () => maxSupply.value === totalSupply.value
     );
 
-    /*
-    watch(contractRes, () => {
-        if (contractRes.value.data?.contract) {
-            const { contract: res } = contractRes.value.data;
-            id.value = res.id;
-            maxSupply.value = res.maxSupply;
-            totalSupply.value = res.totalSupply;
-            maxReserved.value = res.maxReserved;
-            supportsMetadata.value = res.supportsMetadata;
-            name.value = res.name;
-            paused.value = res.paused;
-            symbol.value = res.symbol;
-        }
+    const { result, onResult } = useQuery(CONTRACT, {
+        id: DRIPContractAddress.toLocaleLowerCase(),
     });
-*/
+
+    onResult(({ data }: any) => {
+        console.log("data contract", data);
+        id.value = data.contract.id;
+        maxSupply.value = data.contract.maxSupply;
+        totalSupply.value = data.contract.totalSupply;
+        maxReserved.value = data.contract.maxReserved;
+        supportsMetadata.value = data.contract.supportsMetadata;
+        name.value = data.contract.name;
+        paused.value = data.contract.paused;
+        symbol.value = data.contract.symbol;
+    });
 
     watch(provider, () => {
         contract.value = new ethers.Contract(
@@ -133,6 +141,51 @@ export function createDRIP(): any {
         });
     };
 
+    const waitForTokens = async function (tx: ethers.ContractReceipt) {
+        if (!account.value) {
+            throw new Error("No account available");
+        }
+
+        const enabled = ref(true);
+
+        const { result } = useQuery(
+            TOKENS_FROM_BLOCK,
+            {
+                address: account.value.address,
+                block: tx.blockNumber,
+            },
+            () => ({ pollInterval: 400, enabled: unref(enabled.value) })
+        );
+
+        await until(result).toMatch(
+            (data) => !!data?.tokens && data?.tokens.length > 0,
+            { timeout: 100000, throwOnTimeout: true }
+        );
+
+        enabled.value = false;
+
+        const tokensWithMetadata = await Promise.all(
+            result.value.tokens.map(async (token: any) => {
+                console.log("token", token);
+                const metadata = await fetch(
+                    token.metadataURI.replace(
+                        "ipfs://",
+                        "https://cloudflare-ipfs.com/ipfs/"
+                    )
+                ).then((res) => res.json());
+                metadata.image = metadata.image.replace(
+                    "ipfs://",
+                    "https://cloudflare-ipfs.com/ipfs/"
+                );
+                return { ...token, metadata };
+            })
+        );
+
+        console.log("tokensWithMetadata", tokensWithMetadata);
+
+        return tokensWithMetadata;
+    };
+
     return {
         id,
         maxSupply,
@@ -148,6 +201,7 @@ export function createDRIP(): any {
         genericMint,
         whitelistMint,
         publicMint,
+        waitForTokens,
     };
 }
 
