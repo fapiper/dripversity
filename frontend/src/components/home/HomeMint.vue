@@ -92,6 +92,7 @@ import placeholderImage from "@/assets/images/placeholder.png";
 const image = ref(placeholderImage);
 
 const onClose = () => {
+    image.value = placeholderImage;
     appStore.setShowMintModal(false);
 };
 
