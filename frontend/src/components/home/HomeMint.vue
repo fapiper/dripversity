@@ -2,7 +2,7 @@
     <TransitionRoot appear :show="getShowMintModal" as="template">
         <Dialog as="div" @close="onClose">
             <div
-                class="fixed right-0 top-0 w-full max-w-3xl h-screen z-50 flex"
+                class="fixed right-0 top-0 w-full max-w-4xl h-screen z-50 flex"
             >
                 <TransitionChild
                     as="template"
@@ -48,18 +48,20 @@
                         </div>
 
                         <div
-                            class="p-4 lg:p-8 grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8 overflow-y-auto lg:overflow-y-hidden"
+                            class="grid grid-cols-1 lg:grid-cols-5 overflow-y-auto lg:overflow-y-hidden"
                         >
-                            <div class="lg:order-last lg:col-span-2">
+                            <div class="lg:order-last lg:col-span-2 p-4 lg:p-8">
                                 <img
-                                    class="lg:mx-auto w-44 h-44 lg:h-80 lg:w-80 object-contain"
-                                    src="@/assets/images/placeholder.png"
+                                    class="lg:mx-auto w-60 h-60 lg:h-80 lg:w-80 object-contain"
+                                    :src="image"
                                     alt="Dripversity token placeholder"
                                 />
                             </div>
 
-                            <div class="lg:overflow-y-auto lg:col-span-3">
-                                <MintSteps />
+                            <div
+                                class="lg:overflow-y-auto lg:col-span-3 p-4 lg:p-8"
+                            >
+                                <MintSteps @mint="onMint" />
                             </div>
                         </div>
                     </div>
@@ -81,11 +83,19 @@ import { useAppStore } from "@/store/modules/app";
 import { storeToRefs } from "pinia";
 import MintSteps from "@/components/mint/MintSteps.vue";
 import AppButton from "@/components/app/AppButton.vue";
-
+import { ref } from "vue";
 const appStore = useAppStore();
 const { getShowMintModal } = storeToRefs(appStore);
 
+import placeholderImage from "@/assets/images/placeholder.png";
+
+const image = ref(placeholderImage);
+
 const onClose = () => {
     appStore.setShowMintModal(false);
+};
+
+const onMint = (token: any) => {
+    image.value = token.metadata.image;
 };
 </script>

@@ -55,7 +55,6 @@ export function createDRIP(): any {
     });
 
     onResult(({ data }: any) => {
-        console.log("data contract", data);
         id.value = data.contract.id;
         maxSupply.value = data.contract.maxSupply;
         totalSupply.value = data.contract.totalSupply;
@@ -94,8 +93,6 @@ export function createDRIP(): any {
 
             return tx;
         } catch (e: any) {
-            console.error("genericMint error", e);
-
             const error: any = {};
             Object.keys(e).forEach((key) => {
                 error[key] = e[key];
@@ -128,8 +125,6 @@ export function createDRIP(): any {
 
     // Internal components function for Public Sale
     const publicMint = async function ({ quantity, price }: MintParams) {
-        console.log("account.value", account.value, "signer.value");
-
         if (!account.value || !signer.value) {
             throw new Error("No account, signer or signature available");
         }
@@ -166,7 +161,6 @@ export function createDRIP(): any {
 
         const tokensWithMetadata = await Promise.all(
             result.value.tokens.map(async (token: any) => {
-                console.log("token", token);
                 const metadata = await fetch(
                     token.metadataURI.replace(
                         "ipfs://",
@@ -180,8 +174,6 @@ export function createDRIP(): any {
                 return { ...token, metadata };
             })
         );
-
-        console.log("tokensWithMetadata", tokensWithMetadata);
 
         return tokensWithMetadata;
     };

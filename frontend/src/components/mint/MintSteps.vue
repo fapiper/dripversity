@@ -20,6 +20,8 @@ const userStore = useUserStore();
 const { connect } = userStore;
 const { isConnected, displayName } = storeToRefs(userStore);
 
+const emit = defineEmits(["mint"]);
+
 const stepperRef = ref<typeof StepperContainer>();
 
 const tokens = shallowRef<any[]>();
@@ -51,6 +53,7 @@ const purchase = useAsyncState(
         const receipt = await tx.value.wait();
         stepperRef.value?.goToNext();
         tokens.value = await waitForTokens(receipt);
+        emit("mint", tokens.value && tokens.value[0]);
         stepperRef.value?.goToNext();
         return tx.value;
     },
