@@ -2,7 +2,7 @@
     <section id="cta">
         <div class="overflow-hidden pt-28 lg:pt-20">
             <div
-                class="sm:rounded-2xl bg-gradient-to-bl from-blue via-blue to-blue-700 border border-blue-700 container-default py-8 lg:py-16 space-y-12"
+                class="sm:rounded bg-gradient-to-bl from-blue via-blue to-blue-700 border border-blue-700 container-default max-w-6xl py-8 lg:py-16 space-y-12"
             >
                 <ul
                     class="w-full flex items-center justify-center space-x-4 lg:space-x-8 -mt-28 lg:-mt-36"

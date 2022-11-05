@@ -25,7 +25,7 @@
                         from: { yPercent: 25 },
                         to: { yPercent: -25 },
                     }"
-                    class="relative bg-neutral-900 rounded-2xl shadow-2xl border border-neutral-800 py-8 px-4 lg:px-8 space-y-2 col-start-1 col-span-2 z-10 lg:my-32"
+                    class="relative bg-neutral-900 rounded shadow-2xl py-8 px-4 lg:px-8 space-y-2 col-start-1 col-span-2 z-10 lg:my-32"
                     v-animate.stagger
                 >
                     <h2 class="title-2">The first Collection</h2>

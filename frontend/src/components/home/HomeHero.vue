@@ -4,18 +4,18 @@
             class="relative min-h-screen w-full flex items-center justify-center py-32"
         >
             <div
-                class="relative container-default max-w-xl flex flex-col items-center text-center z-20 space-y-8"
+                class="relative container-default max-w-2xl text-center z-20 space-y-12 mt-32"
                 v-animate.stagger
             >
                 <DripversityIcon class="w-full text-blue stroke-creme" />
-
-                <p class="text-neutral-50 text-sm md:text-base">
-                    Molestie ullamcorper egestas at amet, id proin gravida
-                    tortor. Semper pellentesque sed nisl enim volutpat sem est
-                    vel. Id nunc cras at neque.
-                </p>
-
-                <div>
+                <div
+                    class="max-w-sm w-full mx-auto space-y-8 flex flex-col items-center"
+                >
+                    <p class="text-neutral-50">
+                        Molestie ullamcorper egestas at ametr. Semper
+                        pellentesque sed nisl enim volutpat sem est vel. Id nunc
+                        cras at neque.
+                    </p>
                     <AppCta />
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <AppButton color="outline" rounded="full" size="sm">
-                    <PlayIcon class="w-6 h-6" />
+                    <PlayIcon class="w-4 h-4" />
                     <span class="block">Watch full promo</span>
                 </AppButton>
             </div>

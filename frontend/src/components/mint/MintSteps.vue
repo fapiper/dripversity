@@ -3,7 +3,16 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, reactive, ref, shallowRef, unref } from "vue";
+import {
+    computed,
+    onMounted,
+    onUnmounted,
+    reactive,
+    ref,
+    shallowRef,
+    toRef,
+    unref,
+} from "vue";
 import { storeToRefs } from "pinia";
 import { MaybeRef, useAsyncState } from "@vueuse/core";
 import { useUserStore } from "@/store/modules/user";
@@ -20,11 +29,11 @@ const userStore = useUserStore();
 const { connect } = userStore;
 const { isConnected, displayName } = storeToRefs(userStore);
 
-const emit = defineEmits(["mint"]);
+const props = defineProps(["modelValue"]);
+const emit = defineEmits(["update:modelValue", "load"]);
 
 const stepperRef = ref<typeof StepperContainer>();
 
-const tokens = shallowRef<any[]>();
 const quantity = ref(1);
 const tx = shallowRef();
 
@@ -50,10 +59,11 @@ const purchase = useAsyncState(
         stepperRef.value?.goToNext();
         tx.value = await genericMint(reactive({ quantity, price }));
         stepperRef.value?.goToNext();
+        emit("load");
         const receipt = await tx.value.wait();
         stepperRef.value?.goToNext();
-        tokens.value = await waitForTokens(receipt);
-        emit("mint", tokens.value && tokens.value[0]);
+        const tokens = await waitForTokens(receipt);
+        emit("update:modelValue", tokens);
         stepperRef.value?.goToNext();
         return tx.value;
     },
@@ -68,6 +78,10 @@ const isCurrentError = function (id: string, error: MaybeRef<any>) {
             : null;
     });
 };
+
+onUnmounted(() => {
+    emit("update:modelValue", []);
+});
 
 const steps = [
     {
@@ -122,7 +136,7 @@ const steps = [
                     label: "Waiting for Confirmation...",
                 },
                 () => [
-                    "Your purchase is processing. It should be confirmed on the blockchain shortly. We’re waiting for the network to process your transaction.",
+                    "Your purchase is processing. It should be confirmed on the blockchain shortly. We’re waiting for the network to process your transaction. ",
                     h(
                         "a",
                         {
@@ -157,7 +171,9 @@ const steps = [
         id: "confirm-purchase",
         title: "Celebrate your NFT",
         error: isCurrentError("confirm-purchase", purchase.error),
-        vnode: () => h(MintStepConfirmPurchase, { tokens }),
+        vnode: () => {
+            return h(MintStepConfirmPurchase, { tokens: props.modelValue });
+        },
     },
 ];
 </script>

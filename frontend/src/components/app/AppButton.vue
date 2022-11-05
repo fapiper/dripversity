@@ -18,15 +18,17 @@ export default defineComponent({
                 | "primary"
                 | "secondary"
                 | "outline"
+                | "gray"
+                | "blur"
                 | "transparent",
             default: "primary",
         },
         rounded: {
             type: String as () => "full" | "base" | "none",
-            default: "base",
+            default: "full",
         },
         size: {
-            type: String as () => "xs" | "sm" | "md" | "lg",
+            type: String as () => "xxs" | "xs" | "sm" | "md" | "lg",
             default: "md",
         },
         fullWidth: {
@@ -57,13 +59,15 @@ export default defineComponent({
     setup(props, { emit, slots }) {
         const hover = ref(false);
         const ButtonColor: Indexable<string> = {
-            primary:
-                "bg-blue text-neutral-50 border border-blue hover:bg-blue/80",
-            secondary: "bg-neutral-50 text-blue border border-neutral-50",
+            primary: "bg-blue text-creme border border-blue hover:opacity-90",
+            secondary:
+                "bg-creme text-neutral-900 border border-creme hover:opacity-90",
             outline:
                 "bg-neutral-900/50 background-blur-sm text-current border border-neutral-500 hover:opacity-80",
             transparent:
                 "bg-transparent text-neutral-50 border-transparent hover:opacity-80",
+            gray: "bg-neutral-700 text-neutral-400 border-neutral-700 hover:opacity-90",
+            blur: "bg-neutral-900/50 backdrop-blur-sm text-neutral-200 hover:opacity-90",
             disabled: "bg-neutral-800 text-neutral-400/50 border-neutral-800",
         };
         const ButtonSizeIcon: Indexable<string> = {
@@ -74,15 +78,15 @@ export default defineComponent({
         };
         const ButtonSizeDefault: Indexable<string> = {
             xs: "h-8 text-xs",
-            sm: "h-10 text-sm",
-            md: "h-12 text-base",
+            sm: "h-10 text-xs",
+            md: "h-12 text-sm",
             lg: "h-14 text-lg",
         };
         const ButtonSpacing: Indexable<string> = {
             xs: "py-1 px-2 space-x-2",
-            sm: "py-2 px-3 space-x-2",
+            sm: "py-1 px-4 space-x-2",
             md: "py-3 px-6 space-x-2",
-            lg: "py-6 px-8 space-x-2",
+            lg: "py-4 px-8 space-x-2",
         };
         const ButtonRounded: Indexable<string> = {
             none: "rounded-none",
@@ -91,7 +95,7 @@ export default defineComponent({
         };
 
         const classesButton = computed(() => [
-            `relative inline-flex items-center text-center transition duration-200 font-semibold`,
+            `relative inline-flex items-center text-center transition-all duration-200 font-semibold uppercase tracking-wide`,
             ButtonRounded[props.rounded],
             ButtonColor[props.disabled ? "disabled" : props.color],
             !props.onlyIcon && ButtonSpacing[props.size],

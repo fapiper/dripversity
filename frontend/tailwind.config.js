@@ -6,7 +6,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Satoshi", ...defaultTheme.fontFamily.sans],
+                sans: ["General", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 discord: "#5865F2",
@@ -16,7 +16,7 @@ module.exports = {
                     100: "#8285E9",
                     200: "#6063E3",
                     300: "#3D41DD",
-                    400: "#2429CD",
+                    400: "#2126c5",
                     500: "#1E22AA",
                     600: "#16187A",
                     700: "#0D0F4B",

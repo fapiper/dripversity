@@ -3,7 +3,7 @@
         class="fixed top-0 left-0 h-32 pointer-events-none bg-gradient-to-b from-black/50 via-transparent text-white w-full flex z-40"
     >
         <nav
-            class="px-8 lg:px-12 w-full flex flex-1 items-center justify-start justify-end space-x-4 relative"
+            class="px-8 lg:px-12 w-full flex flex-1 items-center justify-start justify-end space-x-4 md:space-x-8 relative"
         >
             <router-link class="block pointer-events-auto !mr-auto" to="/"
                 ><img
@@ -19,13 +19,16 @@
                     :key="name"
                     class="inline-flex items-center justify-center"
                 >
-                    <a
+                    <AppButton
+                        class="pointer-events-auto !background-blur-sm"
+                        color="blur"
+                        size="xs"
+                        only-icon
+                        rounded="base"
                         :href="social.baseUrl + '/' + social.account"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        class="link-2 inline-flex items-center justify-center pointer-events-auto"
-                        ><component :is="social.icon" class="h-4 w-4"
-                    /></a>
+                    >
+                        <component :is="social.icon" class="h-3.5 w-3.5" />
+                    </AppButton>
                 </li>
             </ul>
 
@@ -37,4 +40,5 @@
 <script lang="ts" setup>
 import { socials } from "@/constants/";
 import LayoutHeaderAvatar from "@/layouts/default/LayoutHeaderAvatar.vue";
+import AppButton from "@/components/app/AppButton.vue";
 </script>

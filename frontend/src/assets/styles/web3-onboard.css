@@ -64,9 +64,9 @@
     --onboard-modal-color: var(--onboard-black);
 
     /* FONTS */
-    --onboard-font-family-normal: Satoshi;
-    --onboard-font-family-semibold: Satoshi;
-    --onboard-font-family-light: Satoshi;
+    --onboard-font-family-normal: theme(fontFamily.sans);
+    --onboard-font-family-semibold: theme(fontFamily.sans);
+    --onboard-font-family-light: theme(fontFamily.sans);
 
     --onboard-font-size-1: theme(spacing.12);
     --onboard-font-size-2: theme(spacing.10);
@@ -115,8 +115,8 @@
     --account-select-modal-danger-500: #ff4f4f;
 
     /* FONTS */
-    --account-select-modal-font-family-normal: Satoshi;
-    --account-select-modal-font-family-light: Satoshi;
+    --account-select-modal-font-family-normal: theme(fontFamily.sans);
+    --account-select-modal-font-family-light: theme(fontFamily.sans);
     --account-select-modal-font-size-5: 1rem;
     --account-select-modal-font-size-7: .75rem;
     --account-select-modal-font-line-height-1: 2rem;

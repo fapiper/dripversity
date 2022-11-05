@@ -9,7 +9,7 @@
             <DripversityIcon
                 v-for="i in 4"
                 :key="i"
-                class="text-transparent stroke-1 stroke-neutral-600/20 h-40 flex-shrink-0"
+                class="text-transparent stroke-1 stroke-neutral-600/30 h-40 flex-shrink-0"
             />
         </div>
     </div>

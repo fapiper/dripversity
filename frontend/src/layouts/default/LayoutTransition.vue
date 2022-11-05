@@ -14,14 +14,14 @@
         >
             <div
                 ref="darkContentRef"
-                class="text-center space-y-16 flex flex-col justify-center items-center transform translate-y-8"
+                class="text-center space-y-12 flex flex-col justify-center items-center transform translate-y-16"
             >
-                <div class="w-60">
+                <div class="w-72">
                     <DripversityIcon class="w-full text-blue stroke-creme" />
                 </div>
 
                 <div
-                    class="relative w-40 h-px bg-neutral-50/20 overflow-hidden rounded"
+                    class="relative w-20 h-0.5 bg-neutral-50/20 overflow-hidden rounded"
                 >
                     <span
                         ref="progressRef"
@@ -58,7 +58,7 @@ const progressRef = templateRef("progressRef");
 const tl = () =>
     gsap.timeline({
         paused: true,
-        defaults: { duration: 0.4, ease: "Power1.easeInOut" },
+        defaults: { duration: 0.4, ease: "Power2.easeInOut" },
     });
 
 const enterTl = ref();
@@ -77,8 +77,8 @@ onMounted(() => {
 
     leaveTl.value = tl()
         .to(darkContentRef.value, { autoAlpha: 0, duration: 0.8 })
-        .to(lightBgRef.value, { height: "100vh" })
-        .to(lightBgRef.value, { yPercent: -100 })
+        .to(lightBgRef.value, { height: "100vh" }, "-=0.1")
+        .to(lightBgRef.value, { yPercent: -100 }, "-=0.1")
         .to(darkBgRef.value, { autoAlpha: 0 });
 
     showLoader();

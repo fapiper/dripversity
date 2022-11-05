@@ -1,6 +1,6 @@
 <template>
     <div class="space-y-4">
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-2 gap-1">
             <template v-for="(value, key) in data" :key="key">
                 <div class="text-neutral-400">{{ key }}</div>
                 <div>{{ value }}</div>

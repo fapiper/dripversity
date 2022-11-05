@@ -48,7 +48,7 @@
 @layer base {
 
     html {
-        @apply 2xl:text-[1vw]
+        @apply 2xl:text-[0.9vw]
     }
 
     body {

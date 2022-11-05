@@ -29,7 +29,7 @@
                         class="flex flex-col w-full bg-neutral-900 border-l border-neutral-800"
                     >
                         <div
-                            class="flex items-center py-2 lg:py-4 px-4 lg:px-8 lg:col-span-5 border-b border-neutral-800"
+                            class="flex items-center p-4 lg:px-8 lg:col-span-5 border-b border-neutral-800"
                         >
                             <div class="flex-1 truncate">
                                 <h3 class="title-2 !m-0">
@@ -51,17 +51,21 @@
                             class="grid grid-cols-1 lg:grid-cols-5 overflow-y-auto lg:overflow-y-hidden"
                         >
                             <div class="lg:order-last lg:col-span-2 p-4 lg:p-8">
-                                <img
-                                    class="lg:mx-auto w-60 h-60 lg:h-80 lg:w-80 object-contain"
-                                    :src="image"
-                                    alt="Dripversity token placeholder"
+                                <MintPreview
+                                    ref="preview"
+                                    :image="tokens[0]?.metadata?.image"
+                                    :alt="tokens[0]?.metadata?.name"
                                 />
                             </div>
 
                             <div
                                 class="lg:overflow-y-auto lg:col-span-3 p-4 lg:p-8"
                             >
-                                <MintSteps @mint="onMint" />
+                                <MintSteps
+                                    v-model="tokens"
+                                    @update:modelValue="preview?.pause()"
+                                    @load="preview?.play()"
+                                />
                             </div>
                         </div>
                     </div>
@@ -87,16 +91,13 @@ import { ref } from "vue";
 const appStore = useAppStore();
 const { getShowMintModal } = storeToRefs(appStore);
 
-import placeholderImage from "@/assets/images/placeholder.png";
+import MintPreview from "@/components/mint/MintPreview.vue";
+import { promiseTimeout } from "@vueuse/core";
 
-const image = ref(placeholderImage);
+const tokens = ref([]);
+const preview = ref<typeof MintPreview>();
 
-const onClose = () => {
-    image.value = placeholderImage;
+const onClose = async () => {
     appStore.setShowMintModal(false);
-};
-
-const onMint = (token: any) => {
-    image.value = token.metadata.image;
 };
 </script>

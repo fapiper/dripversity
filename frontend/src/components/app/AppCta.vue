@@ -11,12 +11,13 @@
     </template>
     <template v-else>
         <AppButton :size="size" :color="color" @click="setShowMintModal(true)"
-            >Start Minting</AppButton
-        >
+            ><span class="block">Start Minting</span>
+        </AppButton>
     </template>
 </template>
 
 <script setup lang="ts">
+import { ArrowRightIcon } from "@heroicons/vue/24/solid";
 import { useSalePhase } from "@/composables/useSalePhase";
 import AppButton from "@/components/app/AppButton.vue";
 import { useAppStore } from "@/store/modules/app";

@@ -1,9 +1,9 @@
 <template>
     <Popover class="relative pointer-events-auto" v-slot="{ open }">
         <PopoverButton
-            class="flex items-center rounded-full space-x-2 cursor-pointer !outline-none bg-neutral-900/50 backdrop-blur-sm p-1"
+            class="flex items-center rounded-full space-x-2 cursor-pointer !outline-none bg-neutral-900/50 backdrop-blur-sm p-1 pr-3"
         >
-            <div class="flex w-7 h-7 rounded-full">
+            <div class="flex w-8 h-8 rounded-full">
                 <img
                     v-if="isConnected"
                     class="block w-full rounded-full"
@@ -11,15 +11,24 @@
                     :alt="'Avatar'"
                 />
 
+                <img
+                    v-else
+                    class="block w-full rounded-full"
+                    src="@/assets/images/placeholder.png"
+                    :alt="'Avatar'"
+                />
+
+                <!--
                 <div
                     v-else
                     class="flex items-center justify-center rounded-full bg-transparent w-full text-neutral-50"
                 >
                     <WalletIcon class="block w-4 h-4" />
                 </div>
+-->
             </div>
 
-            <div class="relative w-8 h-6 rounded-xl">
+            <div class="relative w-8 h-8 rounded">
                 <span
                     class="absolute top-1/2 left-1 right-1 block h-[0.05rem] bg-neutral-50 transform translate-y-[0.25rem] transition-transform duration-200 ease-in-out"
                     :class="open && 'rotate-45 !translate-y-1/2'"

@@ -13,8 +13,8 @@
                 '/' +
                 token?.id
             "
-            full-width
             size="sm"
+            full-width
             >View on Opensea</AppButton
         >
     </div>

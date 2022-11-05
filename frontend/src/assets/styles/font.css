@@ -1,57 +1,36 @@
 @font-face {
-    font-family: "Aktiv Grotesk";
-    font-weight: 300;
-    font-display: swap;
-    font-style: normal;
-    src: url("../font/AktivGrotesk-Light.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Aktiv Grotesk";
+    font-family: "General";
     font-weight: 400;
     font-display: swap;
     font-style: normal;
-    src: url("../font/AktivGrotesk-Regular.woff") format("woff");
+    src: url("../font/GeneralSans-Regular.woff2") format("woff2");
+}
+
+
+@font-face {
+    font-family: "General";
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    src: url("../font/GeneralSans-Light.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "Aktiv Grotesk";
+    font-family: "General";
     font-weight: 600;
     font-display: swap;
     font-style: normal;
-    src: url("../font/AktivGrotesk-Medium.woff") format("woff");
+    src: url("../font/GeneralSans-Medium.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "Aktiv Grotesk";
+    font-family: "General";
     font-weight: 700;
     font-display: swap;
     font-style: normal;
-    src: url("../font/AktivGrotesk-Bold.woff") format("woff");
+    src: url("../font/GeneralSans-Semibold.woff2") format("woff2");
 }
 
-@font-face {
-    font-family: "Satoshi";
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-    src: url("../font/Satoshi-Regular.woff2") format("woff2");
-}
 
-@font-face {
-    font-family: "Satoshi";
-    font-weight: 300;
-    font-display: swap;
-    font-style: normal;
-    src: url("../font/Satoshi-Light.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Satoshi";
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-    src: url("../font/Satoshi-Bold.woff2") format("woff2");
-}
 
 

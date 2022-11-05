@@ -4,7 +4,7 @@
             <slot />
         </p>
 
-        <AppButton full-width size="xs" disabled
+        <AppButton full-width disabled size="sm"
             ><LoadingIcon /><span class="block">{{ label }}</span></AppButton
         >
     </div>

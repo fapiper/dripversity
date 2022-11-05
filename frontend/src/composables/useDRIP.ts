@@ -149,7 +149,7 @@ export function createDRIP(): any {
                 address: account.value.address,
                 block: tx.blockNumber,
             },
-            () => ({ pollInterval: 400, enabled: unref(enabled.value) })
+            () => ({ pollInterval: 800, enabled: unref(enabled.value) })
         );
 
         await until(result).toMatch(
@@ -159,7 +159,7 @@ export function createDRIP(): any {
 
         enabled.value = false;
 
-        const tokensWithMetadata = await Promise.all(
+        return Promise.all(
             result.value.tokens.map(async (token: any) => {
                 const metadata = await fetch(
                     token.metadataURI.replace(
@@ -174,8 +174,6 @@ export function createDRIP(): any {
                 return { ...token, metadata };
             })
         );
-
-        return tokensWithMetadata;
     };
 
     return {
