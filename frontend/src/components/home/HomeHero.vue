@@ -52,14 +52,16 @@
             </div>
         </div>
 
-        <span
-            class="block absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-transparent z-10"
-        />
+        <div
+            class="absolute top-0 left-0 -bottom-60 w-full flex z-0 overflow-hidden"
+        >
+            <span
+                class="block absolute inset-0 bg-gradient-to-t from-black via-black/75 md:via-black/50 z-10"
+            />
 
-        <div class="absolute inset-0 flex z-0 overflow-hidden">
             <img
-                class="flex-1 object-cover"
-                src="@/assets/images/hero.jpeg"
+                class="flex-1 object-cover object-top"
+                src="@/assets/images/lobby.png"
                 alt="Dripversity Environment"
             />
         </div>

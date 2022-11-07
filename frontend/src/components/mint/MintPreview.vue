@@ -10,6 +10,7 @@
         <video
             v-else
             ref="video"
+            playbackRate="1.5"
             loop
             class="block w-full object-cover"
             width="100%"
@@ -21,11 +22,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
 defineProps(["image", "alt"]);
 
 const video = ref<HTMLVideoElement>();
+
+onMounted(() => {
+    if (video.value) {
+        video.value.playbackRate = 1.5;
+    }
+});
 
 const play = function () {
     video.value?.play();

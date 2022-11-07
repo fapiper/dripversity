@@ -59,8 +59,8 @@ const purchase = useAsyncState(
         stepperRef.value?.goToNext();
         tx.value = await genericMint(reactive({ quantity, price }));
         stepperRef.value?.goToNext();
-        emit("load");
         const receipt = await tx.value.wait();
+        emit("load");
         stepperRef.value?.goToNext();
         const tokens = await waitForTokens(receipt);
         emit("update:modelValue", tokens);
