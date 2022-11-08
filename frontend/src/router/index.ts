@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import LayoutLegal from "@/layouts/legal/LayoutLegal.vue";
 import HomeView from "@/views/HomeView.vue";
+import MintView from "@/views/MintView.vue";
 import scrollBehavior from "@/router/scrollBehavior";
 import { App } from "vue";
 
@@ -9,6 +10,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "/",
         name: "home",
         component: HomeView,
+    },
+    {
+        path: "/mint",
+        name: "mint",
+        component: MintView,
     },
     {
         path: "/legal",

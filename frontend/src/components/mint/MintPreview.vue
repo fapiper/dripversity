@@ -1,23 +1,19 @@
 <template>
-    <div class="flex lg:mx-auto w-60 h-60 lg:h-auto lg:w-full">
-        <img
-            v-if="image"
-            class="block w-full object-contain"
-            :src="image"
-            :alt="alt"
-        />
+    <div class="flex flex-col w-full flex-1 items-center justify-center">
+        <div class="relative flex w-full lg:w-96 lg:h-96 z-10">
+            <img v-if="image" class="block w-full" :src="image" :alt="alt" />
 
-        <video
-            v-else
-            ref="video"
-            playbackRate="1.5"
-            loop
-            class="block w-full object-cover"
-            width="100%"
-            poster="@/assets/images/placeholder.png"
-        >
-            <source src="@/assets/videos/reveal.mp4" type="video/mp4" />
-        </video>
+            <video
+                v-else
+                ref="video"
+                loop
+                preload="auto"
+                class="block w-full object-cover"
+                poster="@/assets/images/placeholder.png"
+            >
+                <source src="@/assets/videos/reveal.mp4" type="video/mp4" />
+            </video>
+        </div>
     </div>
 </template>
 

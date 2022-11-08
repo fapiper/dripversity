@@ -10,7 +10,7 @@
         </AppButton>
     </template>
     <template v-else>
-        <AppButton :size="size" :color="color" @click="setShowMintModal(true)"
+        <AppButton :size="size" :color="color" to="/mint"
             ><span class="block">Start Minting</span>
         </AppButton>
     </template>

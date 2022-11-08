@@ -90,9 +90,7 @@ import AppButton from "@/components/app/AppButton.vue";
 import { ref } from "vue";
 const appStore = useAppStore();
 const { getShowMintModal } = storeToRefs(appStore);
-
 import MintPreview from "@/components/mint/MintPreview.vue";
-import { promiseTimeout } from "@vueuse/core";
 
 const tokens = ref([]);
 const preview = ref<typeof MintPreview>();

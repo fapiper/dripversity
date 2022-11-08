@@ -38,8 +38,8 @@
 <script lang="ts" setup>
 import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/vue/24/outline";
 import AppButton from "@/components/app/AppButton.vue";
-import { computed, ref, toRef } from "vue";
-import { useDateFormat, useTimeAgo } from "@vueuse/core";
+import { computed, ref } from "vue";
+import { useTimeAgo } from "@vueuse/core";
 import { getShortAddress } from "@/utils/ethereum";
 
 const props = defineProps(["token"]);

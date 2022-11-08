@@ -31,12 +31,14 @@
                     <span class="block text-neutral-400">Current phase:</span>
 
                     <div class="flex items-center space-x-2">
-                        <span class="relative flex h-2 w-2">
+                        <span
+                            class="relative h-3 w-3 flex items-center justify-center"
+                        >
                             <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue opacity-75"
+                                class="animate-ping absolute block inset-0 rounded-full bg-orange-400 opacity-50"
                             ></span>
                             <span
-                                class="relative inline-flex rounded-full h-2 w-2 bg-blue"
+                                class="relative block h-2 w-2 rounded-full bg-orange-400"
                             ></span>
                         </span>
 
