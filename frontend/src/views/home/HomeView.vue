@@ -1,6 +1,5 @@
 <template>
     <div>
-        <HomeMint />
         <HomeHero />
         <HomeExplore />
         <HomeAbout />
@@ -14,14 +13,13 @@
 </template>
 
 <script lang="ts" setup>
-import HomeHero from "@/components/home/HomeHero.vue";
-import HomeAbout from "@/components/home/HomeAbout.vue";
-import HomeExplore from "@/components/home/HomeExplore.vue";
-import HomeStory from "@/components/home/HomeStory.vue";
-import HomeBlockschmidt from "@/components/home/HomeBlockschmidt.vue";
-import HomeCollection from "@/components/home/HomeCollection.vue";
-import HomeTeam from "@/components/home/HomeTeam.vue";
-import HomeCta from "@/components/home/HomeCta.vue";
-import HomeQuestions from "@/components/home/HomeQuestions.vue";
-import HomeMint from "@/components/home/HomeMint.vue";
+import HomeHero from "@/views/home/src/HomeHero.vue";
+import HomeAbout from "@/views/home/src/HomeAbout.vue";
+import HomeExplore from "@/views/home/src/HomeExplore.vue";
+import HomeStory from "@/views/home/src/HomeStory.vue";
+import HomeBlockschmidt from "@/views/home/src/HomeBlockschmidt.vue";
+import HomeCollection from "@/views/home/src/HomeCollection.vue";
+import HomeTeam from "@/views/home/src/HomeTeam.vue";
+import HomeCta from "@/views/home/src/HomeCta.vue";
+import HomeQuestions from "@/views/home/src/HomeQuestions.vue";
 </script>

@@ -8,6 +8,7 @@
                 >
                     <video
                         autoplay
+                        playsinline
                         muted
                         loop
                         id="maskof"
