@@ -6,7 +6,7 @@ import { useOnboard } from "@web3-onboard/vue";
 import { getShortAddress } from "@/utils/ethereum";
 import Jazzicon from "@raugfer/jazzicon";
 import { hexlify, hexStripZeros } from "ethers/lib/utils";
-import { chain } from "@/constants";
+import { env } from "@/constants";
 
 export const useUserStore = defineStore("drip-user", () => {
     const { connectWallet, ...web3Onboard } = useOnboard();
@@ -75,7 +75,7 @@ export const useUserStore = defineStore("drip-user", () => {
         await connectWallet(options);
         if (isConnected.value) {
             await web3Onboard.setChain({
-                chainId: hexStripZeros(hexlify(chain.chainId)),
+                chainId: hexStripZeros(hexlify(env.chain.chainId)),
                 wallet: web3Onboard.alreadyConnectedWallets.value[0],
             });
         }

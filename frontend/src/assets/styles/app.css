@@ -33,15 +33,19 @@
     }
 
     .link, .link-1 {
-        @apply relative opacity-60 hover:opacity-100 after:block after:absolute after:bottom-px after:left-0 after:w-full after:h-px after:bg-current after:transition-all after:duration-200 hover:after:w-0
+        @apply leading-relaxed relative opacity-60 hover:opacity-100 after:block after:absolute after:bottom-px after:left-0 after:w-full after:h-px after:bg-current after:transition-all after:duration-200 hover:after:w-0
+    }
+
+    .link.router-link-exact-active, .link-1.router-link-exact-active {
+        @apply after:w-0 opacity-100
     }
 
     .link-2 {
         @apply font-semibold opacity-100 transition-opacity duration-200 hover:opacity-70
     }
 
-    .font-logo {
-        @apply font-serif font-bold
+    .link-2.router-link-exact-active, .link-2.router-link-exact-active {
+        @apply opacity-70
     }
 }
 
@@ -57,6 +61,14 @@
 
     section {
         @apply py-24 lg:py-32;
+    }
+
+    #layout-sidebar section:first-of-type {
+        @apply pt-0 lg:pt-0;
+    }
+
+    #layout-sidebar section:last-of-type {
+        @apply pb-0 lg:pb-0;
     }
 
     p {

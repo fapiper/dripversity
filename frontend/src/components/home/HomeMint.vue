@@ -85,12 +85,12 @@ import {
 import { XMarkIcon } from "@heroicons/vue/24/outline";
 import { useAppStore } from "@/store/modules/app";
 import { storeToRefs } from "pinia";
-import MintSteps from "@/components/mint/MintSteps.vue";
+import MintSteps from "@/views/mint/src/MintSteps.vue";
 import AppButton from "@/components/app/AppButton.vue";
 import { ref } from "vue";
 const appStore = useAppStore();
 const { getShowMintModal } = storeToRefs(appStore);
-import MintPreview from "@/components/mint/MintPreview.vue";
+import MintPreview from "@/views/mint/src/MintPreview.vue";
 
 const tokens = ref([]);
 const preview = ref<typeof MintPreview>();

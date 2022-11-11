@@ -1,6 +1,6 @@
 <template>
     <header
-        class="fixed top-0 left-0 h-32 pointer-events-none bg-gradient-to-b from-black/50 via-transparent text-white w-full flex z-40"
+        class="fixed top-0 left-0 h-32 pointer-events-none text-white w-full flex z-40"
     >
         <nav
             class="px-8 lg:px-12 w-full flex flex-1 items-center justify-start justify-end space-x-4 md:space-x-8 relative"
@@ -9,13 +9,13 @@
                 ><img
                     src="@/assets/images/dripversity-dv.png"
                     alt="Dripversity DV Logo"
-                    class="block w-12"
+                    class="block w-8"
                 />
             </router-link>
 
             <ul class="flex items-center justify-start space-x-4">
                 <li
-                    v-for="(social, name) in socials"
+                    v-for="(social, name) in routes.socials"
                     :key="name"
                     class="inline-flex items-center justify-center"
                 >
@@ -38,7 +38,7 @@
 </template>
 
 <script lang="ts" setup>
-import { socials } from "@/constants/";
+import { routes } from "@/constants/";
 import LayoutHeaderAvatar from "@/layouts/default/LayoutHeaderAvatar.vue";
 import AppButton from "@/components/app/AppButton.vue";
 </script>

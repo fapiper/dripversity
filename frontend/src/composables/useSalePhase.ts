@@ -1,4 +1,4 @@
-import { salePhase } from "@/constants/";
+import { env } from "@/constants/";
 
 export enum SalePhase {
     "PRESALE",
@@ -15,7 +15,7 @@ export interface UseSalePhase {
 }
 
 export function useSalePhase(): UseSalePhase {
-    const currentSalePhase = salePhase;
+    const currentSalePhase = env.salePhase;
     const isPreSale = currentSalePhase === SalePhase.PRESALE;
     const isWhitelistSale = currentSalePhase === SalePhase.WHITELISTSALE;
     const isPublicSale = currentSalePhase === SalePhase.PUBLICSALE;

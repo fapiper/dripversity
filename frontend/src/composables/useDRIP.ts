@@ -4,7 +4,7 @@ import { useUserStoreWithOut } from "@/store/modules/user";
 import { ethers } from "ethers";
 import type { Dripversity } from "@dripversity/contracts/typechain";
 import dripversityJson from "@dripversity/contracts/artifacts/contracts/Dripversity.sol/Dripversity.json";
-import { DRIPContractAddress } from "@/constants";
+import { env } from "@/constants";
 import { useSalePhase } from "@/composables/useSalePhase";
 import { useQuery, useSubscription } from "@vue/apollo-composable";
 import {
@@ -51,7 +51,7 @@ export function createDRIP(): any {
     );
 
     const { result, onResult } = useQuery(CONTRACT, {
-        id: DRIPContractAddress.toLocaleLowerCase(),
+        id: env.DRIPContractAddress.toLocaleLowerCase(),
     });
 
     onResult(({ data }: any) => {
@@ -67,7 +67,7 @@ export function createDRIP(): any {
 
     watch(provider, () => {
         contract.value = new ethers.Contract(
-            DRIPContractAddress,
+            env.DRIPContractAddress,
             dripversityJson.abi,
             provider.value
         ) as Dripversity;

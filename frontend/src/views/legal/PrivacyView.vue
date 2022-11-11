@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="space-y-16 break-all">
-            <h1 class="title-2">Privacy Policy</h1>
+            <h1 class="title">Privacy Policy</h1>
             <div class="space-y-4">
                 <h2 class="title-3">1. Datenschutz auf einen Blick</h2>
                 <h3 class="title-4">Allgemeine Hinweise</h3>

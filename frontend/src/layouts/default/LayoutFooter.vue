@@ -16,7 +16,13 @@
                         pellentesque.
                     </p>
 
-                    <AppButton color="outline"
+                    <AppButton
+                        color="outline"
+                        :href="
+                            routes.socials.Discord.baseUrl +
+                            '/' +
+                            routes.socials.Discord.account
+                        "
                         ><DiscordIcon class="block w-4 h-4" />
                         <span class="block">Join our Discord</span></AppButton
                     >
@@ -29,7 +35,7 @@
                 </h4>
 
                 <ul class="flex flex-col space-y-2">
-                    <li v-for="(social, name) in socials" :key="name">
+                    <li v-for="(social, name) in routes.socials" :key="name">
                         <a
                             :href="social.baseUrl + '/' + social.account"
                             target="_blank"
@@ -72,7 +78,7 @@
                 </div>
 
                 <ul class="flex items-center justify-end space-x-4">
-                    <li v-for="(to, name) in legals" :key="name">
+                    <li v-for="(to, name) in routes.legals" :key="name">
                         <router-link class="link text-xs" :to="to">{{
                             name
                         }}</router-link>
@@ -84,7 +90,7 @@
 </template>
 
 <script lang="ts" setup>
-import { socials, legals } from "@/constants/";
+import { routes } from "@/constants/";
 import AppButton from "@/components/app/AppButton.vue";
 import DiscordIcon from "@/components/icons/DiscordIcon.vue";
 import DripversityIcon from "@/components/icons/DripversityIcon.vue";

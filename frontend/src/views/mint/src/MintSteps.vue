@@ -10,19 +10,18 @@ import {
     reactive,
     ref,
     shallowRef,
-    toRef,
     unref,
+    h,
 } from "vue";
 import { storeToRefs } from "pinia";
 import { MaybeRef, useAsyncState } from "@vueuse/core";
 import { useUserStore } from "@/store/modules/user";
 import { useDRIP } from "@/composables/useDRIP";
-import MintStepConnectWallet from "@/components/mint/MintStepConnectWallet.vue";
-import MintStepPurchaseDetails from "@/components/mint/MintStepPurchaseDetails.vue";
-import MintStepGenericProcessing from "@/components/mint/MintStepGenericProcessing.vue";
-import MintStepConfirmPurchase from "@/components/mint/MintStepConfirmPurchase.vue";
+import MintStepConnectWallet from "@/views/mint/src/MintStepConnectWallet.vue";
+import MintStepPurchaseDetails from "@/views/mint/src/MintStepPurchaseDetails.vue";
+import MintStepGenericProcessing from "@/views/mint/src/MintStepGenericProcessing.vue";
+import MintStepConfirmPurchase from "@/views/mint/src/MintStepConfirmPurchase.vue";
 import StepperContainer from "@/components/stepper/StepperContainer.vue";
-import { h } from "vue";
 
 const { price, genericMint, waitForTokens } = useDRIP();
 const userStore = useUserStore();
