@@ -17,15 +17,6 @@
                     src="@/assets/images/placeholder.png"
                     :alt="'Avatar'"
                 />
-
-                <!--
-                <div
-                    v-else
-                    class="flex items-center justify-center rounded-full bg-transparent w-full text-neutral-50"
-                >
-                    <WalletIcon class="block w-4 h-4" />
-                </div>
--->
             </div>
 
             <div class="relative w-8 h-8 rounded">
@@ -61,7 +52,7 @@
                     </div>
 
                     <ul class="flex flex-col">
-                        <li v-for="(to, name) in routes" :key="name">
+                        <li v-for="(to, name) in routes.home" :key="name">
                             <router-link
                                 class="block w-full px-4 py-1 hover:bg-neutral-100 transition-color ease-in"
                                 :to="to"
@@ -72,9 +63,18 @@
                     <ul
                         class="flex flex-col space-y-2 pt-1 mt-1 border-t border-neutral-200"
                     >
+                        <li v-if="!isPreSale">
+                            <router-link
+                                class="flex items-center justify-start space-x-2 font-bold w-full px-4 py-1 hover:bg-neutral-100 transition-color ease-in"
+                                to="/mint"
+                            >
+                                Start Minting
+                            </router-link>
+                        </li>
+
                         <li>
                             <button
-                                class="flex items-center justify-start space-x-2 font-bold w-full px-4 py-1 hover:bg-neutral-200 transition-color ease-in"
+                                class="flex items-center justify-start space-x-2 font-bold w-full px-4 py-1 hover:bg-neutral-100 transition-color ease-in"
                                 @click.prevent="
                                     isConnected
                                         ? disconnectConnectedWallet()
@@ -86,15 +86,9 @@
                                     <span class="block">Connecting...</span>
                                 </template>
                                 <template v-else-if="isConnected">
-                                    <ArrowLeftOnRectangleIcon
-                                        class="block w-4 h-4"
-                                    />
                                     <span class="block">Disconnect Wallet</span>
                                 </template>
                                 <template v-else>
-                                    <ArrowRightOnRectangleIcon
-                                        class="block w-4 h-4"
-                                    />
                                     <span class="block">Connect Wallet</span>
                                 </template>
                             </button>
@@ -112,12 +106,14 @@ import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
 import { storeToRefs } from "pinia";
 import { useUserStore } from "@/store/modules/user";
 import {
-    WalletIcon,
+    GiftIcon,
     ArrowLeftOnRectangleIcon,
     ArrowRightOnRectangleIcon,
-} from "@heroicons/vue/24/solid";
+} from "@heroicons/vue/24/outline";
 import LoadingIcon from "@/components/icons/LoadingIcon.vue";
+import { useSalePhase } from "@/composables/useSalePhase";
 
+const { isPreSale } = useSalePhase();
 const userStore = useUserStore();
 const { disconnectConnectedWallet, connect } = userStore;
 const { isConnected, image, displayName, connectingWallet } =

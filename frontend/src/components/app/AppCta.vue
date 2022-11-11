@@ -17,7 +17,6 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRightIcon } from "@heroicons/vue/24/solid";
 import { useSalePhase } from "@/composables/useSalePhase";
 import AppButton from "@/components/app/AppButton.vue";
 import { useAppStore } from "@/store/modules/app";

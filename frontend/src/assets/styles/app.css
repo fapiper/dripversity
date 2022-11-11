@@ -13,23 +13,23 @@
     }
 
     .title {
-        @apply font-semibold text-4xl md:text-5xl mb-8
+        @apply font-semibold text-4xl md:text-5xl mb-8 leading-relaxed
     }
 
     .title-2 {
-        @apply font-semibold text-2xl md:text-3xl mb-8
+        @apply font-semibold text-2xl md:text-3xl mb-8 leading-relaxed
     }
 
     .title-3 {
-        @apply font-semibold text-lg md:text-xl mb-4
+        @apply font-semibold text-lg md:text-xl mb-4 leading-relaxed
     }
 
     .title-4 {
-        @apply font-semibold text-sm uppercase mb-2 tracking-wide
+        @apply font-semibold text-sm uppercase mb-2 tracking-wide leading-relaxed
     }
 
     .title-5{
-        @apply font-semibold text-sm mb-1 tracking-widest
+        @apply font-semibold text-sm mb-1 tracking-widest leading-relaxed
     }
 
     .link, .link-1 {

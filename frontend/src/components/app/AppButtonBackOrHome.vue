@@ -19,7 +19,6 @@ const router = useRouter();
 const canGoBack = computed(() => !!window.history.state.back);
 
 const goBackOrHome = function () {
-    console.log("window.history", window.history);
     canGoBack.value ? router.go(-1) : router.push(routes.home.Home);
 };
 </script>

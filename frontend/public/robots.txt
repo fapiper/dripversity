@@ -1,3 +1,3 @@
 User-agent: *
-Disallow: /privacy-policy
-Disallow: /terms-of-service
+Disallow: /support/legal/privacy-policy
+Disallow: /support/legal/terms-of-service
