@@ -23,20 +23,24 @@
                 v-if="state"
             >
                 <img
+                    v-animate
                     :src="state.image"
                     :alt="index + ' rarity'"
                     class="rounded w-56 mx-auto"
                 />
-                <ul class="grid grid-cols-3 grid-rows-4 gap-2">
+                <ul
+                    class="grid grid-cols-3 grid-rows-4 gap-2"
+                    v-animate.stagger
+                >
                     <li
                         class="flex w-full"
                         v-for="attribute of state.attributes"
                         :key="attribute"
                     >
                         <AppPanel
-                            :border="true"
                             :truncate="true"
                             size="xs"
+                            color="gray"
                             :title="attribute.value"
                             :subtitle="attribute?.trait_type || ''"
                         ></AppPanel>
