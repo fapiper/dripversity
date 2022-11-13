@@ -37,9 +37,9 @@ import TokenCard from "@/components/token/TokenCard.vue";
 import { FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
-const tokenLength = 10;
+const tokenLength = 21;
 const tokens = Array.from({ length: tokenLength }, (_, id) => ({
-    image: require(`@/assets/images/token/${id + 1}.jpg`),
+    image: require(`@/assets/tokens/images/${id}.png`),
     name: `# XXX`,
 }));
 

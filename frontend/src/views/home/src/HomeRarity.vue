@@ -68,9 +68,9 @@ const token = computedAsync(async () => {
     return useCycleList(
         await Promise.all(
             Array.from({ length: 21 }, async (_, i) => ({
-                image: require("@/assets/images/rarity/" + i + ".png"),
+                image: require("@/assets/tokens/images/" + i + ".png"),
                 attributes: await import(
-                    "@/assets/attributes/" + i + ".json"
+                    "@/assets/tokens/attributes/" + i + ".json"
                 ).then((f) => {
                     return f.default;
                 }),
