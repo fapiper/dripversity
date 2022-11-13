@@ -4,7 +4,9 @@
             <Swiper
                 :modules="modules"
                 grab-cursor
-                free-mode
+                :free-mode="true"
+                :lazy="true"
+                :watchSlidesProgress="true"
                 :centeredSlides="true"
                 loop
                 :slides-per-view="'auto'"
@@ -18,6 +20,9 @@
                     class="!w-80 px-2"
                 >
                     <TokenCard :token="token" />
+                    <div
+                        class="swiper-lazy-preloader swiper-lazy-preloader-white"
+                    ></div>
                 </SwiperSlide>
                 <template v-slot:container-start
                     ><span
@@ -34,8 +39,9 @@
 
 <script lang="ts" setup>
 import TokenCard from "@/components/token/TokenCard.vue";
-import { FreeMode } from "swiper";
+import { FreeMode, Lazy } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import LoadingIcon from "@/components/icons/LoadingIcon.vue";
 
 const tokenLength = 21;
 const tokens = Array.from({ length: tokenLength }, (_, id) => ({
@@ -43,5 +49,5 @@ const tokens = Array.from({ length: tokenLength }, (_, id) => ({
     name: `# XXX`,
 }));
 
-const modules = [FreeMode] as any[];
+const modules = [Lazy, FreeMode] as any[];
 </script>

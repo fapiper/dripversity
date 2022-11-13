@@ -1,9 +1,9 @@
 <template>
-    <article class="relative flex group rounded border border-neutral-800">
+    <article class="relative flex group rounded w-full overflow-hidden">
         <img
-            :src="token.image"
-            :alt="token.name"
-            class="w-full aspect-square rounded"
+            :data-src="token.image"
+            alt="''"
+            class="block w-full aspect-square rounded swiper-lazy overflow-hidden"
         />
 
         <div

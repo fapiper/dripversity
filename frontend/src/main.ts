@@ -3,9 +3,11 @@ import App from "./App.vue";
 import "@/assets/styles/font.css";
 import "@/assets/styles/app.css";
 import "@/assets/styles/web3-onboard.css";
+import "@/assets/styles/swiper.css";
 
 import "./registerServiceWorker";
 import "swiper/css";
+import "swiper/css/lazy";
 import "swiper/css/free-mode";
 
 import { gsap } from "gsap";
