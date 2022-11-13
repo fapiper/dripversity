@@ -1,0 +1,42 @@
+[
+    {
+        "trait_type": "Hair",
+        "value": "Buzzcut Ginger"
+    },
+    {
+        "trait_type": "Inner Layer",
+        "value": "Shirt Orange Oval Open"
+    },
+    {
+        "trait_type": "Outer Layer",
+        "value": "Puffer Jacket Orange"
+    },
+    {
+        "trait_type": "Color",
+        "value": "Blue"
+    },
+    {
+        "trait_type": "Color",
+        "value": "Orange"
+    },
+    {
+        "trait_type": "Color",
+        "value": "White"
+    },
+    {
+        "trait_type": "Jewelry",
+        "value": "Septum"
+    },
+    {
+        "trait_type": "Jewelry Material",
+        "value": "Gold"
+    },
+    {
+        "trait_type": "Character",
+        "value": "Jordan"
+    },
+    {
+        "trait_type": "Expression",
+        "value": "Relaxed"
+    }
+]

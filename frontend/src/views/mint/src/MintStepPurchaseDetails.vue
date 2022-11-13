@@ -1,7 +1,7 @@
 <template>
     <div class="space-y-4">
         <AppPanel
-            :transparent="true"
+            color="transparent"
             title="Dripversity NFT"
             subtitle="1:1 NFT"
             :src="require('@/assets/images/placeholder.png')"
@@ -18,7 +18,7 @@
                 <AppPrice
                     :price="modelValue * price"
                     :digits="4"
-                    class="w-20 items-end"
+                    class="w-16 items-end"
                 />
             </div>
         </AppPanel>

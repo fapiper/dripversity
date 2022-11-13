@@ -3,7 +3,7 @@
         class="w-full grid lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-neutral-900"
     >
         <div
-            class="lg:sticky lg:top-0 lg:left-0 w-full lg:h-screen p-8 pt-32 lg:py-32 flex flex-col bg-neutral-900"
+            class="lg:sticky lg:top-0 lg:left-0 w-full lg:h-screen p-8 pt-32 lg:py-32 flex flex-col bg-gradient-to-bl from-neutral-900 via-neutral-900 to-black"
         >
             <MintPreview
                 ref="preview"

@@ -1,0 +1,42 @@
+[
+    {
+        "trait_type": "Hair",
+        "value": "Slick Back Blond"
+    },
+    {
+        "trait_type": "Inner Layer",
+        "value": "Vest Grey Straight"
+    },
+    {
+        "trait_type": "Outer Layer",
+        "value": "Leather Jacket High Collar Rough"
+    },
+    {
+        "trait_type": "Color",
+        "value": "Black"
+    },
+    {
+        "trait_type": "Color",
+        "value": "Grey"
+    },
+    {
+        "trait_type": "Color",
+        "value": "White"
+    },
+    {
+        "trait_type": "Jewelry",
+        "value": "Chain"
+    },
+    {
+        "trait_type": "Jewelry Material",
+        "value": "Silver"
+    },
+    {
+        "trait_type": "Character",
+        "value": "Chris"
+    },
+    {
+        "trait_type": "Expression",
+        "value": "Doubtful"
+    }
+]

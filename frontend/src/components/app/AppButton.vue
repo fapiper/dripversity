@@ -1,10 +1,7 @@
 <script lang="ts">
 import { computed, defineComponent, h, ref } from "vue";
 import { RouterLink } from "vue-router";
-
-type Indexable<T = any> = {
-    [key: string]: T;
-};
+import { Indexable } from "@types";
 
 export default defineComponent({
     emits: ["click"],

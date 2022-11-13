@@ -1,0 +1,50 @@
+[
+    {
+        "trait_type": "Headwear",
+        "value": "Baseball Cap Orange"
+    },
+    {
+        "trait_type": "Accessory",
+        "value": "Dripversity Gold Headwear"
+    },
+    {
+        "trait_type": "Inner Layer",
+        "value": "Shirt White Rhombus"
+    },
+    {
+        "trait_type": "Outer Layer",
+        "value": "Leather Jacket Fitted Dark"
+    },
+    {
+        "trait_type": "Color",
+        "value": "Blue"
+    },
+    {
+        "trait_type": "Color",
+        "value": "Black"
+    },
+    {
+        "trait_type": "Color",
+        "value": "Orange"
+    },
+    {
+        "trait_type": "Color",
+        "value": "White"
+    },
+    {
+        "trait_type": "Jewelry",
+        "value": "D Chain"
+    },
+    {
+        "trait_type": "Jewelry Material",
+        "value": "Gold"
+    },
+    {
+        "trait_type": "Character",
+        "value": "Francesco"
+    },
+    {
+        "trait_type": "Expression",
+        "value": "Doubtful"
+    }
+]
