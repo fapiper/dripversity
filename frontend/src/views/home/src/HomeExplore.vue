@@ -5,24 +5,19 @@
                 :modules="modules"
                 grab-cursor
                 :free-mode="true"
-                :lazy="true"
-                :watchSlidesProgress="true"
                 :centeredSlides="true"
                 loop
                 :slides-per-view="'auto'"
-                :loopedSlides="tokenLength"
+                :loopedSlides="tokens.length"
                 :space-between="0"
             >
                 <SwiperSlide
-                    v-for="token in tokens"
+                    v-for="(token, i) in tokens.all"
                     ref="slideRef"
-                    :key="token.name"
+                    :key="i"
                     class="!w-80 px-2"
                 >
                     <TokenCard :token="token" />
-                    <div
-                        class="swiper-lazy-preloader swiper-lazy-preloader-white"
-                    ></div>
                 </SwiperSlide>
                 <template v-slot:container-start
                     ><span
@@ -39,15 +34,9 @@
 
 <script lang="ts" setup>
 import TokenCard from "@/components/token/TokenCard.vue";
-import { FreeMode, Lazy } from "swiper";
+import { FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import LoadingIcon from "@/components/icons/LoadingIcon.vue";
+import { tokens } from "@/constants";
 
-const tokenLength = 21;
-const tokens = Array.from({ length: tokenLength }, (_, id) => ({
-    image: require(`@/assets/tokens/images/${id}.png`),
-    name: `# XXX`,
-}));
-
-const modules = [Lazy, FreeMode] as any[];
+const modules = [FreeMode] as any[];
 </script>

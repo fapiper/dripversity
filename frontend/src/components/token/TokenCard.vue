@@ -1,9 +1,9 @@
 <template>
     <article class="relative flex group rounded w-full overflow-hidden">
         <img
-            :data-src="token.image"
-            alt="''"
-            class="block w-full aspect-square rounded swiper-lazy overflow-hidden"
+            :src="token.image"
+            alt="# XXX"
+            class="block w-full aspect-square rounded"
         />
 
         <div
@@ -16,7 +16,7 @@
                     <h4
                         class="font-bold text-neutral-400/50 text-7xl uppercase"
                     >
-                        {{ token.name }}
+                        # XXX
                     </h4>
                     <p class="text-neutral-400">
                         Join the waitlist and be the first to claim this NFT on

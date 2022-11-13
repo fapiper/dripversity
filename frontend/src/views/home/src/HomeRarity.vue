@@ -13,29 +13,25 @@
                     sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </p>
                 <div class="hidden lg:block">
-                    <AppButton color="outline" @click.prevent="token.next()"
+                    <AppButton color="outline" @click.prevent="next()"
                         >Shuffle</AppButton
                     >
                 </div>
             </div>
             <div
                 class="flex flex-col space-y-4 p-8 bg-gradient-to-tl from-neutral-900 to-black rounded"
-                v-if="token.state"
+                v-if="state"
             >
                 <img
-                    :src="token.state.image"
-                    :alt="token.index + ' rarity'"
+                    :src="state.image"
+                    :alt="index + ' rarity'"
                     class="rounded w-56 mx-auto"
-                    v-animate
                 />
-                <ul
-                    class="grid grid-cols-3 grid-rows-4 gap-2"
-                    v-animate.stagger
-                >
+                <ul class="grid grid-cols-3 grid-rows-4 gap-2">
                     <li
                         class="flex w-full"
-                        v-for="attribute of token.state.attributes"
-                        :key="token.id + '-' + attribute"
+                        v-for="attribute of state.attributes"
+                        :key="attribute"
                     >
                         <AppPanel
                             :border="true"
@@ -50,7 +46,7 @@
                     <AppButton
                         color="outline"
                         full-width
-                        @click.prevent="token.next()"
+                        @click.prevent="next()"
                         >Shuffle</AppButton
                     >
                 </div>
@@ -62,20 +58,10 @@
 <script lang="ts" setup>
 import AppButton from "@/components/app/AppButton.vue";
 import AppPanel from "@/components/app/AppPanel.vue";
-import { computedAsync, useCycleList } from "@vueuse/core";
+import { useCycleList } from "@vueuse/core";
+import { tokens } from "@/constants";
 
-const token = computedAsync(async () => {
-    return useCycleList(
-        await Promise.all(
-            Array.from({ length: 21 }, async (_, i) => ({
-                image: require("@/assets/tokens/images/" + i + ".png"),
-                attributes: await import(
-                    "@/assets/tokens/attributes/" + i + ".json"
-                ).then((f) => {
-                    return f.default;
-                }),
-            }))
-        )
-    );
-}, useCycleList([]));
+const { state, index, next } = useCycleList<{ image: any; attributes: any }>(
+    tokens.all
+);
 </script>
