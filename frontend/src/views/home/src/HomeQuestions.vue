@@ -16,9 +16,7 @@
                 >
             </div>
 
-            <div
-                class="lg:col-span-3 w-[calc(100%_+_4rem)] -ml-8 lg:w-full lg:ml-0"
-            >
+            <div class="lg:col-span-3">
                 <ul class="flex flex-col space-y-2" v-animate.stagger>
                     <li class="flex flex-col" v-for="item in 5" :key="item">
                         <DisclosureItem>

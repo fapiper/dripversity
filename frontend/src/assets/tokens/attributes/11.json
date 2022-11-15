@@ -1,23 +1,19 @@
 [
     {
+        "trait_type": "Character",
+        "value": "Francesco"
+    },
+    {
+        "trait_type": "Expression",
+        "value": "Shocked"
+    },
+    {
         "trait_type": "Headwear",
         "value": "Baseball Cap Blue"
     },
     {
-        "trait_type": "Accessory",
-        "value": "Dv Silver Headwear"
-    },
-    {
         "trait_type": "Inner Layer",
         "value": "College Jacket Blue Drip Dv"
-    },
-    {
-        "trait_type": "Color",
-        "value": "Blue"
-    },
-    {
-        "trait_type": "Color",
-        "value": "White"
     },
     {
         "trait_type": "Jewelry",
@@ -28,11 +24,15 @@
         "value": "Silver"
     },
     {
-        "trait_type": "Character",
-        "value": "Francesco"
+        "trait_type": "Accessory",
+        "value": "Dv Silver Headwear"
     },
     {
-        "trait_type": "Expression",
-        "value": "Shocked"
+        "trait_type": "Color",
+        "value": "Blue"
+    },
+    {
+        "trait_type": "Color",
+        "value": "White"
     }
 ]

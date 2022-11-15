@@ -1,5 +1,13 @@
 [
     {
+        "trait_type": "Character",
+        "value": "Hyuk"
+    },
+    {
+        "trait_type": "Expression",
+        "value": "Slight Smile"
+    },
+    {
         "trait_type": "Hair",
         "value": "Buzzcut Blond"
     },
@@ -12,14 +20,6 @@
         "value": "Puffer Jacket Blue"
     },
     {
-        "trait_type": "Color",
-        "value": "Blue"
-    },
-    {
-        "trait_type": "Color",
-        "value": "White"
-    },
-    {
         "trait_type": "Jewelry",
         "value": "Chain"
     },
@@ -28,11 +28,11 @@
         "value": "Silver"
     },
     {
-        "trait_type": "Character",
-        "value": "Hyuk"
+        "trait_type": "Color",
+        "value": "Blue"
     },
     {
-        "trait_type": "Expression",
-        "value": "Slight Smile"
+        "trait_type": "Color",
+        "value": "White"
     }
 ]

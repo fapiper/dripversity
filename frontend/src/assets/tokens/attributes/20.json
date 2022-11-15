@@ -1,19 +1,19 @@
 [
     {
+        "trait_type": "Character",
+        "value": "Hyuk"
+    },
+    {
+        "trait_type": "Expression",
+        "value": "Broad Smile"
+    },
+    {
         "trait_type": "Headwear",
         "value": "Hooded Hole Mask Gold"
     },
     {
         "trait_type": "Inner Layer",
         "value": "Hoodie Up Blue Curved Dv"
-    },
-    {
-        "trait_type": "Color",
-        "value": "Blue"
-    },
-    {
-        "trait_type": "Color",
-        "value": "White"
     },
     {
         "trait_type": "Jewelry",
@@ -24,11 +24,11 @@
         "value": "Gold"
     },
     {
-        "trait_type": "Character",
-        "value": "Hyuk"
+        "trait_type": "Color",
+        "value": "Blue"
     },
     {
-        "trait_type": "Expression",
-        "value": "Broad Smile"
+        "trait_type": "Color",
+        "value": "White"
     }
 ]

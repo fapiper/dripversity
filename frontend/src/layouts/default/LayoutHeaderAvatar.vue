@@ -61,7 +61,7 @@
                         </li>
                     </ul>
                     <ul
-                        class="flex flex-col space-y-2 pt-1 mt-1 border-t border-neutral-200"
+                        class="flex flex-col pt-1 mt-1 border-t border-neutral-200"
                     >
                         <li v-if="!isPreSale">
                             <router-link

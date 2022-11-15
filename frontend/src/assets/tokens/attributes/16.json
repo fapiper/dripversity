@@ -1,5 +1,13 @@
 [
     {
+        "trait_type": "Character",
+        "value": "Jordan"
+    },
+    {
+        "trait_type": "Expression",
+        "value": "Shocked"
+    },
+    {
         "trait_type": "Headwear",
         "value": "Bucket Hat Orange Fuzzy"
     },
@@ -10,6 +18,14 @@
     {
         "trait_type": "Outer Layer",
         "value": "Leather Jacket Folded Dark"
+    },
+    {
+        "trait_type": "Jewelry",
+        "value": "B Chain"
+    },
+    {
+        "trait_type": "Jewelry Material",
+        "value": "Gold"
     },
     {
         "trait_type": "Accessory",
@@ -26,21 +42,5 @@
     {
         "trait_type": "Color",
         "value": "White"
-    },
-    {
-        "trait_type": "Jewelry",
-        "value": "B Chain"
-    },
-    {
-        "trait_type": "Jewelry Material",
-        "value": "Gold"
-    },
-    {
-        "trait_type": "Character",
-        "value": "Jordan"
-    },
-    {
-        "trait_type": "Expression",
-        "value": "Shocked"
     }
 ]

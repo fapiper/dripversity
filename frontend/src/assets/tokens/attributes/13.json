@@ -1,11 +1,27 @@
 [
     {
+        "trait_type": "Character",
+        "value": "Chris"
+    },
+    {
+        "trait_type": "Expression",
+        "value": "Silly"
+    },
+    {
         "trait_type": "Headwear",
         "value": "3 Hole Balaclava White"
     },
     {
         "trait_type": "Inner Layer",
         "value": "Polo Shirt Blue Curved Dv"
+    },
+    {
+        "trait_type": "Jewelry",
+        "value": "D Chain"
+    },
+    {
+        "trait_type": "Jewelry Material",
+        "value": "Silver"
     },
     {
         "trait_type": "Color",
@@ -18,21 +34,5 @@
     {
         "trait_type": "Color",
         "value": "White"
-    },
-    {
-        "trait_type": "Jewelry",
-        "value": "D Chain"
-    },
-    {
-        "trait_type": "Jewelry Material",
-        "value": "Silver"
-    },
-    {
-        "trait_type": "Character",
-        "value": "Chris"
-    },
-    {
-        "trait_type": "Expression",
-        "value": "Silly"
     }
 ]

@@ -36,6 +36,7 @@ const props = defineProps([
     "size",
     "border",
     "truncate",
+    "reverse",
 ]);
 const is = props.to ? "router-link" : props.href ? "a" : "div";
 
@@ -75,11 +76,13 @@ const classes = computed(() => {
         "font-semibold",
         sizes.title[props.size || "md"],
         props.truncate && "truncate",
+        props.reverse && "order-last",
     ];
     const subtitle = [
-        "text-neutral-400 leading-none",
+        "text-neutral-400",
         props.truncate && "truncate",
         sizes.subtitle[props.size || "md"],
+        props.reverse && "order-first",
     ];
 
     return { wrapper, img, title, subtitle };

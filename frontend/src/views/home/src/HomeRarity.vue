@@ -13,23 +13,21 @@
                     sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </p>
                 <div class="hidden lg:block">
-                    <AppButton color="outline" @click.prevent="next()"
-                        >Shuffle</AppButton
-                    >
+                    <AppButton @click.prevent="next()">Shuffle</AppButton>
                 </div>
             </div>
             <div
-                class="flex flex-col space-y-4 px-8 lg:py-8 lg:bg-gradient-to-tl lg:from-neutral-900 lg:to-black lg:rounded"
+                class="flex flex-col space-y-4 px-8 lg:py-8 lg:bg-gradient-to-bl lg:from-neutral-900 lg:to-black lg:rounded"
                 v-if="state"
             >
                 <img
                     v-animate
                     :src="state.image"
                     :alt="index + ' rarity'"
-                    class="rounded w-40 mx-auto"
+                    class="rounded w-full sm:w-80 mx-auto"
                 />
                 <ul
-                    class="grid grid-cols-4 grid-rows-3 gap-2"
+                    class="grid grid-cols-3 grid-rows-4 gap-2"
                     v-animate.stagger
                 >
                     <li
@@ -38,7 +36,7 @@
                         :key="attribute"
                     >
                         <AppPanel
-                            :truncate="true"
+                            :reverse="true"
                             size="xs"
                             color="gray"
                             :title="attribute.value"

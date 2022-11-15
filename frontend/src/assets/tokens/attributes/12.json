@@ -1,19 +1,19 @@
 [
     {
+        "trait_type": "Character",
+        "value": "Chris"
+    },
+    {
+        "trait_type": "Expression",
+        "value": "Doubtful"
+    },
+    {
         "trait_type": "Hair",
         "value": "Buzzcut With Line Up Ginger"
     },
     {
         "trait_type": "Inner Layer",
         "value": "Shirt White Circle Dv"
-    },
-    {
-        "trait_type": "Color",
-        "value": "Blue"
-    },
-    {
-        "trait_type": "Color",
-        "value": "White"
     },
     {
         "trait_type": "Jewelry",
@@ -24,12 +24,12 @@
         "value": "Gold"
     },
     {
-        "trait_type": "Character",
-        "value": "Chris"
+        "trait_type": "Color",
+        "value": "Blue"
     },
     {
-        "trait_type": "Expression",
-        "value": "Doubtful"
+        "trait_type": "Color",
+        "value": "White"
     },
     {
         "value": "Bleached brows"

@@ -5,12 +5,8 @@
         <nav
             class="px-8 lg:px-12 w-full flex flex-1 items-center justify-start justify-end space-x-4 md:space-x-8 relative"
         >
-            <router-link class="block pointer-events-auto !mr-auto" to="/"
-                ><img
-                    src="@/assets/images/dripversity-dv.png"
-                    alt="Dripversity DV Logo"
-                    class="block w-8"
-                />
+            <router-link class="block pointer-events-auto !mr-auto" to="/">
+                <DripversityDvIcon class="block w-10 lg:w-12" />
             </router-link>
 
             <ul class="flex items-center justify-start space-x-4">
@@ -41,4 +37,5 @@
 import { routes } from "@/constants/";
 import LayoutHeaderAvatar from "@/layouts/default/LayoutHeaderAvatar.vue";
 import AppButton from "@/components/app/AppButton.vue";
+import DripversityDvIcon from "@/components/icons/DripversityDvIcon.vue";
 </script>

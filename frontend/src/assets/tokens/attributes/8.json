@@ -1,19 +1,19 @@
 [
     {
+        "trait_type": "Character",
+        "value": "Sanjith"
+    },
+    {
+        "trait_type": "Expression",
+        "value": "Broad Smile"
+    },
+    {
         "trait_type": "Hair",
         "value": "Classic Scissor Cut Brown"
     },
     {
         "trait_type": "Inner Layer",
         "value": "Hoodie Down Orange"
-    },
-    {
-        "trait_type": "Color",
-        "value": "Orange"
-    },
-    {
-        "trait_type": "Color",
-        "value": "White"
     },
     {
         "trait_type": "Jewelry",
@@ -24,11 +24,11 @@
         "value": "Gold"
     },
     {
-        "trait_type": "Character",
-        "value": "Sanjith"
+        "trait_type": "Color",
+        "value": "Orange"
     },
     {
-        "trait_type": "Expression",
-        "value": "Broad Smile"
+        "trait_type": "Color",
+        "value": "White"
     }
 ]
