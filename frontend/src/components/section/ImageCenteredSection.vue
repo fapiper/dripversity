@@ -1,13 +1,21 @@
 <template>
-    <section :id="id" class="relative">
-        <img
-            :src="src"
-            :alt="alt || id"
-            class="absolute top-0 left-0 w-full h-full object-cover object-left-bottom"
-        />
+    <section :id="id" class="relative overflow-hidden">
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full h-full flex"
+        >
+            <img
+                :src="src"
+                :alt="alt || id"
+                class="w-full object-cover object-left-bottom"
+                v-parallax="{
+                    from: { yPercent: 25, scale: 1.5 },
+                    to: { yPercent: -25, scale: 1.5 },
+                }"
+            />
+        </div>
 
         <span
-            class="block absolute top-0 left-0 w-full h-full bg-gradient-to-bl from-black/25 via-black/50 to-black"
+            class="block absolute top-0 left-0 w-full h-full bg-gradient-to-bl from-black/25 via-black/75 to-black"
         />
 
         <div
