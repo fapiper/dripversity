@@ -22,7 +22,7 @@ export default defineComponent({
         },
         rounded: {
             type: String as () => "full" | "base" | "none",
-            default: "full",
+            default: "base",
         },
         size: {
             type: String as () => "xxs" | "xs" | "sm" | "md" | "lg",
@@ -92,7 +92,7 @@ export default defineComponent({
         };
 
         const classesButton = computed(() => [
-            `relative inline-flex items-center text-center transition-all duration-200 font-semibold uppercase tracking-wide`,
+            `relative inline-flex items-center text-center transition-opacity transition-transform font-semibold duration-200 uppercase tracking-wide`,
             ButtonRounded[props.rounded],
             ButtonColor[props.disabled ? "disabled" : props.color],
             !props.onlyIcon && ButtonSpacing[props.size],

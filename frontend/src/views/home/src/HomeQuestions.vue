@@ -1,28 +1,26 @@
 <template>
-    <section id="faq">
-        <div class="container-default grid lg:grid-cols-2 gap-8 lg:gap-16">
-            <div>
-                <div
-                    class="space-y-8 w-full max-w-md mx-auto"
-                    v-animate.stagger
+    <ContainerSection id="faq">
+        <div class="grid col-span-1 lg:grid-cols-5 gap-16">
+            <div
+                class="lg:col-span-2 space-y-6 lg:text-right"
+                v-animate.stagger
+            >
+                <h2 class="title">Questions? We got answers.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua.
+                </p>
+                <AppButton :to="routes.support['How to Mint']"
+                    >More Answers</AppButton
                 >
-                    <h2 class="title">Questions?<br />We got answers.</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et
-                        dolore magna aliquyam erat, sed diam voluptua.
-                    </p>
-                    <AppCta />
-                </div>
             </div>
 
-            <div class="lg:mt-52">
-                <ul class="flex flex-col" v-animate.stagger>
-                    <li
-                        class="flex flex-col space-y-1"
-                        v-for="item in 5"
-                        :key="item"
-                    >
+            <div
+                class="lg:col-span-3 w-[calc(100%_+_4rem)] -ml-8 lg:w-full lg:ml-0"
+            >
+                <ul class="flex flex-col space-y-2" v-animate.stagger>
+                    <li class="flex flex-col" v-for="item in 5" :key="item">
                         <DisclosureItem>
                             <template #question
                                 >Duis lacus ipsum pretium pellentesque venenatis
@@ -40,10 +38,16 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </ContainerSection>
+
+    <div class="container-default max-w-4xl"></div>
 </template>
 
 <script lang="ts" setup>
 import DisclosureItem from "@/components/disclosure/DisclosureItem.vue";
 import AppCta from "@/components/app/AppCta.vue";
+import AppButton from "@/components/app/AppButton.vue";
+import { routes } from "@/constants/";
+import TextCenteredSection from "@/components/section/TextCenteredSection.vue";
+import ContainerSection from "@/components/section/ContainerSection.vue";
 </script>

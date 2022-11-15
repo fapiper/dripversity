@@ -7,7 +7,7 @@
         <HomeBlockschmidt />
         <HomeCollection />
         <HomeTeam />
-        <HomeCta />
+        <CtaSection />
         <HomeQuestions />
     </div>
 </template>
@@ -20,6 +20,6 @@ import HomeStory from "@/views/home/src/HomeStory.vue";
 import HomeBlockschmidt from "@/views/home/src/HomeBlockschmidt.vue";
 import HomeCollection from "@/views/home/src/HomeCollection.vue";
 import HomeTeam from "@/views/home/src/HomeTeam.vue";
-import HomeCta from "@/views/home/src/HomeCta.vue";
+import CtaSection from "@/components/cta/CtaSection.vue";
 import HomeQuestions from "@/views/home/src/HomeQuestions.vue";
 </script>

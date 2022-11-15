@@ -3,10 +3,10 @@
         <div class="container-default grid lg:grid-cols-5 py-24 gap-24">
             <div class="lg:col-span-3">
                 <div class="w-full max-w-md space-y-8">
-                    <h3 class="font-semibold text-5xl">
+                    <h3 class="font-semibold text-4xl">
                         Join the
                         <DripversityIcon
-                            class="inline-block align-top w-60 text-transparent stroke-neutral-50"
+                            class="inline-block align-top w-52 text-transparent stroke-neutral-50"
                         />
                         community
                     </h3>
@@ -18,6 +18,7 @@
 
                     <AppButton
                         color="outline"
+                        size="sm"
                         :href="
                             routes.socials.Discord.baseUrl +
                             '/' +
@@ -29,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="lg:col-span-2 flex flex-col justify-between space-y-8">
+            <div class="lg:col-span-2 flex flex-col space-y-8">
                 <h4 class="font-semibold text-3xl">
                     Follow us on our social channels
                 </h4>
@@ -57,7 +58,7 @@
             class="py-4 border-t border-b-8 border-b-blue border-t-neutral-900"
         >
             <div
-                class="container-default flex flex-col md:flex-row items-start md:items-center justify-between space-y-4 md:space-y-0 md:space-x-8 lg:space-x-12"
+                class="container-default flex flex-col md:flex-row items-start md:items-center justify-between md:space-x-8 lg:space-x-12"
             >
                 <div class="text-xs leading-relaxed">
                     <p>

@@ -1,46 +1,36 @@
 <template>
-    <!--
-    <img
-        class="w-full object-cover overflow-hidden rounded-t-2xl mt-12 lg:mt-16"
-        src="@/assets/images/story-1.png"
-        alt="The story behind Dripversity"
+    <ImageOnlySection
+        id="story-img"
+        :src="require('@/assets/images/hallway.png')"
+        :alt="'Our Story'"
     />
--->
 
-    <section id="story">
-        <div class="container-default">
-            <div class="grid lg:grid-cols-4 gap-8 lg:gap-16 items-center">
-                <div
-                    class="space-y-4 lg:col-start-2 lg:col-span-2"
-                    v-animate.stagger
-                >
-                    <h3 class="tracking-widest text-sm uppercase">
-                        The story behind
-                        <DripversityIcon
-                            class="inline-block align-middle w-16 mb-1 text-neutral-50"
-                        />
-                    </h3>
-                    <h2 class="title !mt-6 !mb-8">How we got here</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et
-                        dolore magna aliquyam erat, sed diam voluptua. At vero
-                        eos et accusam et justo duo dolores et ea rebum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et
-                        dolore magna aliquyam erat, sed diam voluptua. At vero
-                        eos et accusam et justo duo dolores et ea rebum. Stet
-                        clita kasd gubergren, no sea takimata sanctus est Lorem
-                        ipsum dolor sit amet.
-                    </p>
-                </div>
-            </div>
+    <TextCenteredSection id="story" class="!pb-0">
+        <div class="space-y-4">
+            <h3 class="text-xs tracking-widest uppercase">
+                The story behind
+                <DripversityIcon class="inline-block align-middle w-16 mb-1" />
+            </h3>
+
+            <h2 class="title">How we got here</h2>
         </div>
-    </section>
+
+        <div class="space-y-2">
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum.
+            </p>
+        </div>
+
+        <AppButton to="/#blockschmidt">Explore</AppButton>
+    </TextCenteredSection>
 </template>
 
 <script lang="ts" setup>
 import DripversityIcon from "@/components/icons/DripversityIcon.vue";
+import AppButton from "@/components/app/AppButton.vue";
+import ImageOnlySection from "@/components/section/ImageOnlySection.vue";
+import TextCenteredSection from "@/components/section/TextCenteredSection.vue";
 </script>

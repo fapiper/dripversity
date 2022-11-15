@@ -19,17 +19,17 @@
                 </div>
             </div>
             <div
-                class="flex flex-col space-y-4 p-8 bg-gradient-to-tl from-neutral-900 to-black rounded"
+                class="flex flex-col space-y-4 px-8 lg:py-8 lg:bg-gradient-to-tl lg:from-neutral-900 lg:to-black lg:rounded"
                 v-if="state"
             >
                 <img
                     v-animate
                     :src="state.image"
                     :alt="index + ' rarity'"
-                    class="rounded w-56 mx-auto"
+                    class="rounded w-40 mx-auto"
                 />
                 <ul
-                    class="grid grid-cols-3 grid-rows-4 gap-2"
+                    class="grid grid-cols-4 grid-rows-3 gap-2"
                     v-animate.stagger
                 >
                     <li
@@ -46,11 +46,8 @@
                         ></AppPanel>
                     </li>
                 </ul>
-                <div class="lg:hidden pt-4 w-full">
-                    <AppButton
-                        color="outline"
-                        full-width
-                        @click.prevent="next()"
+                <div class="lg:hidden flex flex-col items-center">
+                    <AppButton color="outline" @click.prevent="next()"
                         >Shuffle</AppButton
                     >
                 </div>

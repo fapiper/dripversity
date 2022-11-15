@@ -1,12 +1,12 @@
 <template>
-    <section id="team">
-        <div class="container-default">
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
-                <div
-                    class="space-y-4 lg:col-start-2 lg:col-span-2"
-                    v-animate.stagger
-                >
-                    <h2 class="title">Building a Team</h2>
+    <ContainerSection id="team">
+        <div class="grid col-span-1 lg:grid-cols-5 gap-16">
+            <div
+                class="lg:col-span-2 space-y-6 text-center lg:text-right"
+                v-animate.stagger
+            >
+                <h2 class="title">Building a Team</h2>
+                <div class="space-y-2">
                     <p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                         sed diam nonumy eirmod tempor invidunt ut labore et
@@ -18,65 +18,40 @@
                         sed diam nonumy eirmod tempor invidunt ut labore et
                         dolore magna aliquyam erat, sed diam voluptua.
                     </p>
-                    <p>
-                        At vero eos et accusam et justo duo dolores et ea rebum.
-                        Stet clita kasd gubergren, no sea takimata sanctus est
-                        Lorem ipsum dolor sit amet.
-                    </p>
                 </div>
 
-                <div
-                    class="lg:col-start-2 lg:col-span-3 flex space-x-4 overflow-hidden w-full"
+                <AppCta color="outline" />
+            </div>
+
+            <div
+                class="lg:col-span-3 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8"
+                v-animate.stagger
+            >
+                <article
+                    v-for="item in 6"
+                    :key="item"
+                    class="flex flex-col rounded bg-neutral-900"
                 >
-                    <Swiper
-                        :modules="modules"
-                        grab-cursor
-                        free-mode
-                        :slides-per-view="'auto'"
-                        :breakpoints="{
-                            768: {},
-                            1024: {},
-                            1536: {},
-                        }"
-                        :space-between="16"
-                    >
-                        <SwiperSlide
-                            v-for="item in 5"
-                            :key="item"
-                            class="!w-64"
+                    <img
+                        class="w-full aspect-square w-full rounded"
+                        :src="require(`@/assets/images/token/${item + 1}.jpg`)"
+                        :alt="'Member ' + item"
+                    />
+                    <div class="p-2 text-center">
+                        <h5 class="font-semibold leading-normal">Name</h5>
+                        <span
+                            class="text-neutral-200/50 uppercase text-xs leading-normal"
+                            >Role</span
                         >
-                            <article
-                                class="flex flex-col border border-neutral-800 bg-neutral-900 rounded"
-                            >
-                                <img
-                                    class="w-full aspect-square w-full rounded"
-                                    :src="
-                                        require(`@/assets/images/token/${
-                                            item + 1
-                                        }.jpg`)
-                                    "
-                                    :alt="'Member ' + item"
-                                />
-                                <div class="p-4">
-                                    <h5 class="font-semibold leading-none">
-                                        Name
-                                    </h5>
-                                    <span
-                                        class="text-neutral-400/50 text-xs uppercase"
-                                        >Role</span
-                                    >
-                                </div>
-                            </article>
-                        </SwiperSlide>
-                    </Swiper>
-                </div>
+                    </div>
+                </article>
             </div>
         </div>
-    </section>
+    </ContainerSection>
 </template>
 
 <script lang="ts" setup>
-import { FreeMode } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/vue";
-const modules = [FreeMode] as any[];
+import ContainerSection from "@/components/section/ContainerSection.vue";
+import AppButton from "@/components/app/AppButton.vue";
+import AppCta from "@/components/app/AppCta.vue";
 </script>

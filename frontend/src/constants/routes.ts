@@ -30,7 +30,7 @@ const socials = {
 
 const support = {
     "How to create a wallet": "/support/getting-started/how-to-create-a-wallet",
-    "How to Mint": "/support/getting-started/how-to-src",
+    "How to Mint": "/support/getting-started/how-to-mint",
 };
 
 const legals = {

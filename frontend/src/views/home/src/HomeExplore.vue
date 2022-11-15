@@ -1,6 +1,6 @@
 <template>
-    <section id="explore">
-        <div class="relative z-10 w-full" v-animate>
+    <section id="explore" class="!pb-0">
+        <div class="relative z-10 w-full">
             <Swiper
                 :modules="modules"
                 grab-cursor
@@ -10,6 +10,7 @@
                 :slides-per-view="'auto'"
                 :loopedSlides="tokens.length"
                 :space-between="0"
+                v-animate.stagger
             >
                 <SwiperSlide
                     v-for="(token, i) in tokens.all"

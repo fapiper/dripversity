@@ -30,11 +30,11 @@ const routes: Array<RouteRecordRaw> = [
                     ),
             },
             {
-                path: "getting-started/how-to-src",
-                name: "how-to-src",
+                path: "getting-started/how-to-mint",
+                name: "how-to-mint",
                 component: () =>
                     import(
-                        /* webpackChunkName: "how-to-src" */ "@/views/support/HowToMintView.vue"
+                        /* webpackChunkName: "how-to-mint" */ "@/views/support/HowToMintView.vue"
                     ),
             },
             {
