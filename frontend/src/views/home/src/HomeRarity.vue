@@ -8,24 +8,25 @@
                 <p>
                     We equipped DRIPVERSITY with a rarity system that controls
                     the spawn probability of every trait. Lower rarity ranks are
-                    assigned to more complex traits, like headwear with multiple
-                    logo variations or clothes with an inner and outer layer
-                    trait structure. Less shared color variants or pinned metal
-                    accessories also garments rarer. Moreover, simpler traits
-                    like clothes that only have an inner layer and no outer
-                    layer, headwear with only one logo, or chains without any
-                    pendant, are more likely to drop due to a higher rarity
-                    rank. Concerning each trait's rarity, the integrated
-                    randomizer generates a combination of each trait category.
-                    Each generated NFT has a unique appearance since each
-                    combination of elements just appears once.
+                    assigned to more complex traits like headwear with multiple
+                    logo variations or clothes with an inner-, and outer layer.
+                    Less shared color variants or pinned metal accessories also
+                    make traits rarer.
                 </p>
                 <p>
-                    Feel free to check out the implemented “SHUFFLE” function to
-                    recreate the randomizing process and have a look at which
-                    traits spawn to have a better understanding. Maybe you can
-                    get your hands on an ultra-rare DRIPVERSITY patterned puffed
-                    hood jacket or an outstanding golden hooded mask?
+                    Moreover, simpler traits like clothes that only have an
+                    inner-, and no outer layer, headwear with one logo, or
+                    chains without a pendant, are more likely to drop due to a
+                    higher rarity rank. Concerning each trait's rarity, the
+                    integrated randomizer generates a unique trait combination
+                    for every NFT.
+                </p>
+                <p>
+                    Check out the SHUFFLE function to recreate the randomizing
+                    process and look at which traits spawn for a better
+                    understanding. Maybe you get an ultra-rare DRIPVERSITY
+                    patterned puffed hood jacket or an outstanding golden hooded
+                    mask?
                 </p>
                 <div class="hidden lg:block !mt-6">
                     <AppButton @click.prevent="next()" color="outline"

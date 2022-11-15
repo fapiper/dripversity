@@ -31,22 +31,21 @@
                 >
                     <h2 class="title">The First Collection</h2>
                     <p class="text-neutral-400">
-                        “MASKOF” is an animated 1/1 NFT collection of unique
-                        masked outfits. Instantly sold out, it was followed up
-                        by two more NFTs, to complete this 10-piece collection.
-                        We felt that people appreciated the 3D animated art
-                        style and saw the time and love which was put into this
+                        MASKOF is an animated 1/1 NFT collection of unique
+                        masked outfits. Instantly sold out, two more added NFTs
+                        completed the project. We felt that people appreciated
+                        the detailed 3D art and effort that was put into this
                         collection. After realizing that collectors spent over 2
                         ETH on those NFTs, it felt surreal, and beyond grateful
                         for this opportunity.
                     </p>
                     <p class="text-neutral-400">
-                        However, after “MASKOF” we started “DRIPVRSITY” to
-                        create a collection where even greater effort and time
-                        were needed. Staying true to the masked outfit aesthetic
-                        of “MASKOF”, “DRIPVERSITY” includes this coherent look
-                        while combining it with an abundant variety of headwear,
-                        hairstyle, clothes, and jewelry traits
+                        However, after MASKOF we started DRIPVRSITY to create a
+                        collection where even greater effort and time were
+                        needed. Maintaining the masked outfit aesthetic of
+                        MASKOF, DRIPVERSITY includes a coherent look while
+                        combining an abundant variety of headwear, hairstyle,
+                        clothes, and jewelry traits.
                     </p>
 
                     <AppPanel
