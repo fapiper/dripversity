@@ -29,26 +29,24 @@
                     class="relative bg-neutral-900 rounded py-8 px-4 lg:px-8 space-y-2 col-start-1 col-span-2 z-10 lg:my-32"
                     v-animate.stagger
                 >
-                    <h2 class="title-2">The first Collection</h2>
+                    <h2 class="title">The First Collection</h2>
                     <p class="text-neutral-400">
                         “MASKOF” is an animated 1/1 NFT collection of unique
-                        masked outfits with custom beats. Instantly sold out,
-                        and followed up by two more editions, the 10 piece
-                        collection was completed. We felt that people
-                        appreciated the 3D animated art style and saw the time
-                        and love that was put into this collection. After
-                        realizing that NFT collectors spent over 2 ETH on those
-                        NFTs, it felt surreal, and we were beyond grateful for
-                        this opportunity.
+                        masked outfits. Instantly sold out, it was followed up
+                        by two more NFTs, to complete this 10-piece collection.
+                        We felt that people appreciated the 3D animated art
+                        style and saw the time and love which was put into this
+                        collection. After realizing that collectors spent over 2
+                        ETH on those NFTs, it felt surreal, and beyond grateful
+                        for this opportunity.
                     </p>
                     <p class="text-neutral-400">
-                        However, after “MASKOF” this new project “DRIPVRSITY”
-                        was started with an approach to create a collection with
-                        even greater time and effort needed to be accomplished.
-                        Staying true to the masked outfit aesthetic of “MASKOF”,
-                        “DRIPVERSITY” includes this coherent aesthetic while
-                        simultaneously combining it with an abundant variety of
-                        headwear, hairstyle, clothes and jewelry pieces.
+                        However, after “MASKOF” we started “DRIPVRSITY” to
+                        create a collection where even greater effort and time
+                        were needed. Staying true to the masked outfit aesthetic
+                        of “MASKOF”, “DRIPVERSITY” includes this coherent look
+                        while combining it with an abundant variety of headwear,
+                        hairstyle, clothes, and jewelry traits
                     </p>
 
                     <AppPanel

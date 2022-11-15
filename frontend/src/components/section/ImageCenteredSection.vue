@@ -15,7 +15,7 @@
         </div>
 
         <span
-            class="block absolute top-0 left-0 w-full h-full bg-gradient-to-bl from-black/25 via-black/75 to-black"
+            class="block absolute top-0 left-0 w-full h-full bg-gradient-to-bl from-black/0 via-black/50 to-black"
         />
 
         <div

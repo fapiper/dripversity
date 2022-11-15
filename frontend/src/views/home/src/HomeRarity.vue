@@ -3,17 +3,34 @@
         <div
             class="container-default px-0 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
         >
-            <div class="px-8 lg:px-0 space-y-8 lg:text-right" v-animate.stagger>
-                <h2 class="title">Unique<br />characteristics</h2>
+            <div class="px-8 lg:px-0 space-y-2 lg:text-right" v-animate.stagger>
+                <h2 class="title">Rarity System Randomizer</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                    sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    We equipped DRIPVERSITY with a rarity system that controls
+                    the spawn probability of every trait. Lower rarity ranks are
+                    assigned to more complex traits, like headwear with multiple
+                    logo variations or clothes with an inner and outer layer
+                    trait structure. Less shared color variants or pinned metal
+                    accessories also garments rarer. Moreover, simpler traits
+                    like clothes that only have an inner layer and no outer
+                    layer, headwear with only one logo, or chains without any
+                    pendant, are more likely to drop due to a higher rarity
+                    rank. Concerning each trait's rarity, the integrated
+                    randomizer generates a combination of each trait category.
+                    Each generated NFT has a unique appearance since each
+                    combination of elements just appears once.
                 </p>
-                <div class="hidden lg:block">
-                    <AppButton @click.prevent="next()">Shuffle</AppButton>
+                <p>
+                    Feel free to check out the implemented “SHUFFLE” function to
+                    recreate the randomizing process and have a look at which
+                    traits spawn to have a better understanding. Maybe you can
+                    get your hands on an ultra-rare DRIPVERSITY patterned puffed
+                    hood jacket or an outstanding golden hooded mask?
+                </p>
+                <div class="hidden lg:block !mt-6">
+                    <AppButton @click.prevent="next()" color="outline"
+                        >Shuffle</AppButton
+                    >
                 </div>
             </div>
             <div
@@ -27,7 +44,7 @@
                     class="rounded w-full sm:w-80 mx-auto"
                 />
                 <ul
-                    class="grid grid-cols-3 grid-rows-4 gap-2"
+                    class="grid grid-cols-2 grid-rows-6 gap-1 sm:gap-2"
                     v-animate.stagger
                 >
                     <li
@@ -36,6 +53,7 @@
                         :key="attribute"
                     >
                         <AppPanel
+                            :truncate="true"
                             :reverse="true"
                             size="xs"
                             color="gray"
@@ -44,7 +62,7 @@
                         ></AppPanel>
                     </li>
                 </ul>
-                <div class="lg:hidden flex flex-col items-center">
+                <div class="lg:hidden flex flex-col items-start">
                     <AppButton color="outline" @click.prevent="next()"
                         >Shuffle</AppButton
                     >

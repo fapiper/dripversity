@@ -2,7 +2,7 @@
     <ContainerSection id="team">
         <div class="grid col-span-1 lg:grid-cols-5 gap-16">
             <div
-                class="lg:col-span-2 space-y-6 text-center lg:text-right"
+                class="lg:col-span-2 space-y-6 lg:text-right"
                 v-animate.stagger
             >
                 <h2 class="title">Building a Team</h2>
@@ -19,8 +19,6 @@
                         dolore magna aliquyam erat, sed diam voluptua.
                     </p>
                 </div>
-
-                <AppCta />
             </div>
 
             <div
