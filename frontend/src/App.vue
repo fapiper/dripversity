@@ -1,4 +1,5 @@
 <template>
+    <LayoutCursor />
     <LayoutHeader />
     <LayoutBody>
         <router-view v-slot="{ Component }">
@@ -15,4 +16,5 @@ import LayoutHeader from "@/layouts/default/LayoutHeader.vue";
 import LayoutFooter from "@/layouts/default/Footer/LayoutFooter.vue";
 import LayoutBody from "@/layouts/default/LayoutBody.vue";
 import LayoutTransition from "@/layouts/default/LayoutTransition.vue";
+import LayoutCursor from "@/layouts/default/LayoutCursor.vue";
 </script>
