@@ -1,5 +1,5 @@
 <template>
-    <div class="grid lg:grid-cols-4 py-32 lg:py-0">
+    <div class="grid lg:grid-cols-4 pt-32 lg:pt-0">
         <slot />
     </div>
 </template>

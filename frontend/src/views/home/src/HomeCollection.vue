@@ -4,17 +4,16 @@
 
         <div class="space-y-2">
             <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet.
+                To speak frankly, we were fed up with NFT collections displaying
+                one human avatar with various shades of skin colors and calling
+                it diverse. This ordinary NFT profile picture approach bored us
+                and we wanted to include different ethnic backgrounds to display
+                actual individual human characters. DRIPVERSITY uses a concept
+                of five human characters that cherishes each individual's
+                uniqueness while still being able to assign all wearable
+                clothes, headwear pieces, and jewelry traits to every character.
+                Moreover, we can underline everyone's unique appearance while
+                also showcasing what connects us as wearables.
             </p>
         </div>
 

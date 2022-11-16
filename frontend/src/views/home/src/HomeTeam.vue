@@ -8,15 +8,13 @@
                 <h2 class="title">Building a Team</h2>
                 <div class="space-y-2">
                     <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et
-                        dolore magna aliquyam erat, sed diam voluptua. At vero
-                        eos et accusam et justo duo dolores et ea rebum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et
-                        dolore magna aliquyam erat, sed diam voluptua.
+                        Surround yourself with people that you can trust and who
+                        share the same work ethic as you do. That was our
+                        approach while working on this project - and still is
+                        the concept that kept us going even with ongoing
+                        challenges and errors which brought quite some
+                        headaches. In the end we made it work - welcome to
+                        DRIPVERSITY.
                     </p>
                 </div>
             </div>

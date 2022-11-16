@@ -1,101 +1,72 @@
 <template>
     <section>
-        <div class="space-y-16 break-all">
-            <h1 class="title">Terms of Service</h1>
-            <div class="space-y-4">
-                <h2 class="title-3">Angaben gemäß § 5 TM</h2>
+        <div class="space-y-12">
+            <h1 class="title">How to Mint</h1>
+            <p class="text-lg">
+                Minting refers to the process of creating an NFT and initially
+                writing it to the blockchain. It establishes an immutable record
+                of authenticity and ownership and represents the first ever
+                interaction with every one-of-a-kind Dripversity token. Before
+                minting, the item metadata is hidden. Upon creation on the
+                blockchain, it is revealed and all of its unique traits and it's
+                rarity are visible to the public.
+            </p>
+            <div>
                 <p>
-                    Julian Kaltschmidt<br />Ludwigstraße 13<br />04315 Leipzig
+                    After you have added funds to your wallet, you will be able
+                    to begin minting NFTs from Dripversity's
+                    <router-link to="/mint">Minting interface</router-link>. It
+                    is really simple, you’ll just need to do the following:
                 </p>
-                <h2 class="title-3">Kontakt</h2>
+
+                <ol>
+                    <li>
+                        Ensure that you have adequate amounts of ETH in your
+                        wallet prior to the launch date.
+                    </li>
+                    <li>
+                        Choose the quantity of NFTs that you want to buy on the
+                        Mint page, the project will specify the maximum quantity
+                        of NFTs you can purchase.
+                    </li>
+                    <li>
+                        Select the “Mint” button, and then continue with the
+                        transactions, guided by your wallet prompt.
+                    </li>
+                    <li>Done!</li>
+                </ol>
+            </div>
+            <div>
                 <p>
-                    Telefon: +49 152 07138886<br />E-Mail:&nbsp;<a
-                        href="mailto:%20info@dripversity.com"
-                        >info@dripversity.com</a
-                    >
-                </p>
-                <h2 class="title-3">Umsatzsteuer-ID</h2>
-                <p>
-                    Umsatzsteuer-Identifikationsnummer gemäß § 27 a
-                    Umsatzsteuergesetz:
-                </p>
-                <p>
-                    Bitte erfragen an unsere E-Mail-Adresse die Sie oben im
-                    Impressum finden
-                </p>
-                <h2 class="title-3">Streitschlichtung</h2>
-                <p>
-                    Die Europäische Kommission stellt eine Plattform zur
-                    Online-Streitbeilegung (OS) bereit:&nbsp;<a
-                        target="_blank"
-                        rel="noopener"
-                        href="https://ec.europa.eu/consumers/odr"
-                        >https://ec.europa.eu/consumers/odr</a
-                    >.<br />Unsere E-Mail-Adresse finden Sie oben im Impressum.
-                </p>
-                <p>
-                    Wir sind nicht bereit oder verpflichtet, an
-                    Streitbeilegungsverfahren vor einer
-                    Verbraucherschlichtungsstelle teilzunehmen.
-                </p>
-                <h3 class="title-4">Haftung für Inhalte</h3>
-                <p>
-                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene
-                    Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
-                    verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
-                    Diensteanbieter jedoch nicht verpflichtet, übermittelte oder
-                    gespeicherte fremde Informationen zu überwachen oder nach
-                    Umständen zu forschen, die auf eine rechtswidrige Tätigkeit
-                    hinweisen.
+                    Also, keep in mind that you need to account for transaction
+                    fees. The fees for the Ethereum network are between US$60
+                    and US$100 on average, and they can go even higher during
+                    times of heavy traffic volume.
                 </p>
                 <p>
-                    Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
-                    Informationen nach den allgemeinen Gesetzen bleiben hiervon
-                    unberührt. Eine diesbezügliche Haftung ist jedoch erst ab
-                    dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung
-                    möglich. Bei Bekanntwerden von entsprechenden
-                    Rechtsverletzungen werden wir diese Inhalte umgehend
-                    entfernen.
-                </p>
-                <h3 class="title-4">Haftung für Links</h3>
-                <p>
-                    Unser Angebot enthält Links zu externen Websites Dritter,
-                    auf deren Inhalte wir keinen Einfluss haben. Deshalb können
-                    wir für diese fremden Inhalte auch keine Gewähr übernehmen.
-                    Für die Inhalte der verlinkten Seiten ist stets der
-                    jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
-                    Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung
-                    auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte
-                    waren zum Zeitpunkt der Verlinkung nicht erkennbar.
-                </p>
-                <p>
-                    Eine permanente inhaltliche Kontrolle der verlinkten Seiten
-                    ist jedoch ohne konkrete Anhaltspunkte einer
-                    Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von
-                    Rechtsverletzungen werden wir derartige Links umgehend
-                    entfernen.
-                </p>
-                <h3 class="title-4">Urheberrecht</h3>
-                <p>
-                    Die durch die Seitenbetreiber erstellten Inhalte und Werke
-                    auf diesen Seiten unterliegen dem deutschen Urheberrecht.
-                    Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
-                    der Verwertung außerhalb der Grenzen des Urheberrechtes
-                    bedürfen der schriftlichen Zustimmung des jeweiligen Autors
-                    bzw. Erstellers. Downloads und Kopien dieser Seite sind nur
-                    für den privaten, nicht kommerziellen Gebrauch gestattet.
-                </p>
-                <p>
-                    Soweit die Inhalte auf dieser Seite nicht vom Betreiber
-                    erstellt wurden, werden die Urheberrechte Dritter beachtet.
-                    Insbesondere werden Inhalte Dritter als solche
-                    gekennzeichnet. Sollten Sie trotzdem auf eine
-                    Urheberrechtsverletzung aufmerksam werden, bitten wir um
-                    einen entsprechenden Hinweis. Bei Bekanntwerden von
-                    Rechtsverletzungen werden wir derartige Inhalte umgehend
-                    entfernen.
+                    The transaction expenses that you are required to pay in
+                    addition to the cost of the NFT are referred to as “Gas
+                    Fees.” You may also be able to change the gas fee, and the
+                    greater the gas fee that you choose to pay, the higher
+                    priority you will be given in being able to acquire your
+                    NFT. You would consequently need to take into account the
+                    transaction costs as well as the cost of each NFT as a
+                    result of this.
                 </p>
             </div>
         </div>
     </section>
 </template>
+
+<style lang="postcss" scoped>
+ol {
+    @apply list-decimal pl-8 leading-relaxed;
+}
+h2 {
+    @apply title-2 mb-2 !important;
+}
+
+h2 ~ p {
+    @apply italic my-4;
+}
+</style>

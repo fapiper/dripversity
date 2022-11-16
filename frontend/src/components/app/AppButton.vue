@@ -22,7 +22,7 @@ export default defineComponent({
         },
         rounded: {
             type: String as () => "full" | "base" | "none",
-            default: "base",
+            default: "full",
         },
         size: {
             type: String as () => "xxs" | "xs" | "sm" | "md" | "lg",
