@@ -4,11 +4,23 @@
             <div
                 class="container-default !px-0 grid grid-cols-2 lg:grid-cols-6 lg:divide-x divide-neutral-800"
             >
-                <FooterGridItem title="Home" :routes="routes.home" />
+                <FooterGridItem
+                    title="Home"
+                    :routes="routes.home"
+                    class="border-r border-b border-neutral-800 lg:border-b-0 lg:border-r-0"
+                />
 
-                <FooterGridItem title="Help" :routes="routes.support" />
+                <FooterGridItem
+                    title="Help"
+                    :routes="routes.support"
+                    class="border-b border-neutral-800 lg:border-b-0"
+                />
 
-                <FooterGridItem title="Join the community" size="lg">
+                <FooterGridItem
+                    title="Join the Community"
+                    size="lg"
+                    class="border-b border-neutral-800 lg:border-b-0"
+                >
                     <p>
                         Non integer vulputate ut tempus mollis in blandit.
                         Vestibulum, ultrices quis vitae sagittis et
@@ -56,7 +68,7 @@
             </div>
 
             <div
-                class="py-4 border-t border-b-8 border-b-blue border-t-neutral-900"
+                class="py-4 border-t border-b-[0.5rem] border-b-blue border-t-neutral-900"
             >
                 <div
                     class="container-default flex flex-col md:flex-row items-start md:items-center justify-between md:space-x-8 lg:space-x-12"

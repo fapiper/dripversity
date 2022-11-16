@@ -8,7 +8,7 @@ import "@/assets/styles/swiper.css";
 import "./registerServiceWorker";
 import "swiper/css";
 import "swiper/css/lazy";
-import "swiper/css/free-mode";
+import "swiper/css/effect-coverflow";
 
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
