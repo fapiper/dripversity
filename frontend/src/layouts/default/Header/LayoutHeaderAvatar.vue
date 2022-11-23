@@ -41,7 +41,7 @@
         >
             <PopoverPanel class="absolute top-full right-0 w-60 z-10 mt-2">
                 <div
-                    class="py-2 bg-neutral-50 text-neutral-900 rounded-2xl overflow-hidden"
+                    class="py-2 bg-neutral-50 text-neutral-900 rounded-2xl overflow-hidden border border-neutral-200"
                 >
                     <div
                         class="px-4 py-2 mb-1 border-b border-neutral-200"
@@ -105,11 +105,6 @@ import { routes } from "@/constants/";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
 import { storeToRefs } from "pinia";
 import { useUserStore } from "@/store/modules/user";
-import {
-    GiftIcon,
-    ArrowLeftOnRectangleIcon,
-    ArrowRightOnRectangleIcon,
-} from "@heroicons/vue/24/outline";
 import LoadingIcon from "@/components/icons/LoadingIcon.vue";
 import { useSalePhase } from "@/composables/useSalePhase";
 

@@ -35,7 +35,7 @@
 
 <script lang="ts" setup>
 import { routes } from "@/constants/";
-import LayoutHeaderAvatar from "@/layouts/default/LayoutHeaderAvatar.vue";
+import LayoutHeaderAvatar from "./LayoutHeaderAvatar.vue";
 import AppButton from "@/components/app/AppButton.vue";
 import DripversityDvIcon from "@/components/icons/DripversityDvIcon.vue";
 </script>

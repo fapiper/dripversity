@@ -1,20 +1,14 @@
 <template>
-    <LayoutCursor />
-    <LayoutHeader />
-    <LayoutBody>
+    <LayoutDefault>
         <router-view v-slot="{ Component }">
             <LayoutTransition>
                 <component :is="Component" />
             </LayoutTransition>
         </router-view>
-    </LayoutBody>
-    <LayoutFooter />
+    </LayoutDefault>
 </template>
 
 <script lang="ts" setup>
-import LayoutHeader from "@/layouts/default/LayoutHeader.vue";
-import LayoutFooter from "@/layouts/default/Footer/LayoutFooter.vue";
-import LayoutBody from "@/layouts/default/LayoutBody.vue";
-import LayoutTransition from "@/layouts/default/LayoutTransition.vue";
-import LayoutCursor from "@/layouts/default/LayoutCursor.vue";
+import LayoutTransition from "@/layouts/default/Transition/LayoutTransition.vue";
+import LayoutDefault from "@/layouts/default/LayoutDefault.vue";
 </script>

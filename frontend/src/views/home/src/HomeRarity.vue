@@ -8,22 +8,23 @@
                 <p>
                     We equipped DRIPVERSITY with a rarity system that controls
                     the spawn probability of every trait. Lower rarity ranks are
-                    assigned to more complex traits like headwear with multiple
-                    logo variations or clothes with an inner-, and outer layer.
-                    Less shared color variants or pinned metal accessories also
-                    make traits rarer. Moreover, simpler traits like clothes
-                    that only have an inner-, and no outer layer, headwear with
-                    one logo, or chains without a pendant, are more likely to
-                    drop due to a higher rarity rank. Concerning each trait's
-                    rarity, the integrated randomizer generates a unique trait
-                    combination for every NFT.
+                    assigned to more complex traits with multiple logo and color
+                    variations or clothes with an inner-, and outer layer.
+                    Pinned metal accessories also make traits rarer.
                 </p>
                 <p>
-                    Check out the SHUFFLE function to recreate the randomizing
-                    process and look at which traits spawn for a better
-                    understanding. Maybe you get an ultra-rare DRIPVERSITY
-                    patterned puffed hood jacket or an outstanding golden hooded
-                    mask?
+                    Therefore, simpler traits with single logos usage, clothes
+                    with an inner-, and no outer layer or chains without a
+                    pendant, are more likely to drop due to a higher rarity
+                    rank. Concerning each trait's rarity, the integrated
+                    randomizer generates a unique trait combination for every
+                    NFT.
+                </p>
+                <p>
+                    Click SHUFFLE to create randomized trait combinations and
+                    see which traits spawn. Maybe you get an ultra-rare
+                    DRIPVERSITY patterned puffed hood jacket or an outstanding
+                    golden hooded mask?
                 </p>
                 <div class="hidden lg:block !mt-6">
                     <AppButton @click.prevent="next()" color="outline"

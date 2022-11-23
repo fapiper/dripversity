@@ -10,10 +10,9 @@
                     <p>
                         Surround yourself with people that you can trust and who
                         share the same work ethic as you do. That was our
-                        approach while working on this project - and still is
-                        the concept that kept us going even with ongoing
+                        approach which kept us going even with ongoing
                         challenges and errors which brought quite some
-                        headaches. In the end we made it work - welcome to
+                        headaches. <br />In the end we made it work - welcome to
                         DRIPVERSITY.
                     </p>
                 </div>
@@ -24,8 +23,8 @@
                 v-animate.stagger
             >
                 <article
-                    v-for="(item, i) in 6"
-                    :key="item"
+                    v-for="(member, i) in team"
+                    :key="member.name"
                     class="flex flex-col p-4 border-b border-l border-neutral-800"
                     :class="[
                         (i + 1) % 2 === 0 &&
@@ -40,14 +39,16 @@
                 >
                     <img
                         class="w-full aspect-square w-full rounded"
-                        :src="require(`@/assets/images/token/${item + 1}.jpg`)"
-                        :alt="'Member ' + item"
+                        :src="member.image"
+                        :alt="member.name"
                     />
-                    <div class="pt-2">
-                        <h5 class="font-semibold leading-none">Name</h5>
+                    <div class="pt-4 text-center">
+                        <h5 class="font-semibold leading-none">
+                            {{ member.name }}
+                        </h5>
                         <span
                             class="text-neutral-200/50 uppercase text-xs leading-none"
-                            >Role</span
+                            >{{ member.role }}</span
                         >
                     </div>
                 </article>
@@ -58,6 +59,37 @@
 
 <script lang="ts" setup>
 import ContainerSection from "@/components/section/ContainerSection.vue";
-import AppButton from "@/components/app/AppButton.vue";
-import AppCta from "@/components/app/AppCta.vue";
+
+const team = [
+    {
+        name: "Blockschmidt",
+        role: "3D Artist",
+        image: require("@/assets/images/team/blockschmidt.png"),
+    },
+    {
+        name: "Aaron",
+        role: "3D Environment Artist",
+        image: require("@/assets/images/team/aaron.png"),
+    },
+    {
+        name: "Videokidd",
+        role: "3D Animation Artist",
+        image: require("@/assets/images/team/videokidd.png"),
+    },
+    {
+        name: "Chris",
+        role: "Logo Illustration and Design",
+        image: require("@/assets/images/team/chris.png"),
+    },
+    {
+        name: "Flori",
+        role: "UI/UX Designer",
+        image: require("@/assets/images/team/flori.png"),
+    },
+    {
+        name: "Fabi",
+        role: "Engineer",
+        image: require("@/assets/images/team/fabi.png"),
+    },
+];
 </script>

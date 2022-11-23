@@ -1,6 +1,6 @@
 <template>
     <section id="blockschmidt" class="lg:py-0">
-        <div class="container-default overflow-visible">
+        <div class="container-default px-0 overflow-visible">
             <div class="relative grid grid-cols-1 lg:grid-cols-5">
                 <div
                     class="w-full lg:absolute lg:top-0 lg:right-0 lg:w-4/5 lg:h-full flex"
@@ -26,26 +26,26 @@
                         from: { yPercent: 25 },
                         to: { yPercent: -25 },
                     }"
-                    class="relative bg-neutral-900 rounded py-8 px-4 lg:px-8 space-y-2 col-start-1 col-span-2 z-10 lg:my-32"
+                    class="relative bg-neutral-900 rounded p-8 space-y-2 col-start-1 col-span-2 z-10 lg:my-32"
                     v-animate.stagger
                 >
-                    <h2 class="title">The First Collection</h2>
+                    <h2 class="title">About the First Collection</h2>
                     <p class="text-neutral-400">
                         MASKOF is an animated 1/1 NFT collection of unique
-                        masked outfits. Instantly sold out, two more added NFTs
-                        completed the project. We felt that people appreciated
-                        the detailed 3D art and effort that was put into this
-                        collection. After realizing that collectors spent over 2
-                        ETH on those NFTs, it felt surreal, and beyond grateful
-                        for this opportunity.
+                        masked outfits. Instantly sold out, two more NFTs
+                        completed the project. We felt that collectors
+                        appreciated the detailed 3D art and effort that was put
+                        into this project - it felt surreal and we were beyond
+                        grateful for this opportunity.
                     </p>
+
                     <p class="text-neutral-400">
-                        However, after MASKOF we started DRIPVRSITY to create a
-                        collection where even greater effort and time were
-                        needed. Maintaining the masked outfit aesthetic of
-                        MASKOF, DRIPVERSITY includes a coherent look while
-                        combining an abundant variety of headwear, hairstyle,
-                        clothes, and jewelry traits.
+                        However, after MASKOF we started DRIPVERSITY to create a
+                        collection that demanded even greater effort and time.
+                        Maintaining the masked outfit aesthetic of MASKOF,
+                        DRIPVERSITY showcases a coherent look with a great
+                        variety of headwear, hairstyle, clothes, and jewelry
+                        traits.
                     </p>
 
                     <AppPanel
