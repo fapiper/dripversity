@@ -8,7 +8,7 @@
             {{ isPreSale ? "Stay up to date" : "Claim your NFT now" }}
         </h2>
 
-        <p class="text-neutral-50 text-lg">
+        <p class="text-neutral-50 text-lg text-center">
             {{
                 isPreSale
                     ? "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."

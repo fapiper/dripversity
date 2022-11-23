@@ -72,7 +72,6 @@
     }
 
     p {
-        @apply text-neutral-300/70
+        @apply text-justify text-neutral-300/70
     }
-
 }

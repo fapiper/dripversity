@@ -3,16 +3,16 @@
         <div
             class="container-default px-0 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
         >
-            <div class="px-8 lg:px-0 space-y-2 lg:text-right" v-animate.stagger>
+            <div class="px-8 lg:px-0 space-y-2 text-right" v-animate.stagger>
                 <h2 class="title">Rarity System</h2>
-                <p>
+                <p class="lg:text-end">
                     We equipped DRIPVERSITY with a rarity system that controls
                     the spawn probability of every trait. Lower rarity ranks are
                     assigned to more complex traits with multiple logo and color
                     variations or clothes with an inner-, and outer layer.
                     Pinned metal accessories also make traits rarer.
                 </p>
-                <p>
+                <p class="lg:text-end">
                     Therefore, simpler traits with single logos usage, clothes
                     with an inner-, and no outer layer or chains without a
                     pendant, are more likely to drop due to a higher rarity
@@ -20,7 +20,7 @@
                     randomizer generates a unique trait combination for every
                     NFT.
                 </p>
-                <p>
+                <p class="lg:text-end">
                     Click SHUFFLE to create randomized trait combinations and
                     see which traits spawn. Maybe you get an ultra-rare
                     DRIPVERSITY patterned puffed hood jacket or an outstanding

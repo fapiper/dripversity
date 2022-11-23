@@ -1,13 +1,13 @@
 <template>
     <ContainerSection id="team">
-        <div class="grid col-span-1 lg:grid-cols-5 gap-16">
+        <div class="grid col-span-1 lg:grid-cols-5 gap-8">
             <div
                 class="lg:col-span-2 space-y-6 lg:text-right"
                 v-animate.stagger
             >
                 <h2 class="title">Building a Team</h2>
                 <div class="space-y-2">
-                    <p>
+                    <p class="lg:text-end">
                         Surround yourself with people that you can trust and who
                         share the same work ethic as you do. That was our
                         approach which kept us going even with ongoing
@@ -27,10 +27,8 @@
                     :key="member.name"
                     class="flex flex-col p-4 border-b border-l border-neutral-800"
                     :class="[
-                        (i + 1) % 2 === 0 &&
-                            (i + 1) % 3 !== 0 &&
-                            'border-r lg:border-r-0',
                         (i + 1) % 3 === 0 && 'lg:border-r',
+                        (i + 1) % 2 === 0 && 'border-r lg:border-r-0',
                         i < 2 && 'border-t',
                         i < 3 && 'lg:border-t',
                         i >= 6 - 2 && 'border-b',
@@ -43,7 +41,7 @@
                         :alt="member.name"
                     />
                     <div class="pt-4 text-center">
-                        <h5 class="font-semibold leading-none">
+                        <h5 class="font-semibold">
                             {{ member.name }}
                         </h5>
                         <span

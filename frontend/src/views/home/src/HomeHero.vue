@@ -4,14 +4,14 @@
             class="relative min-h-screen w-full flex items-center justify-center py-32"
         >
             <div
-                class="relative container-default max-w-2xl text-center z-20 space-y-12 mt-32"
+                class="relative container-default max-w-2xl z-20 space-y-12 mt-32"
                 v-animate.stagger
             >
                 <DripversityIcon class="w-full text-blue stroke-creme" />
                 <div
                     class="max-w-sm w-full mx-auto space-y-8 flex flex-col items-center"
                 >
-                    <p class="text-neutral-50">
+                    <p class="text-neutral-50 text-center">
                         Molestie ullamcorper egestas at ametr. Semper
                         pellentesque sed nisl enim volutpat sem est vel. Id nunc
                         cras at neque.
