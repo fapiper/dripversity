@@ -1,9 +1,10 @@
 <template>
     <section id="rarity">
-        <div
-            class="container-default px-0 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
-        >
-            <div class="px-8 lg:px-0 space-y-2 text-right" v-animate.stagger>
+        <div class="container-default px-0 lg:px-12 grid lg:grid-cols-5 gap-8">
+            <div
+                class="px-8 lg:px-0 space-y-2 lg:text-right lg:col-span-2"
+                v-animate.stagger
+            >
                 <h2 class="title">Rarity System</h2>
                 <p class="lg:text-end">
                     We equipped DRIPVERSITY with a rarity system that controls
@@ -28,45 +29,60 @@
                     spawn. Maybe you get an ultra-rare DRIPVERSITY patterned
                     puffed hood jacket or an outstanding golden hooded mask?
                 </p>
-                <div class="hidden lg:block !mt-6">
-                    <AppButton @click.prevent="next()" color="outline"
-                        >Shuffle</AppButton
-                    >
-                </div>
+                <AppButton @click.prevent="next()" color="outline" class="!mt-6"
+                    >Shuffle</AppButton
+                >
             </div>
             <div
-                class="flex flex-col space-y-4 px-8 lg:py-8 lg:bg-gradient-to-bl lg:from-neutral-900 lg:to-black lg:rounded"
+                class="grid grid-cols-1 lg:grid-cols-2 gap-4 px-8 lg:py-8 lg:bg-gradient-to-bl lg:from-neutral-900 lg:to-black lg:rounded lg:col-span-3"
                 v-if="state"
             >
                 <img
                     v-animate
                     :src="state.image"
                     :alt="index + ' rarity'"
-                    class="rounded w-full sm:w-80 mx-auto"
+                    class="rounded w-full"
                 />
-                <ul
-                    class="grid grid-cols-2 grid-rows-6 gap-1 sm:gap-2"
-                    v-animate.stagger
-                >
-                    <li
-                        class="flex w-full"
-                        v-for="attribute of state.attributes"
-                        :key="attribute"
+                <div class="space-y-2">
+                    <ul
+                        class="grid grid-cols-2 lg:grid-cols-1 gap-2"
+                        v-animate.stagger
                     >
-                        <AppPanel
-                            :truncate="true"
-                            :reverse="true"
-                            size="xs"
-                            color="gray"
-                            :title="attribute.value"
-                            :subtitle="attribute?.trait_type || ''"
-                        ></AppPanel>
-                    </li>
-                </ul>
-                <div class="lg:hidden flex flex-col items-start">
-                    <AppButton color="outline" @click.prevent="next()"
-                        >Shuffle</AppButton
+                        <li
+                            class="flex w-full"
+                            v-for="attribute of collapse
+                                ? state.attributes
+                                : state.attributes.slice(0, 6)"
+                            :key="attribute"
+                        >
+                            <AppPanel
+                                :truncate="true"
+                                :reverse="true"
+                                size="xs"
+                                color="gray"
+                                :title="attribute.value"
+                                :subtitle="attribute?.trait_type || ''"
+                            ></AppPanel>
+                        </li>
+                    </ul>
+
+                    <AppButton
+                        @click.prevent="collapse = !collapse"
+                        size="xs"
+                        color="transparent"
+                        class="!p-0"
                     >
+                        <span class="block">
+                            <template v-if="collapse"
+                                >Collapse attributes</template
+                            >
+                            <template v-else
+                                >Expand for all attributes</template
+                            >
+                        </span>
+                        <ChevronUpIcon v-if="collapse" class="w-2 h-2 block" />
+                        <ChevronDownIcon v-else class="w-2 h-2 block" />
+                    </AppButton>
                 </div>
             </div>
         </div>
@@ -74,10 +90,14 @@
 </template>
 
 <script lang="ts" setup>
+import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/vue/24/outline";
 import AppButton from "@/components/app/AppButton.vue";
 import AppPanel from "@/components/app/AppPanel.vue";
 import { useCycleList } from "@vueuse/core";
 import { tokens } from "@/constants";
+import { ref } from "vue";
+
+const collapse = ref(false);
 
 const { state, index, next } = useCycleList<{ image: any; attributes: any }>(
     tokens.all

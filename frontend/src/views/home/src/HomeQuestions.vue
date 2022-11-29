@@ -7,9 +7,8 @@
             >
                 <h2 class="title">Questions? We got answers.</h2>
                 <p class="lg:text-end">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua.
+                    Here are the most common and important questions to get you
+                    started on purchasing a Dripversity token.
                 </p>
                 <AppButton :to="routes.support['How to Mint']"
                     >More Answers</AppButton

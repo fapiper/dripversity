@@ -68,7 +68,7 @@
             </div>
 
             <div
-                class="py-4 border-t border-b-[0.5rem] border-b-blue border-t-neutral-900"
+                class="py-4 border-t border-b-[1rem] border-b-blue border-t-neutral-900"
             >
                 <div
                     class="container-default flex flex-col md:flex-row items-start md:items-center justify-between md:space-x-8 lg:space-x-12"
