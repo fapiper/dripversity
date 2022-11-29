@@ -21,10 +21,12 @@
                     NFT.
                 </p>
                 <p class="lg:text-end">
-                    Click SHUFFLE to create randomized trait combinations and
-                    see which traits spawn. Maybe you get an ultra-rare
-                    DRIPVERSITY patterned puffed hood jacket or an outstanding
-                    golden hooded mask?
+                    <button class="link-2" @click.prevent="next()">
+                        Shuffle
+                    </button>
+                    to create randomized trait combinations and see which traits
+                    spawn. Maybe you get an ultra-rare DRIPVERSITY patterned
+                    puffed hood jacket or an outstanding golden hooded mask?
                 </p>
                 <div class="hidden lg:block !mt-6">
                     <AppButton @click.prevent="next()" color="outline"
