@@ -22,6 +22,7 @@
 
                 <div
                     class="relative w-20 h-0.5 bg-neutral-50/20 overflow-hidden rounded"
+                    v-if="appear"
                 >
                     <span
                         ref="progressRef"
@@ -49,7 +50,9 @@ import { templateRef } from "@vueuse/core";
 import { onMounted, ref } from "vue";
 import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 
+const appear = ref(true);
 const show = ref(true);
+
 const lightBgRef = templateRef("lightBgRef");
 const darkBgRef = templateRef("darkBgRef");
 const darkContentRef = templateRef("darkContentRef");
@@ -64,24 +67,20 @@ const tl = () =>
 const enterTl = ref();
 const leaveTl = ref();
 
-onMounted(() => {
-    enterTl.value = tl().fromTo(
-        progressRef.value,
-        { width: "0%" },
-        {
-            width: "100%",
-            duration: 1.2,
-            ease: "slow(0.1, 2, false)",
-        }
-    );
+onMounted(async () => {
+    enterTl.value = tl().to(progressRef.value, {
+        width: "100%",
+        duration: 1.2,
+        ease: "slow(0.1, 2, false)",
+    });
 
     leaveTl.value = tl()
         .to(darkContentRef.value, { autoAlpha: 0, duration: 0.8 })
-        .to(lightBgRef.value, { height: "100vh" }, "-=0.1")
-        .to(lightBgRef.value, { yPercent: -100 }, "-=0.1")
+        .to(lightBgRef.value, { height: "100vh" })
+        .to(lightBgRef.value, { yPercent: -100 })
         .to(darkBgRef.value, { autoAlpha: 0 });
 
-    showLoader();
+    await showLoader();
 });
 
 async function onEnter(el: Element, done: () => any) {
@@ -90,21 +89,25 @@ async function onEnter(el: Element, done: () => any) {
 }
 
 async function onLeave(el: Element, done: () => any) {
-    showLoader();
-    await done();
+    await showLoader();
+    done();
 }
 
-function showLoader() {
+async function showLoader() {
     document.body.style.overflow = "hidden";
     show.value = true;
-    enterTl.value.play(0);
+    if (appear.value) {
+        await enterTl.value.play(0);
+    }
 }
 
 async function hideLoader() {
     await enterTl.value.then(() => leaveTl.value.play(0));
+    if (appear.value) {
+        appear.value = false;
+    }
     document.body.style.overflow = "auto";
     show.value = false;
     leaveTl.value.progress(0).pause();
-    enterTl.value.progress(0).pause();
 }
 </script>

@@ -2,7 +2,7 @@
     <ContainerSection id="team">
         <div class="grid col-span-1 lg:grid-cols-5 gap-8">
             <div
-                class="lg:col-span-2 space-y-6 lg:text-right"
+                class="lg:col-span-2 space-y-6 lg:text-right lg:p-8"
                 v-animate.stagger
             >
                 <h2 class="title">Building a Team</h2>

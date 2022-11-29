@@ -29,7 +29,7 @@
                     class="relative bg-neutral-900 rounded p-8 space-y-2 col-start-1 col-span-2 z-10 lg:my-32"
                     v-animate.stagger
                 >
-                    <h2 class="title">About the First Collection</h2>
+                    <h2 class="title-2">About the First Collection</h2>
                     <p class="text-neutral-400">
                         MASKOF is an animated 1/1 NFT collection of unique
                         masked outfits. Instantly sold out, two more NFTs
