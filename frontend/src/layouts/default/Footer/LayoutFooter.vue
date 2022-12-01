@@ -73,10 +73,20 @@
                 <div
                     class="container-default flex flex-col md:flex-row items-start md:items-center justify-between md:space-x-8 lg:space-x-12"
                 >
-                    <div class="text-xs leading-relaxed">
+                    <div class="text-xs">
                         <p>
                             Copyright &copy; {{ new Date().getFullYear() }}
                             Dripversity
+                        </p>
+                        <p>
+                            Made by
+                            <a
+                                class="link-2"
+                                href="https://www.decentum.co/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Decentum</a
+                            >
                         </p>
                     </div>
 
