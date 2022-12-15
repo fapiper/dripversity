@@ -1,5 +1,5 @@
 <template>
-    <section id="explore" class="!pb-0">
+    <section id="explorer" class="!pb-0">
         <div
             class="relative z-10 w-full flex flex-col items-center justify-start space-y-4"
             v-animate

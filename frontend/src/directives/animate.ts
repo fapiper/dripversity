@@ -1,13 +1,14 @@
-import { Directive } from "vue";
+import { Directive, ref } from "vue";
 import { gsap } from "gsap";
 
 const from = { autoAlpha: 0, xPercent: 0, y: 10 };
 const duration = 0.6;
+const tween = ref<gsap.core.Tween | null>(null);
 
 export default {
     mounted(el, binding) {
         const els = (binding?.modifiers.stagger && el.children) || el;
-        gsap.from(els, {
+        tween.value = gsap.from(els, {
             ...from,
             stagger: {
                 amount: duration,
@@ -18,8 +19,12 @@ export default {
             },
             overwrite: true,
             duration,
-            ease: "Power1.inOut",
+            ease: "Power3.in",
             ...binding?.value,
         });
+    },
+    beforeDestroy() {
+        console.log("tween", tween);
+        tween.value?.kill();
     },
 } as Directive;

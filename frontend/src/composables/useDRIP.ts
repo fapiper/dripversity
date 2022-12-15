@@ -6,13 +6,8 @@ import type { Dripversity } from "@dripversity/contracts/typechain";
 import dripversityJson from "@dripversity/contracts/artifacts/contracts/Dripversity.sol/Dripversity.json";
 import { env } from "@/constants";
 import { useSalePhase } from "@/composables/useSalePhase";
-import { useQuery, useSubscription } from "@vue/apollo-composable";
-import {
-    CONTRACT,
-    TOKEN_HOUR_DATAS,
-    TOKENS_FROM_BLOCK,
-} from "@/graphql/queries";
-import { clientIdUniswapV3 } from "@/graphql";
+import { useQuery } from "@vue/apollo-composable";
+import { CONTRACT, TOKENS_FROM_BLOCK } from "@/graphql/queries";
 import { until } from "@vueuse/core";
 
 interface txOptions {
@@ -50,7 +45,7 @@ export function createDRIP(): any {
         () => maxSupply.value === totalSupply.value
     );
 
-    const { result, onResult } = useQuery(CONTRACT, {
+    const { onResult } = useQuery(CONTRACT, {
         id: env.DRIPContractAddress.toLocaleLowerCase(),
     });
 

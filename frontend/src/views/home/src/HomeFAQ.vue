@@ -5,14 +5,20 @@
                 class="lg:col-span-2 space-y-6 lg:text-right"
                 v-animate.stagger
             >
-                <h2 class="title">Questions? We got answers.</h2>
-                <p class="lg:text-end">
-                    Here are the most common and important questions to get you
-                    started on purchasing a Dripversity token.
-                </p>
-                <AppButton :to="routes.support['How to Mint']"
-                    >More Answers</AppButton
-                >
+                <div>
+                    <h2 class="title">Questions? We got answers.</h2>
+                </div>
+                <div>
+                    <p class="lg:text-end">
+                        Here are the most common and important questions to get
+                        you started on purchasing a Dripversity token.
+                    </p>
+                </div>
+                <div>
+                    <AppButton :to="routes.support['How to Mint']"
+                        >More Answers</AppButton
+                    >
+                </div>
             </div>
 
             <div class="lg:col-span-3">
@@ -35,16 +41,12 @@
             </div>
         </div>
     </ContainerSection>
-
-    <div class="container-default max-w-4xl"></div>
 </template>
 
 <script lang="ts" setup>
 import DisclosureItem from "@/components/disclosure/DisclosureItem.vue";
-import AppCta from "@/components/app/AppCta.vue";
 import AppButton from "@/components/app/AppButton.vue";
 import { routes } from "@/constants/";
-import TextCenteredSection from "@/components/section/TextCenteredSection.vue";
 import ContainerSection from "@/components/section/ContainerSection.vue";
 
 const questions = {

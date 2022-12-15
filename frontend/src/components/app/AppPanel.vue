@@ -41,7 +41,7 @@ const props = defineProps([
 const is = props.to ? "router-link" : props.href ? "a" : "div";
 
 const colors: Indexable<string> = {
-    black: "bg-black/50 backdrop-blur-sm hover:bg-black/60",
+    black: "bg-black hover:bg-black/40",
     gray: "bg-neutral-900",
     transparent: "bg-transparent",
 };

@@ -9,9 +9,5 @@
 </template>
 
 <script lang="ts" setup>
-import { useSalePhase } from "@/composables/useSalePhase";
-import AppCta from "@/components/app/AppCta.vue";
-
-const { isPreSale } = useSalePhase();
 defineProps(["token"]);
 </script>

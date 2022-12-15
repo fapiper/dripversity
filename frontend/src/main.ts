@@ -12,22 +12,17 @@ import "swiper/css/effect-coverflow";
 
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import pinDirective from "@/directives/pin";
-import animateDirective from "@/directives/animate";
-import parallaxDirective from "@/directives/parallax";
 import { router, setupRouter } from "./router";
 import { setupRouterGuard } from "@/router/guard";
 import { setupStore } from "@/store";
 import { setupWeb3Onboard } from "@/wallets";
 import { setupApolloClients } from "@/graphql";
 import { setupGlobalComposables } from "@/composables";
+import { setupDirectives } from "@/directives";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const app = createApp(App);
-app.directive("pin", pinDirective);
-app.directive("animate", animateDirective);
-app.directive("parallax", parallaxDirective);
 
 // Configure store
 setupStore(app);
@@ -44,5 +39,8 @@ setupWeb3Onboard();
 
 // Configure global composables after web3Onboard
 setupGlobalComposables(app);
+
+// Configure directives
+setupDirectives(app);
 
 app.mount("#app");

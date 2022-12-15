@@ -5,17 +5,17 @@
         :alt="'Our Story'"
     />
 
-    <TextCenteredSection id="story" class="!pb-0">
-        <div class="space-y-4">
+    <TextCenteredSection id="story">
+        <div class="space-y-2">
             <h3 class="text-xs tracking-widest uppercase">
                 The story behind
-                <DripversityIcon class="inline-block align-middle w-16 mb-1" />
+                <DripversityIcon class="inline-block align-middle w-16" />
             </h3>
 
             <h2 class="title">How we got here</h2>
         </div>
 
-        <div class="space-y-2">
+        <div>
             <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -24,7 +24,9 @@
             </p>
         </div>
 
-        <AppButton to="/#blockschmidt">Explore</AppButton>
+        <div>
+            <AppButton to="/#blockschmidt">Explore</AppButton>
+        </div>
     </TextCenteredSection>
 </template>
 

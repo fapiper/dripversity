@@ -1,6 +1,8 @@
 <template>
-    <TextCenteredSection id="collection" class="!pt-0">
-        <h2 class="title !mb-0">The Spark for the Collection</h2>
+    <TextCenteredSection id="about">
+        <div>
+            <h2 class="title !mb-0">The Spark for the Collection</h2>
+        </div>
 
         <div class="space-y-2">
             <p>
@@ -18,15 +20,13 @@
             </p>
         </div>
 
-        <AppCta />
+        <div>
+            <AppCta />
+        </div>
     </TextCenteredSection>
 </template>
 
-<script lang="ts" setup></script>
-<script>
-import AppCta from "@/components/app/AppCta";
-import TextCenteredSection from "@/components/section/TextCenteredSection";
-export default {
-    components: { TextCenteredSection, AppCta },
-};
+<script lang="ts" setup>
+import AppCta from "@/components/app/AppCta.vue";
+import TextCenteredSection from "@/components/section/TextCenteredSection.vue";
 </script>

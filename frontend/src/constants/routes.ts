@@ -5,10 +5,14 @@ import DiscordIcon from "@/components/icons/DiscordIcon.vue";
 const home = {
     Home: "/#home",
     Rarity: "/#rarity",
-    Story: "/#story",
+    About: "/#about",
+    "Our Story": "/#story",
+    "MASK OF": "/#mask-of",
     Team: "/#team",
     FAQ: "/#faq",
 };
+
+const mint = "/mint";
 
 const socials = {
     Instagram: {
@@ -40,6 +44,7 @@ const legals = {
 
 export const routes = {
     home,
+    mint,
     socials,
     support,
     legals,

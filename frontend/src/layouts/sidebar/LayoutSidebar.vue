@@ -6,7 +6,7 @@
                 <router-view />
             </LayoutSidebarBody>
         </LayoutSidebarContainer>
-        <CtaSection />
+        <LayoutSidebarCta />
     </div>
 </template>
 
@@ -14,5 +14,5 @@
 import LayoutSidebarContainer from "@/layouts/sidebar/src/LayoutSidebarContainer.vue";
 import LayoutSidebarBody from "@/layouts/sidebar/src/LayoutSidebarBody.vue";
 import LayoutSidebarSidebar from "@/layouts/sidebar/src/LayoutSidebarSidebar.vue";
-import CtaSection from "@/components/cta/CtaSection.vue";
+import LayoutSidebarCta from "@/layouts/sidebar/src/LayoutSidebarCta.vue";
 </script>

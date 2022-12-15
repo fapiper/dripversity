@@ -4,10 +4,10 @@
         <HomeExplore />
         <HomeRarity />
         <HomeStory />
-        <HomeBlockschmidt />
-        <HomeCollection />
+        <HomeMaskOf />
+        <HomeAbout />
         <HomeTeam />
-        <CtaSection />
+        <HomeCta />
         <HomeQuestions />
     </div>
 </template>
@@ -15,11 +15,11 @@
 <script lang="ts" setup>
 import HomeHero from "@/views/home/src/HomeHero.vue";
 import HomeRarity from "@/views/home/src/HomeRarity.vue";
-import HomeExplore from "@/views/home/src/HomeExplore.vue";
+import HomeExplore from "@/views/home/src/HomeExplorer.vue";
 import HomeStory from "@/views/home/src/HomeStory.vue";
-import HomeBlockschmidt from "@/views/home/src/HomeBlockschmidt.vue";
-import HomeCollection from "@/views/home/src/HomeCollection.vue";
+import HomeMaskOf from "@/views/home/src/HomeMaskOf.vue";
+import HomeAbout from "@/views/home/src/HomeAbout.vue";
 import HomeTeam from "@/views/home/src/HomeTeam.vue";
-import CtaSection from "@/components/cta/CtaSection.vue";
-import HomeQuestions from "@/views/home/src/HomeQuestions.vue";
+import HomeCta from "@/views/home/src/HomeCta.vue";
+import HomeQuestions from "@/views/home/src/HomeFAQ.vue";
 </script>
