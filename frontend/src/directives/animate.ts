@@ -23,8 +23,4 @@ export default {
             ...binding?.value,
         });
     },
-    beforeDestroy() {
-        console.log("tween", tween);
-        tween.value?.kill();
-    },
 } as Directive;
