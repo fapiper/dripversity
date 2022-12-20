@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import LayoutSidebar from "@/layouts/sidebar/LayoutSidebar.vue";
 import HomeView from "@/views/home/HomeView.vue";
 import MintView from "@/views/mint/MintView.vue";
+import AirdropView from "@/views/airdrop/AirdropView.vue";
 import scrollBehavior from "@/router/scrollBehavior";
 import { App } from "vue";
 
@@ -15,6 +16,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "/mint",
         name: "mint",
         component: MintView,
+    },
+    {
+        path: "/airdrop",
+        name: "airdrop",
+        component: AirdropView,
     },
     {
         path: "/support",

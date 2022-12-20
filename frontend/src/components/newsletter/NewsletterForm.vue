@@ -1,17 +1,18 @@
 <template>
-    <form
-        @submit.prevent="subscribe"
-        class="bg-neutral-800/50 backdrop-blur p-1 rounded space-y-2"
-    >
+    <form @submit.prevent="subscribe" class="space-y-4 w-full">
         <div
             v-if="isFinished"
-            class="flex items-start w-full space-x-2"
-            :class="error ? 'text-red-600' : 'text-green-600'"
+            class="flex items-start w-full space-x-2 rounded p-4 border-2 border-dotted"
+            :class="
+                error
+                    ? 'text-red-600 border-red-600'
+                    : 'text-green-600 border-green-600'
+            "
         >
             <ExclamationCircleIcon v-if="error" class="w-6 h-6 block" />
             <CheckCircleIcon v-else class="w-6 h-6 block" />
 
-            <div class="space-y-1">
+            <div class="space-y-1 max-w-full">
                 <h4>
                     {{
                         error
@@ -20,36 +21,49 @@
                     }}
                 </h4>
 
-                <div
+                <p
                     v-if="error"
-                    class="p-2 text-xs rounded bg-red-600 text-white inline-block"
+                    class="text-xs text-red-600 truncate whitespace-nowrap"
                 >
-                    <span>{{ error }}</span>
-                </div>
+                    {{ error }}
+                </p>
             </div>
         </div>
-        <div class="flex w-full items-end space-x-2">
-            <div class="text-left flex flex-col flex-1">
-                <input
-                    required
-                    v-model="email"
-                    type="email"
-                    id="email"
-                    placeholder="Your Email"
-                    class="w-full block h-12 bg-transparent px-4 border-none placeholder-neutral-400 placeholder:font-semibold !ring-0 !outline-none"
-                />
+
+        <div class="w-full space-y-1">
+            <input
+                required
+                v-model="email"
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                class="w-full block h-12 bg-neutral-900 rounded px-4 border border-neutral-800 placeholder-neutral-400 focus:border-neutral-50 !ring-0 !outline-none"
+            />
+
+            <div class="text-xs">
+                <p>
+                    We will send you updates on the development on dripversity
+                    to your email once a month.
+                </p>
             </div>
-            <div>
-                <AppButton :disabled="isFetching" type="submit" :color="color">
-                    <span class="block w-24">{{
-                        isFetching
-                            ? "Loading"
-                            : error
-                            ? "Try Again"
-                            : "Join Waitlist"
-                    }}</span>
-                </AppButton>
-            </div>
+        </div>
+
+        <div class="w-full lg:px-8">
+            <AppButton
+                full-width
+                :disabled="isFetching"
+                type="submit"
+                :color="color"
+                size="sm"
+            >
+                <span class="block w-32">{{
+                    isFetching
+                        ? "Loading"
+                        : error
+                        ? "Try Again"
+                        : "Join Waitlist"
+                }}</span>
+            </AppButton>
         </div>
 
         <!--
