@@ -22,7 +22,7 @@ export function useSalePhase(): UseSalePhase {
 
     const stringify = function (salePhase: SalePhase) {
         return {
-            0: "Pre Sale",
+            0: "Pre-Drop",
             1: "Whitelist Sale",
             2: "Public Sale",
         }[salePhase];

@@ -29,26 +29,27 @@
                     v-animate.stagger
                 >
                     <div>
-                        <h2 class="title-2 mb-0">About the First Collection</h2>
+                        <h2 class="title-2 mb-0">
+                            About the first Foundation collection
+                        </h2>
                     </div>
 
                     <div class="space-y-2">
                         <p class="text-neutral-400">
-                            MASKOF is an animated 1/1 NFT collection of unique
-                            masked outfits. Instantly sold out, two more NFTs
-                            completed the project. We felt that collectors
-                            appreciated the detailed 3D art and effort that was
-                            put into this project - it felt surreal and we were
-                            beyond grateful for this opportunity.
+                            MASKOF is an animated 1/1 NFT collection showcasing
+                            a character avatar with unique masked outfits. With
+                            each NFT presenting its own story and aesthetic, it
+                            was sold out instantly, with two more NFTs
+                            completing the project.
                         </p>
 
                         <p class="text-neutral-400">
-                            However, after MASKOF we started DRIPVERSITY to
-                            create a collection that demanded even greater
-                            effort and time. Maintaining the masked outfit
-                            aesthetic of MASKOF, DRIPVERSITY showcases a
-                            coherent look with a great variety of headwear,
-                            hairstyle, clothes, and jewelry traits.
+                            However, after MASKOF, DRIPVERSITY was started and
+                            demanded even greater effort and time. Maintaining
+                            the masked outfit aesthetic of MASKOF, DRIPVERSITY
+                            showcases a great variety of headwear, hairstyle,
+                            clothes, and jewelry traits, fitting all character
+                            avatars.
                         </p>
                     </div>
                     <div>

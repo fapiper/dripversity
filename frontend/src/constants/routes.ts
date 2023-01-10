@@ -7,7 +7,7 @@ const home = {
     Rarity: "/#rarity",
     About: "/#about",
     "Our Story": "/#story",
-    "MASK OF": "/#mask-of",
+    MASKOF: "/#mask-of",
     Team: "/#team",
     FAQ: "/#faq",
 };
@@ -34,7 +34,8 @@ const socials = {
 
 const support = {
     "How to create a wallet": "/support/getting-started/how-to-create-a-wallet",
-    "How to Mint": "/support/getting-started/how-to-mint",
+    "How to Mint":
+        "https://help.foundation.app/hc/en-us/articles/4561241975451-How-to-collect-NFTs-on-Foundation",
 };
 
 const legals = {

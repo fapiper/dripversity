@@ -1,17 +1,19 @@
 <template>
     <template v-if="isPreSale">
-        <NewsletterModal v-model="showNewsletterModal" />
         <AppButton
-            @click.prevent="showNewsletterModal = true"
+            href="https://foundation.app/@blockschmidt"
             :size="size"
             :color="color"
         >
-            Join Waitlist
+            Mint Dripversity Drop
         </AppButton>
     </template>
     <template v-else>
-        <AppButton :size="size" :color="color" to="/mint"
-            ><span class="block">Start Minting</span>
+        <AppButton
+            :size="size"
+            :color="color"
+            href="https://foundation.app/@blockschmidt"
+            >Mint Dripversity Drop
         </AppButton>
     </template>
 </template>

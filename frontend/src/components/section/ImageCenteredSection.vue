@@ -15,6 +15,7 @@
         </div>
 
         <span
+            v-if="!!gradient"
             class="block absolute top-0 left-0 w-full h-full bg-gradient-to-bl from-black/0 via-black/50 to-black"
         />
 
@@ -28,5 +29,5 @@
 </template>
 
 <script lang="ts" setup>
-defineProps(["id", "src", "alt"]);
+defineProps(["id", "src", "alt", "gradient"]);
 </script>

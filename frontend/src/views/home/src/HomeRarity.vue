@@ -5,35 +5,41 @@
                 class="px-8 lg:px-0 space-y-6 lg:text-right lg:col-span-2"
                 v-animate.stagger
             >
-                <div>
-                    <h2 class="title">Rarity System</h2>
+                <div class="space-y-2">
+                    <h3 class="text-xs tracking-widest uppercase">About</h3>
+
+                    <h2 class="title">
+                        Collection insights, process and rarity system
+                    </h2>
                 </div>
 
                 <div class="space-y-2">
                     <p class="lg:text-end">
-                        We equipped DRIPVERSITY with a rarity system that
-                        controls the spawn probability of every trait. Lower
-                        rarity ranks are assigned to more complex traits with
-                        multiple logo and color variations or clothes with an
-                        inner-, and outer layer. Pinned metal accessories also
-                        make traits rarer.
+                        In total 1000 renders were created using a randomizer
+                        tool with an integrated rarity system that assigned
+                        unique trait combinations of 200+ traits consisting of
+                        headwear, hairstyle, clothes, character avatar, facial
+                        expression, and jewelry. The rarity system assigns lower
+                        drop rates to more complex traits like clothes with
+                        multiple logo variations or pinned metal accessories.
+                        Moreover, simpler traits like headwear with single logo
+                        variants or chains without a pendant are more likely to
+                        drop due to their less complex structure.
                     </p>
                     <p class="lg:text-end">
-                        Therefore, simpler traits with single logos usage,
-                        clothes with an inner-, and no outer layer or chains
-                        without a pendant, are more likely to drop due to a
-                        higher rarity rank. Concerning each trait's rarity, the
-                        integrated randomizer generates a unique trait
-                        combination for every NFT.
+                        For each of the five character avatars: Jordan, Chris,
+                        Francesco, Hyuk, and Sanjith, 50 renders were
+                        hand-picked after the randomization process to achieve a
+                        balanced representation within the collection of the
+                        most mesmerizing trait combinations.
                     </p>
                     <p class="lg:text-end">
                         <button class="link-2" @click.prevent="next()">
                             Shuffle
                         </button>
-                        to create randomized trait combinations and see which
-                        traits spawn. Maybe you get an ultra-rare DRIPVERSITY
-                        patterned puffed hood jacket or an outstanding golden
-                        hooded mask?
+                        to create trait combinations - can you spawn a rare
+                        DRIPVERSITY patterned puffed hood jacket or an
+                        outstanding golden hooded mask?
                     </p>
                 </div>
 

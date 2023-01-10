@@ -22,7 +22,7 @@ export default defineComponent({
         },
         rounded: {
             type: String as () => "full" | "base" | "none",
-            default: "full",
+            default: "base",
         },
         size: {
             type: String as () => "xxs" | "xs" | "sm" | "md" | "lg",
@@ -60,7 +60,7 @@ export default defineComponent({
             secondary:
                 "bg-creme text-neutral-900 border border-creme hover:opacity-90",
             outline:
-                "bg-neutral-900/50 background-blur-sm text-current border border-neutral-500 hover:opacity-80",
+                "bg-neutral-900 text-current border border-transparent hover:opacity-80",
             transparent:
                 "bg-transparent text-neutral-50 border-transparent hover:opacity-80",
             gray: "bg-neutral-700 text-neutral-400 border-neutral-700 hover:opacity-90",
@@ -74,25 +74,25 @@ export default defineComponent({
             lg: "w-12 h-12 text-lg",
         };
         const ButtonSizeDefault: Indexable<string> = {
-            xs: "h-8 text-xs",
-            sm: "h-10 text-xs",
-            md: "h-12 text-sm",
-            lg: "h-14 text-lg",
+            xs: "text-xs",
+            sm: "text-sm",
+            md: "text-md",
+            lg: "text-lg",
         };
         const ButtonSpacing: Indexable<string> = {
             xs: "py-1 px-2 space-x-2",
-            sm: "py-1 px-4 space-x-2",
+            sm: "py-2 px-4 space-x-2",
             md: "py-3 px-6 space-x-2",
             lg: "py-4 px-8 space-x-2",
         };
         const ButtonRounded: Indexable<string> = {
             none: "rounded-none",
-            base: "rounded",
+            base: "rounded-xl",
             full: "rounded-full",
         };
 
         const classesButton = computed(() => [
-            `relative inline-flex items-center text-center transition font-semibold duration-200 uppercase tracking-wide`,
+            `relative inline-flex items-center text-center transition font-semibold duration-200 tracking-wide`,
             ButtonRounded[props.rounded],
             ButtonColor[props.disabled ? "disabled" : props.color],
             !props.onlyIcon && ButtonSpacing[props.size],

@@ -1,8 +1,9 @@
 <template>
     <ImageCenteredSection
         :id="id"
-        :src="require('@/assets/images/lobby-2.png')"
+        :src="require('@/assets/images/seminar-hall.png')"
         :alt="isPreSale ? 'Stay up to date' : 'Claim your NFT now'"
+        :gradient="true"
     >
         <div>
             <h2 class="title !mb-0">

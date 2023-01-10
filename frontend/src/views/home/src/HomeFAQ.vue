@@ -50,14 +50,16 @@ import { routes } from "@/constants/";
 import ContainerSection from "@/components/section/ContainerSection.vue";
 
 const questions = {
-    "Will the NFTs be sold on open marketplaces?":
-        "Primary sales (Minting) of Dripversity NFTs will be on dripversity.com. Dripversity tokens will appear on secondary marketplaces like OpenSea and Rarible etc. for resale purchase. Dripversity NFTs will adhere to the ERC-721 standard.",
+    "How many Dripversity NFTs are there?":
+        "There are 250 Dripversity tokens for this collection.",
+    "How can I claim my Dripversity Campus airdrop?":
+        "In order to be eligible for the Dripversity Campus airdrop you have to buy a Dripversity NFT of the collection drop on Foundation. After the drop reveal you can connect your wallet that holds one or more Dripversity NFTs to claim your Campus airdrop.",
+    "How do I purchase a Dripversity NFT?":
+        "In order to purchase a Dripversity NFT, you will need to conduct two important steps. First, you will need to purchase ETH from a crypto-currency exchange such as Coinbase, Kraken, or Binance. Once you have completed that step, you will need to transfer your ETH into a non-custodial digital wallet like MetaMask or WalletConnect compatible wallets. These wallets connect to the Foundation website and allow you to purchase an NFT of the Dripversity drop. For your reference, here are blog posts outlining in detail how to set up a crypto wallet, as well as the basic steps to take to send ETH to your wallet.",
     "Can I resell my Dripversity NFT?":
         "Yes. Dripversity tokens can be resold on NFT marketplaces such as OpenSea and Rarible etc. If a Dripversity token is resold there will be a 5% royalty fee to Dripversity.",
-    "How do I purchase a Dripversity NFT?":
-        "In order to purchase a Dripversity NFT, you will need to conduct two important steps. First, you will need to purchase ETH from a crypto-currency exchange such as Coinbase, Kraken, or Binance. Once you have completed that step, you will need to transfer your ETH into a non-custodial digital wallet like MetaMask, Portis or WalletConnect compatible wallets. These wallets connect to the Dripversity website and allow you to purchase an NFT. For your reference, here are blog posts outlining in detail how to set up a crypto wallet, as well as the basic steps to take to send ETH to your wallet.",
-    "How many Dripversity NFTs are there?":
-        "There are 1 000 Dripversity tokens for this collection.",
+    "Will the NFTs be sold on open marketplaces?":
+        "Primary sales (Minting) of Dripversity NFTs will be on Foundation.app. DRIPVERSITY tokens will appear on secondary marketplaces like OpenSea and Rarible etc. for resale purchase. Dripversity NFTs will adhere to the ERC-721 standard.",
     "What blockchain are these NFTs minted on?":
         "NFTs are minted on ERC-721 compliant contracts deployed to the Ethereum blockchain.",
 };

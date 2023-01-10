@@ -1,22 +1,22 @@
 <template>
     <TextCenteredSection id="about">
         <div>
-            <h2 class="title !mb-0">The Spark for the Collection</h2>
+            <h2 class="title !mb-0">The Spark for Dripversity</h2>
         </div>
 
         <div class="space-y-2">
             <p>
-                To speak frankly, we were fed up with NFT collections displaying
-                one human avatar with various shades of skin colors and calling
-                it diverse. This ordinary NFT profile picture approach bored us
-                and we wanted to include different ethnic backgrounds to display
-                actual individual human characters.
+                NFT collections displaying one human base avatar with various
+                shades of skin colors and calling it diverse is something that
+                Dripversity wants to do better. Therefore, the inclusion of five
+                diverse ethnic backgrounds shows actual relatable individual
+                human characters.
             </p>
             <p>
-                DRIPVERSITY uses a concept of five human characters that
+                Dripversity uses a concept of five human character avatars that
                 cherishes each individual's uniqueness while still being able to
-                assign all wearable clothes, headwear pieces, and jewelry traits
-                to every character.
+                assign all wearable traits. A concept that highlights everyone's
+                diverse appearance while also showcasing what connects us.
             </p>
         </div>
 

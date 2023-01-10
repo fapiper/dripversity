@@ -2,10 +2,12 @@
     <div>
         <HomeHero />
         <HomeExplore />
-        <HomeRarity />
         <HomeStory />
-        <HomeMaskOf />
+        <HomeRoadmap />
+        <HomeRarity />
+        <HomeCtaAirdrop />
         <HomeAbout />
+        <HomeMaskOf />
         <HomeTeam />
         <HomeCta />
         <HomeQuestions />
@@ -22,4 +24,6 @@ import HomeAbout from "@/views/home/src/HomeAbout.vue";
 import HomeTeam from "@/views/home/src/HomeTeam.vue";
 import HomeCta from "@/views/home/src/HomeCta.vue";
 import HomeQuestions from "@/views/home/src/HomeFAQ.vue";
+import HomeCtaAirdrop from "@/views/home/src/HomeCtaAirdrop.vue";
+import HomeRoadmap from "@/views/home/src/HomeRoadmap.vue";
 </script>

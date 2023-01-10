@@ -12,9 +12,10 @@
                     class="max-w-sm w-full mx-auto space-y-8 flex flex-col items-center"
                 >
                     <p class="text-neutral-50 text-center">
-                        Molestie ullamcorper egestas at ametr. Semper
-                        pellentesque sed nisl enim volutpat sem est vel. Id nunc
-                        cras at neque.
+                        A 3D-rendered collection of 250 NFTs representing the
+                        diversity of ethnic heritage, cherishing education and
+                        learning, with a crossover of college-themed and urban
+                        fashion aesthetics
                     </p>
                     <AppCta />
                 </div>
@@ -47,10 +48,12 @@
                         }}</span>
                     </div>
                 </div>
+                <!--
                 <AppButton color="outline" rounded="full" size="sm">
                     <PlayIcon class="w-4 h-4" />
                     <span class="block">Watch full promo</span>
                 </AppButton>
+-->
             </div>
         </div>
 
@@ -63,8 +66,8 @@
 
             <img
                 class="flex-1 object-cover object-top"
-                src="@/assets/images/lobby.png"
-                alt="Dripversity Environment"
+                src="@/assets/images/domel-lobby.png"
+                alt="Dripversity Lobby"
             />
         </div>
     </header>

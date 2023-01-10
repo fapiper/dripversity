@@ -2,7 +2,7 @@
     <footer class="relative">
         <div class="border-t border-neutral-800">
             <div
-                class="container-default !px-0 grid grid-cols-2 lg:grid-cols-6 lg:divide-x divide-neutral-800"
+                class="container-default !px-0 grid grid-cols-2 lg:grid-cols-7 lg:divide-x divide-neutral-800"
             >
                 <FooterGridItem
                     title="Home"
@@ -15,6 +15,44 @@
                     :routes="routes.support"
                     class="border-b border-neutral-800 lg:border-b-0"
                 />
+
+                <FooterGridItem
+                    title="Social"
+                    class="border-b border-neutral-800 lg:border-b-0"
+                >
+                    <ul class="flex flex-col space-y-2">
+                        <li
+                            v-for="(social, name) in routes.socials"
+                            :key="name"
+                        >
+                            <a
+                                :href="social.baseUrl + '/' + social.account"
+                                target="_blank"
+                                class="inline-flex items-center space-x-2 link-2 font-normal"
+                                rel="noopener noreferrer"
+                                ><component
+                                    :is="social.icon"
+                                    class="block w-4 h-4"
+                                /><span
+                                    class="block text-neutral-400 text-sm mb-1"
+                                    >{{ social.account }}</span
+                                ></a
+                            >
+                        </li>
+                    </ul>
+                </FooterGridItem>
+
+                <FooterGridItem
+                    title="Stay up to Date"
+                    size="lg"
+                    class="border-b border-neutral-800 lg:border-b-0"
+                >
+                    <p>
+                        Receive the most up-to date information on the
+                        development of Dripversity
+                    </p>
+                    <NewsletterForm />
+                </FooterGridItem>
 
                 <FooterGridItem
                     title="Join the Community"
@@ -38,32 +76,6 @@
                         ><DiscordIcon class="block w-4 h-4" />
                         <span class="block">Join our Discord</span></AppButton
                     >
-                </FooterGridItem>
-
-                <FooterGridItem
-                    title="Follow us on our social channels"
-                    size="lg"
-                >
-                    <ul class="flex flex-col space-y-2">
-                        <li
-                            v-for="(social, name) in routes.socials"
-                            :key="name"
-                        >
-                            <a
-                                :href="social.baseUrl + '/' + social.account"
-                                target="_blank"
-                                class="inline-flex items-center space-x-2 link-2"
-                                rel="noopener noreferrer"
-                                ><component
-                                    :is="social.icon"
-                                    class="block w-4 h-4"
-                                /><span
-                                    class="block text-neutral-400 text-sm mb-1"
-                                    >@{{ social.account }}</span
-                                ></a
-                            >
-                        </li>
-                    </ul>
                 </FooterGridItem>
             </div>
 
@@ -108,4 +120,5 @@ import { routes } from "@/constants/";
 import AppButton from "@/components/app/AppButton.vue";
 import DiscordIcon from "@/components/icons/DiscordIcon.vue";
 import FooterGridItem from "@/layouts/default/Footer/FooterGridItem.vue";
+import NewsletterForm from "@/components/newsletter/NewsletterForm.vue";
 </script>

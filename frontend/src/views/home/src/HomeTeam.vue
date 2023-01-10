@@ -76,7 +76,7 @@ const team = [
     },
     {
         name: "Chris",
-        role: "Logo Illustration and Design",
+        role: "Typedesign",
         image: require("@/assets/images/team/chris.png"),
     },
     {

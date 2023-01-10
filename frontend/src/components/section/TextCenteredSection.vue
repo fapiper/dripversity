@@ -1,7 +1,7 @@
 <template>
     <section :id="id">
         <div
-            class="px-8 lg:pl-[36%] lg:pr-12 w-full max-w-5xl 2xl:max-w-6xl space-y-6 flex flex-col"
+            class="px-8 lg:pl-[28%] lg:pr-12 w-full max-w-6xl 2xl:max-w-8xl space-y-6 flex flex-col"
             :class="aligns[align || 'left']"
             v-animate.stagger
         >

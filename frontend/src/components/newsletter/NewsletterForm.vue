@@ -39,18 +39,10 @@
                 placeholder="Your Email"
                 class="w-full block h-12 bg-neutral-900 rounded px-4 border border-neutral-800 placeholder-neutral-400 focus:border-neutral-50 !ring-0 !outline-none"
             />
-
-            <div class="text-xs">
-                <p>
-                    We will send you updates on the development on dripversity
-                    to your email once a month.
-                </p>
-            </div>
         </div>
 
-        <div class="w-full lg:px-8">
+        <div class="w-full">
             <AppButton
-                full-width
                 :disabled="isFetching"
                 type="submit"
                 :color="color"
@@ -61,7 +53,7 @@
                         ? "Loading"
                         : error
                         ? "Try Again"
-                        : "Join Waitlist"
+                        : "Join Newsletter"
                 }}</span>
             </AppButton>
         </div>
