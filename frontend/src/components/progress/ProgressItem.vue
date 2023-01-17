@@ -16,7 +16,10 @@
                 />
             </span>
 
-            <span class="block flex-1 w-px bg-neutral-400/25" />
+            <span
+                class="block flex-1 w-px bg-neutral-400/25"
+                :class="isLast && 'bg-neutral-400/0'"
+            />
         </div>
 
         <div class="flex-1">
@@ -30,7 +33,7 @@
                     <span class="block">{{ tag }}</span>
                 </div>
             </div>
-            <div class="pb-6 pt-2">
+            <div class="pb-12 pt-3">
                 <slot />
             </div>
         </div>
@@ -47,6 +50,7 @@ const props = defineProps([
     "isCurrent",
     "isActive",
     "tag",
+    "isLast",
 ]);
 
 const classes = computed(() => {

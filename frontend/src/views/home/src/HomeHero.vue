@@ -9,7 +9,7 @@
             >
                 <DripversityIcon class="w-full text-blue stroke-creme" />
                 <div
-                    class="max-w-sm w-full mx-auto space-y-8 flex flex-col items-center"
+                    class="max-w-lg w-full mx-auto space-y-8 flex flex-col items-center"
                 >
                     <p class="text-neutral-50 text-center">
                         A 3D-rendered collection of 250 NFTs representing the

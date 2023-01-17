@@ -10,11 +10,13 @@
         </div>
         <div>
             <p class="text-neutral-50 text-lg text-center">
-                In order to be eligible for the DRIPVERSITY CAMPUS airdrop you
-                have to buy a DRIPVERSITY NFT of the collection drop on
-                Foundation. After the drop reveal you can connect your wallet
-                that holds one or more DRIPVERSITY NFTs to claim your CAMPUS
-                airdrop
+                In order to be eligible for the
+                <DripversityIcon class="text-dripversity" /> Campus airdrop you
+                have to buy a <DripversityIcon class="text-dripversity" /> NFT
+                of the collection drop on Foundation. After the drop reveal you
+                can connect your wallet that holds one or more
+                <DripversityIcon class="text-dripversity" /> NFTs to claim your
+                Campus airdrop.
             </p>
         </div>
         <div>
@@ -28,4 +30,5 @@
 <script lang="ts" setup>
 import AppButton from "@/components/app/AppButton.vue";
 import ImageCenteredSection from "@/components/section/ImageCenteredSection.vue";
+import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 </script>

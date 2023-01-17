@@ -11,11 +11,12 @@
                 <div>
                     <p class="lg:text-end">
                         Here are the most common and important questions to get
-                        you started on purchasing a Dripversity token.
+                        you started on purchasing a
+                        <DripversityIcon class="text-dripversity" /> token.
                     </p>
                 </div>
                 <div>
-                    <AppButton :to="routes.support['How to Mint']"
+                    <AppButton :to="routes.support['How to create a wallet']"
                         >More Answers</AppButton
                     >
                 </div>
@@ -48,6 +49,7 @@ import DisclosureItem from "@/components/disclosure/DisclosureItem.vue";
 import AppButton from "@/components/app/AppButton.vue";
 import { routes } from "@/constants/";
 import ContainerSection from "@/components/section/ContainerSection.vue";
+import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 
 const questions = {
     "How many Dripversity NFTs are there?":

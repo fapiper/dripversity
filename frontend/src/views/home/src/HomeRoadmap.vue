@@ -9,50 +9,55 @@
                 <ProgressItem
                     :is-current="true"
                     title="Community Presale"
-                    tag="In 02/2023"
+                    tag="02/2023"
                 >
-                    <div class="space-y-2">
-                        <p>
+                    <div>
+                        <p class="text-left">
                             Register for allowlist to be eligible for the
-                            DRIPVERSITY presale
+                            <DripversityIcon class="text-dripversity" /> presale
                         </p>
-                        <AppButton size="xs">Register now</AppButton>
                     </div>
                 </ProgressItem>
-                <ProgressItem title="Presale on Foundation" tag="In 04/2023"
-                    ><p>
+                <ProgressItem title="Presale on Foundation" tag="04/2023"
+                    ><p class="text-left">
                         For registered allowlist supporters only
                     </p></ProgressItem
                 >
                 <ProgressItem title="Public sale" tag="In 05/2023">
-                    <p>Exclusively on Foundation</p>
+                    <p class="text-left">Exclusively on Foundation</p>
                 </ProgressItem>
                 <ProgressItem
                     title="Reveal of the collection"
                     tag="When sold out"
                 ></ProgressItem>
                 <ProgressItem title="Claim Airdrop" tag="When sold out">
-                    <p>
-                        Claim DRIPVERSITY CAMPUS airdrop by connecting the
-                        wallet that holds DRIPVERSITY NFT(s) on
-                        www.dripversity.com
+                    <p class="text-left">
+                        Claim
+                        <DripversityIcon class="text-dripversity" />
+                        CAMPUS airdrop by connecting the wallet that holds
+                        <DripversityIcon class="text-dripversity" />
+                        NFT(s) on www.dripversity.com
+                    </p>
+                </ProgressItem>
+                <ProgressItem title="Dripversity Experience" tag="Q4 2023">
+                    <p class="text-left">
+                        Connect your wallet with
+                        <DripversityIcon class="text-dripversity" />
+                        / Campus NFT to enter a browser-based experience and
+                        walk through the
+                        <DripversityIcon class="text-dripversity" /> Campus to
+                        explore and interact with the NFT screens
                     </p>
                 </ProgressItem>
                 <ProgressItem
-                    title="Enter Dripversity Digital Experience"
-                    tag="In Q4 2023"
+                    :isLast="true"
+                    title="Dripversity Relaunch"
+                    tag="Q1 2024"
                 >
-                    <p>
-                        Connect your wallet with DRIPVERSITY / CAMPUS NFT to
-                        enter a browser-based experience and walk through the
-                        DRIPVERSITY CAMPUS to explore and interact with the NFT
-                        screens
-                    </p>
-                </ProgressItem>
-                <ProgressItem title="Dripversity Relaunch" tag="In Q1 2024">
-                    <p>
-                        Second Drop of animated DRIPVERSITY NFTs with known
-                        characters and new individual trait combinations
+                    <p class="text-left">
+                        Second Drop of animated
+                        <DripversityIcon class="text-dripversity" /> NFTs with
+                        known characters and new individual trait combinations
                     </p>
                 </ProgressItem>
             </ProgressContainer>

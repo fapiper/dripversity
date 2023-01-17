@@ -13,7 +13,7 @@
                         approach which kept us going even with ongoing
                         challenges and errors which brought quite some
                         headaches. <br />In the end we made it work - welcome to
-                        DRIPVERSITY.
+                        <DripversityIcon class="text-dripversity" />.
                     </p>
                 </div>
             </div>
@@ -57,6 +57,7 @@
 
 <script lang="ts" setup>
 import ContainerSection from "@/components/section/ContainerSection.vue";
+import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 
 const team = [
     {

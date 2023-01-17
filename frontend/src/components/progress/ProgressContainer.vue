@@ -1,5 +1,5 @@
 <template>
-    <ul class="w-full flex flex-col space-y-2">
+    <ul class="w-full flex flex-col space-y-3">
         <slot />
     </ul>
 </template>
