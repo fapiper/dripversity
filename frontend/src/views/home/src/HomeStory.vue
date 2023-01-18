@@ -46,7 +46,9 @@
             </p>
         </div>
         <div class="flex items-center justify-center">
-            <AppButton color="secondary" to="/#roadmap">Explore</AppButton>
+            <AppButton color="secondary" :to="routes.home.Rarity"
+                >Explore</AppButton
+            >
         </div>
     </TextCenteredSection>
 </template>
@@ -55,4 +57,5 @@
 import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 import AppButton from "@/components/app/AppButton.vue";
 import TextCenteredSection from "@/components/section/TextCenteredSection.vue";
+import { routes } from "@/constants";
 </script>
