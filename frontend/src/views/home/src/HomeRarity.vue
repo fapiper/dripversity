@@ -2,8 +2,8 @@
     <section id="rarity">
         <div class="container-default max-w-6xl grid lg:grid-cols-3 gap-12">
             <div class="lg:col-span-2">
-                <div class="space-y-6">
-                    <h2 class="text-5xl uppercase font-semibold">About</h2>
+                <div class="space-y-6 flex flex-col" v-animate.stagger>
+                    <h2 class="title uppercase">About</h2>
                     <h3 class="text-xs tracking-widest uppercase font-semibold">
                         Collection insights, process and rarity system
                     </h3>
@@ -41,7 +41,7 @@
                         </p>
                     </div>
 
-                    <div>
+                    <div class="ml-auto md:ml-0">
                         <AppButton @click.prevent="next()" color="secondary"
                             >Shuffle</AppButton
                         >
@@ -54,7 +54,7 @@
                     v-animate
                     :src="state.image"
                     :alt="index + ' rarity'"
-                    class="rounded-2xl w-full"
+                    class="rounded-xl w-full"
                 />
                 <div class="space-y-2">
                     <ul class="grid grid-cols-2 gap-2" v-animate.stagger>

@@ -59,19 +59,20 @@ const sizes: Indexable<Indexable<string>> = {
         sm: "text-xs",
         md: "text-sm",
     },
-    img: { xs: "w-8 h-8", sm: "w-10 h-10", md: "w-12 h-12" },
+    img: {
+        xs: "w-8 h-8",
+        sm: "w-10 h-10",
+        md: "w-12 h-12",
+    },
 };
 
 const classes = computed(() => {
     const wrapper = [
-        "flex items-center w-full rounded p-2 space-x-4 transition duration-200 border",
+        "flex items-center w-full rounded-xl p-2 space-x-3 transition duration-200 border",
         colors[props.color || "black"],
         props.border ? borders[props.color || "black"] : "border-transparent",
     ];
-    const img = [
-        "w-12 h-12 rounded object-cover",
-        sizes.img[props.size || "md"],
-    ];
+    const img = ["object-cover rounded-xl", sizes.img[props.size || "md"]];
     const title = [
         "font-semibold",
         sizes.title[props.size || "md"],

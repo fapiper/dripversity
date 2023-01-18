@@ -3,9 +3,9 @@
         <HomeHero />
         <HomeExplore />
         <HomeStory />
-        <HomeRoadmap />
         <HomeRarity />
         <HomeCtaAirdrop />
+        <HomeRoadmap />
         <HomeAbout />
         <HomeMaskOf />
         <HomeTeam />

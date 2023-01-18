@@ -1,6 +1,6 @@
 <template>
     <section id="mask-of" class="lg:py-0">
-        <div class="container-default px-0 overflow-visible">
+        <div class="container-default px-3 overflow-visible">
             <div class="relative grid grid-cols-1 lg:grid-cols-5">
                 <div
                     class="w-full lg:absolute lg:top-0 lg:right-0 lg:w-4/5 lg:h-full flex"
@@ -25,17 +25,17 @@
                         from: { yPercent: 25 },
                         to: { yPercent: -25 },
                     }"
-                    class="relative bg-neutral-900 rounded p-8 space-y-6 col-start-1 col-span-2 z-10 lg:my-32"
+                    class="relative bg-gradient-to-tr from-black via-blue-900 to-blue-800 rounded-xl px-3 py-6 lg:px-6 space-y-6 col-start-1 col-span-2 z-10 lg:my-32"
                     v-animate.stagger
                 >
                     <div>
-                        <h2 class="title-2 mb-0">
+                        <h2 class="title-2">
                             About the first Foundation collection
                         </h2>
                     </div>
 
                     <div class="space-y-2">
-                        <p class="text-neutral-400">
+                        <p class="">
                             MASKOF is an animated 1/1 NFT collection showcasing
                             a character avatar with unique masked outfits. With
                             each NFT presenting its own story and aesthetic, it
@@ -43,10 +43,12 @@
                             completing the project.
                         </p>
 
-                        <p class="text-neutral-400">
-                            However, after MASKOF, DRIPVERSITY was started and
-                            demanded even greater effort and time. Maintaining
-                            the masked outfit aesthetic of MASKOF, DRIPVERSITY
+                        <p class="">
+                            However, after MASKOF,
+                            <DripversityIcon class="text-dripversity" /> was
+                            started and demanded even greater effort and time.
+                            Maintaining the masked outfit aesthetic of MASKOF,
+                            <DripversityIcon class="text-dripversity" />
                             showcases a great variety of headwear, hairstyle,
                             clothes, and jewelry traits, fitting all character
                             avatars.
@@ -76,4 +78,5 @@
 <script lang="ts" setup>
 import { ChevronRightIcon } from "@heroicons/vue/24/outline";
 import AppPanel from "@/components/app/AppPanel.vue";
+import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 </script>

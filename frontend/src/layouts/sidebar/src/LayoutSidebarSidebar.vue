@@ -21,7 +21,7 @@
                 <div
                     v-for="(linkRoutes, linkName) in links"
                     :key="linkName"
-                    class="space-y-2 p-4 rounded bg-neutral-900"
+                    class="space-y-2 p-3 rounded-xl bg-neutral-900"
                 >
                     <span class="title-4">{{ linkName }}</span>
                     <ul>
