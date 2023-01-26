@@ -30,7 +30,7 @@
 
         <div class="flex-1">
             <div class="flex items-center space-x-2">
-                <h4 class="title-3 !mb-0 !leading-none inline-block">
+                <h4 class="title-3 !mb-0 inline-block !text-left">
                     {{ title }}
                 </h4>
                 <div
