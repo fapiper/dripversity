@@ -6,17 +6,24 @@
         :gradient="false"
     >
         <div>
-            <h2 class="title !mb-0">Claim Campus Airdrop</h2>
+            <h2 class="title !mb-0">
+                Claim your
+                <DripversityIcon class="text-dripversity w-52" /> CAMPUS airdrop
+            </h2>
         </div>
         <div>
-            <p class="text-neutral-50 text-lg text-center">
-                In order to be eligible for the
-                <DripversityIcon class="text-dripversity" /> Campus airdrop you
+            <p class="text-neutral-50 text-base text-center">
+                Each <DripversityIcon class="text-dripversity" /> NFT has a twin
+                NFT version, the
+                <DripversityIcon class="text-dripversity" /> CAMPUS NFT, that
+                showcases every 250 renders on a screen inside of the CAMPUS
+                environment with four unknown locations. To be eligible for the
+                <DripversityIcon class="text-dripversity" /> CAMPUS airdrop you
                 have to buy a <DripversityIcon class="text-dripversity" /> NFT
                 of the collection drop on Foundation. After the drop reveal you
-                can connect your wallet that holds one or more
-                <DripversityIcon class="text-dripversity" /> NFTs to claim your
-                Campus airdrop.
+                can connect your wallet that holds
+                <DripversityIcon class="text-dripversity" /> NFT(s) to claim
+                your CAMPUS airdrop
             </p>
         </div>
         <div>

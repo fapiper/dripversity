@@ -62,7 +62,7 @@ import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 const team = [
     {
         name: "Blockschmidt",
-        role: "3D Artist",
+        role: "3D artist and Founder",
         image: require("@/assets/images/team/blockschmidt.png"),
     },
     {
@@ -87,7 +87,7 @@ const team = [
     },
     {
         name: "Fabi",
-        role: "Engineer",
+        role: "Engineering Lead",
         image: require("@/assets/images/team/fabi.png"),
     },
 ];

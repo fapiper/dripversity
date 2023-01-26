@@ -2,20 +2,20 @@
     <ImageCenteredSection
         :id="id"
         :src="require('@/assets/images/seminar-hall.png')"
-        :alt="isPreSale ? 'Mint your NFT now' : 'Claim your NFT now'"
+        :alt="isPreSale ? 'Mint your NFT now' : 'Mint your NFT now'"
         :gradient="true"
     >
         <div>
             <h2 class="title !mb-0">
-                {{ isPreSale ? "Mint your NFT now" : "Claim your NFT now" }}
+                {{ isPreSale ? "Mint your NFT now" : "Mint your NFT now" }}
             </h2>
         </div>
         <div>
             <p class="text-neutral-50 text-lg text-center">
                 {{
                     isPreSale
-                        ? "Buy your custom Dripversity NFT from the Collection Drop on Foundation."
-                        : "Buy your custom Dripversity NFT from the Collection Drop on Foundation."
+                        ? "Buy your unique DRIPVERSITY NFT from the collection drop on Foundation."
+                        : "Buy your unique DRIPVERSITY NFT from the collection drop on Foundation."
                 }}
             </p>
         </div>

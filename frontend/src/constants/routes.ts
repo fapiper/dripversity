@@ -3,10 +3,10 @@ import TwitterIcon from "@/components/icons/TwitterIcon.vue";
 import DiscordIcon from "@/components/icons/DiscordIcon.vue";
 
 const home = {
-    Home: "/#home",
-    Rarity: "/#rarity",
-    About: "/#about",
     "Our Story": "/#story",
+    About: "/#rarity",
+    Roadmap: "/#roadmap",
+    "The Spark for DRIPVERSITY": "#spark",
     MASKOF: "/#mask-of",
     Team: "/#team",
     FAQ: "/#faq",

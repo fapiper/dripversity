@@ -17,8 +17,14 @@
             </span>
 
             <span
-                class="block flex-1 w-px bg-neutral-400/25"
-                :class="isLast && 'bg-neutral-400/0'"
+                class="block flex-1 w-px"
+                :class="[
+                    isLast
+                        ? 'bg-neutral-400/0'
+                        : isActive || isCurrent
+                        ? 'bg-blue'
+                        : 'bg-neutral-400/25',
+                ]"
             />
         </div>
 

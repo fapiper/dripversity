@@ -25,7 +25,7 @@
                         from: { yPercent: 25 },
                         to: { yPercent: -25 },
                     }"
-                    class="relative bg-gradient-to-tr from-black via-blue-900 to-blue-800 rounded-xl px-3 py-6 lg:px-6 space-y-6 col-start-1 col-span-2 z-10 lg:my-32"
+                    class="relative bg-gradient-to-bl from-neutral-900 via-neutral-900 to-black rounded-xl px-3 py-6 lg:px-6 space-y-6 col-start-1 col-span-2 z-10 lg:my-32"
                     v-animate.stagger
                 >
                     <div>

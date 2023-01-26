@@ -63,12 +63,23 @@
                     <ul
                         class="flex flex-col pt-1 mt-1 border-t border-neutral-200"
                     >
-                        <li v-if="!isPreSale">
+                        <li>
+                            <a
+                                class="flex items-center justify-start space-x-2 font-bold w-full px-4 py-1 hover:bg-neutral-100 transition-color ease-in"
+                                href="https://foundation.app/@blockschmidt"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Mint Dripversity Drop
+                            </a>
+                        </li>
+
+                        <li>
                             <router-link
                                 class="flex items-center justify-start space-x-2 font-bold w-full px-4 py-1 hover:bg-neutral-100 transition-color ease-in"
-                                to="/mint"
+                                to="/airdrop"
                             >
-                                Start Minting
+                                Claim CAMPUS Airdrop
                             </router-link>
                         </li>
 

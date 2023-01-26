@@ -1,16 +1,10 @@
 <template>
     <div
-        class="relative flex flex-col w-full flex-1 items-center justify-center p-8 pt-32 lg:py-32"
+        class="relative flex flex-col w-full flex-1 items-center justify-center p-8 pt-32 lg:py-32 bg-gradient-to-bl from-neutral-900 via-neutral-900 to-black"
     >
         <img
-            class="absolute top-0 left-0 w-full h-full object-cover"
-            src="@/assets/images/placeholder-airdrop-bg.png"
-            :alt="alt + ' Background'"
-        />
-
-        <img
-            class="relative block w-full flex-1 object-cover rounded shadow"
-            src="@/assets/images/placeholder-airdrop.png"
+            class="relative block w-full object-contain rounded-xl"
+            src="@/assets/images/classroom.png"
             :alt="alt"
         />
     </div>

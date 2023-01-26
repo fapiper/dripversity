@@ -6,11 +6,7 @@
         :alt="'Unrevealed Campus'"
     />
 -->
-    <TextCenteredSection
-        id="story"
-        :src="require('@/assets/images/hallway.png')"
-        :alt="'Unrevealed Campus'"
-    >
+    <TextCenteredSection id="story">
         <h2 class="title uppercase">How we got here</h2>
 
         <h3 class="subtitle">

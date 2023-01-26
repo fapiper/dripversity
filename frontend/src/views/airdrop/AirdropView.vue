@@ -14,19 +14,21 @@
                     <AppButtonBackOrHome />
                 </div>
 
-                <h1 class="title">
-                    Claim your Dripversity Environment Airdrop
+                <h1 class="title mb-8">
+                    Claim your
+                    <DripversityIcon class="text-dripversity w-52" /> CAMPUS
+                    airdrop
                 </h1>
 
                 <p class="mb-8">
-                    Every Dripversity NFT owner receives an airdrop of it's
-                    associated Environment NFT. Just follow the steps below to
-                    assert your claim (it's free, you'll just need to cover the
-                    transaction fees)
+                    Every <DripversityIcon class="text-dripversity" /> NFT
+                    holder receives an airdrop of it's associated CAMPUS NFT.
+                    Just follow the steps below to assert your claim (it's free,
+                    you'll just need to cover the transaction fees)
                 </p>
 
                 <div
-                    class="space-y-4 rounded p-4 border-2 border-neutral-400/50 border-dashed"
+                    class="space-y-4 rounded-xl p-4 border-2 border-neutral-400/50"
                 >
                     <h2 class="title-3">You're too early</h2>
                     <p class="text-lg">
@@ -56,6 +58,7 @@ import AppButtonBackOrHome from "@/components/app/AppButtonBackOrHome.vue";
 import AppButton from "@/components/app/AppButton.vue";
 
 import { routes } from "@/constants/";
+import DripversityIcon from "@/components/icons/DripversityIcon.vue";
 const tokens = ref([]);
 const preview = ref<typeof AirdropPreview>();
 </script>

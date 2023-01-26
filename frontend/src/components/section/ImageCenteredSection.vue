@@ -20,7 +20,7 @@
         />
 
         <div
-            class="relative container-default max-w-xl space-y-8 text-center"
+            class="relative container-default max-w-2xl space-y-8 text-center"
             v-animate.stagger
         >
             <slot />
